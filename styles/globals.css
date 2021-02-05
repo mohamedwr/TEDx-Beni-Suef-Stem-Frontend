@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+	min-height: 100vh;
+}
+
+/* Underline effect */
+
+.underline {
+	text-decoration: none;
+	position: relative;
+	transition: all 0.15s ease-out;
+}
+.underline:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2.2px; /* border height */
+	bottom: -2px; /* border bottom padding */
+	left: 0;
+	background-color: #e74c3c;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+.underline:hover:before,
+.underline.active:before {
+	visibility: visible;
+	/* bottom: -4px; */
+	transform: scaleX(1);
+}
+
+/* Underline effect */
+
+.backdrop {
+	backdrop-filter: grayscale(1) blur(7px);
+}
+
+/* Soon effect */
+
+.soon {
+	position: relative;
+}
+.soon::after {
+	content: 'soon';
+	position: absolute;
+	top: -7px;
+	right: 0;
+	font-size: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	color: white;
+}
+
+/* Soon effect */
