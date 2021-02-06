@@ -39,7 +39,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 						: 'py-5 lg:px-16 px-6'
 				}
 				${autoTransparent ? (underNavHeight ? 'bg-black' : '') : 'bg-black'}
-				${menu ? 'md:bg-black' : ''}
+				${menu ? 'bg-black' : ''}
 				duration-500 ease-in flex flex-wrap justify-between items-center`}
 			>
 				{/* Logo */}
