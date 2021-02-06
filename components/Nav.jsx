@@ -4,27 +4,23 @@ import MenuIcon from '../public/menu.svg';
 import { useRouter } from 'next/router';
 import { useWindowScroll } from 'react-use';
 
+// autoTransparent => for controlling in transparent
+// NavHeight => navbar height
+// fixed => position fixed or sticky
+
 const Nav = ({ fixed = false, autoTransparent = false }) => {
 	const { y } = useWindowScroll();
 	const router = useRouter();
 	const [menu, setMenu] = useState(false);
 
-	const [transparent, setTransparent] = useState(false);
-
+	const [underNavHeight, setUnderNavHeight] = useState(false);
 	// to get Nav Height
 	const divRef = createRef();
-	const [height, SetHeight] = useState(0);
 
 	// get Nav Height When the Page is fully loaded
-	// 1
 	useEffect(() => {
-		SetHeight(divRef.current.clientHeight);
-		console.log(y, transparent);
-		if (height < y) {
-			setTransparent(true);
-		} else {
-			setTransparent(false);
-		}
+		if (divRef.current.clientHeight < y) setUnderNavHeight(true);
+		else setUnderNavHeight(false);
 	}, [y]);
 
 	return (
@@ -35,13 +31,11 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 			ref={divRef}
 		>
 			<header
-				className={`lg:px-16 px-6 ${
-					fixed
-						? transparent
-							? 'bg-black py-5 lg:px-16 px-6'
-							: 'py-10 lg:px-28 px-10'
-						: 'bg-black'
-				} duration-1000 ease-in-out flex flex-wrap justify-between items-center`}
+				className={`${
+					underNavHeight && fixed
+						? 'bg-black py-5 lg:px-16 px-6'
+						: 'py-10 lg:px-28 px-10'
+				} duration-500 ease-in flex flex-wrap justify-between items-center`}
 			>
 				{/* Logo */}
 				<div

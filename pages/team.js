@@ -44,6 +44,7 @@ const teams = () => {
 				<div ref={PRTeamRef} className='keen-slider cursor-move'>
 					{[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((index) => (
 						<PersonCard
+							key={index}
 							img='/cover.jpg'
 							name={`${faker.name.firstName()} ${faker.name.lastName()}`}
 							role={faker.name.jobTitle()}
