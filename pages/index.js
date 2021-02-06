@@ -2,12 +2,14 @@ import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Separator from '../components/Separator';
 import Slider from '../components/Slider';
+import Title from '../components/Title';
 import Word from '../components/Word';
 
 export default function Home() {
 	return (
 		<>
-			<Nav fixed />
+			<Nav fixed autoTransparent />
+			<Title>Home</Title>
 			{/* <section className='h-screen w-full bg-mainImage bg-no-repeat bg-cover bg-center flex justify-center items-center'>
 				<div className='flex flex-col py-4 px-2 md:py-16 md:px-24 justify-center items-center backdrop rounded-2xl border-red-500 border-2 space-y-12'>
 					<h1 className='text-4xl md:text-6xl lg:text-7xl font-roboto font-bold text-white'>

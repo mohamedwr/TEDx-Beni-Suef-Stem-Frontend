@@ -1,16 +1,19 @@
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
+
+// Components
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Separator from '../components/Separator';
 import Word from '../components/Word';
-import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react';
 import PersonCard from '../components/PersonCard';
+import Title from '../components/Title';
 
 const about = () => {
 	const [sliderRef1] = useKeenSlider({
 		mode: 'free',
 		spacing: 15,
-		
+
 		// mobile
 		slidesPerView: 2,
 		breakpoints: {
@@ -32,7 +35,7 @@ const about = () => {
 	return (
 		<>
 			<Nav />
-
+			<Title>About Us</Title>
 			<section className='flex justify-center items-center'>
 				<div className='container py-12 grid grid-cols-1 lg:grid-cols-2 gap-8'>
 					<div>

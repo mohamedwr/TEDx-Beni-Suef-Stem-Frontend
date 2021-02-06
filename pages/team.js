@@ -6,6 +6,7 @@ import PersonCard from '../components/PersonCard';
 import Separator from '../components/Separator';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import Title from '../components/Title';
 
 const teams = () => {
 	const settings = {
@@ -37,6 +38,7 @@ const teams = () => {
 	return (
 		<>
 			<Nav />
+			<Title>Team</Title>
 			<section className='container py-12'>
 				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
 					PR Team
