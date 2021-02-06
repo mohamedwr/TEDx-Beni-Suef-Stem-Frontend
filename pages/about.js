@@ -8,24 +8,25 @@ import PersonCard from '../components/PersonCard';
 
 const about = () => {
 	const [sliderRef1] = useKeenSlider({
-		slidesPerView: 4,
 		mode: 'free',
 		spacing: 15,
-	});
-	const [sliderRef2] = useKeenSlider({
-		slidesPerView: 4,
-		mode: 'free',
-		spacing: 15,
-	});
-	const [sliderRef3] = useKeenSlider({
-		slidesPerView: 4,
-		mode: 'free',
-		spacing: 15,
-	});
-	const [sliderRef4] = useKeenSlider({
-		slidesPerView: 4,
-		mode: 'free',
-		spacing: 15,
+		
+		// mobile
+		slidesPerView: 2,
+		breakpoints: {
+			// tablet
+			'(min-width: 768px)': {
+				slidesPerView: 3,
+			},
+			// mini laptop
+			'(min-width: 1200px)': {
+				slidesPerView: 5,
+			},
+			// laptop
+			'(min-width: 1600px)': {
+				slidesPerView: 6,
+			},
+		},
 	});
 
 	return (
@@ -84,71 +85,26 @@ const about = () => {
 			</div>
 			<section className='container py-12'>
 				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
-					PR Team
+					TedX BeniSuefSTEM Leaders
 				</h2>
 				<div ref={sliderRef1} className='keen-slider cursor-move'>
-					{[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((index) => (
-						<PersonCard
-							key={index * Math.random()}
-							img='/cover.jpg'
-							name='john doe'
-							role='backend developer'
-						/>
-					))}
-				</div>
-			</section>
-			<div className='container'>
-				<Separator color='bg-red-500' />
-			</div>
-			<section className='container py-12'>
-				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
-					Video Editing Team
-				</h2>
-				<div ref={sliderRef2} className='keen-slider cursor-move'>
-					{[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((index) => (
-						<PersonCard
-							key={index * Math.random()}
-							img='/cover.jpg'
-							name='john doe'
-							role='backend developer'
-						/>
-					))}
-				</div>
-			</section>
-			<div className='container'>
-				<Separator color='bg-red-500' />
-			</div>
-			<section className='container py-12'>
-				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
-					HR Team
-				</h2>
-				<div ref={sliderRef3} className='keen-slider cursor-move'>
-					{[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((index) => (
-						<PersonCard
-							key={index * Math.random()}
-							img='/cover.jpg'
-							name='john doe'
-							role='backend developer'
-						/>
-					))}
-				</div>
-			</section>
-			<div className='container'>
-				<Separator color='bg-red-500' />
-			</div>
-			<section className='container py-12'>
-				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
-					Technical Support Team
-				</h2>
-				<div ref={sliderRef4} className='keen-slider cursor-move'>
-					{[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((index) => (
-						<PersonCard
-							key={index * Math.random()}
-							img='/cover.jpg'
-							name='john doe'
-							role='backend developer'
-						/>
-					))}
+					<PersonCard name='Yussof Waleed' role='Chairman' img='/person0.png' />
+					<PersonCard
+						name='Ahmed Sayed'
+						role='Co-Chairman'
+						img='/person1.png'
+					/>
+					<PersonCard name='Salma Ahmed' role='CEO' img='/person2.png' />
+					<PersonCard
+						name='Salma Ahmed'
+						role='Multi-Media Chef'
+						img='/person4.png'
+					/>
+					<PersonCard
+						name='Mohamed Hisham'
+						role='Digital-Marketing Chef'
+						img='/person3.png'
+					/>
 				</div>
 			</section>
 

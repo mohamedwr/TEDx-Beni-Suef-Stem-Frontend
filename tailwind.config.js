@@ -9,6 +9,9 @@ module.exports = {
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
 			},
+			zIndex: {
+				'-10': '-10',
+			},
 		},
 		container: {
 			center: true,

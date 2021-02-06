@@ -1,13 +1,96 @@
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 
 const contact = () => {
 	return (
 		<>
 			<Nav />
-			<Particles width='100vw' height='100vh' params={{}} />
-			<section className='flex justify-center items-center'>
+			<section className='flex justify-center items-center z-20'>
+				<Particles
+					id='tsparticles'
+					className='absolute inset-0 -z-10'
+					options={{
+						background: {
+							color: {
+								value: 'transparent',
+							},
+						},
+						fpsLimit: 60,
+						interactivity: {
+							detectsOn: 'canvas',
+							modes: {
+								bubble: {
+									distance: 400,
+									duration: 2,
+									opacity: 0.8,
+									size: 40,
+								},
+								push: {
+									quantity: 4,
+								},
+								repulse: {
+									distance: 200,
+									duration: 0.4,
+								},
+							},
+						},
+						particles: {
+							color: {
+								value: '#e74c3c',
+							},
+							links: {
+								color: '#000',
+								distance: 100,
+								enable: true,
+								opacity: 0.5,
+								width: 1,
+							},
+							collisions: {
+								enable: true,
+							},
+							move: {
+								direction: 'none',
+								enable: true,
+								outMode: 'bounce',
+								random: false,
+								speed: 6,
+								straight: false,
+							},
+							number: {
+								density: {
+									enable: true,
+									value_area: 800,
+								},
+								value: 80,
+							},
+							opacity: {
+								value: 0.5,
+							},
+							shape: {
+								type: ['image', 'circle'],
+								image: [
+									{
+										src: '/x.svg',
+										height: 30,
+										width: 30,
+									},
+								],
+							},
+							size: {
+								value: 10,
+								random: false,
+								anim: {
+									enable: true,
+									speed: 4,
+									size_min: 10,
+									sync: false,
+								},
+							},
+						},
+						detectRetina: true,
+					}}
+				/>
 				<div className='container py-10 space-y-5'>
 					<h2 className='text-4xl font-bold font-roboto pb-4 capitalize text-center'>
 						contact us

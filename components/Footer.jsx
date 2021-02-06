@@ -1,7 +1,7 @@
 import Icon from './Icon';
 
 const Footer = () => (
-	<footer className='py-10 bg-gray-800'>
+	<footer className='py-10 bg-gray-800 z-50'>
 		<div className='container flex flex-col items-center justify-center space-y-5'>
 			<ul className='font-roboto select-none text-center flex flex-col md:flex-row md:space-x-8 text-lg'>
 				<li className='capitalize text-gray-100 duration-150 cursor-pointer font-bold hover:text-red-500'>
