@@ -7,39 +7,23 @@ import Separator from '../components/Separator';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Title from '../components/Title';
+import TeamSlider from '../components/TeamSlider';
 
 const teams = () => {
-	const settings = {
-		mode: 'free',
-		spacing: 15,
-		// mobile
-		slidesPerView: 2,
-		breakpoints: {
-			// tablet
-			'(min-width: 768px)': {
-				slidesPerView: 3,
-			},
-			// mini laptop
-			'(min-width: 1200px)': {
-				slidesPerView: 5,
-			},
-			// laptop
-			'(min-width: 1600px)': {
-				slidesPerView: 6,
-			},
-		},
-	};
-	const [CHTeamRef] = useKeenSlider(settings);
-	const [HRTeamRef] = useKeenSlider(settings);
-	const [PRTeamRef] = useKeenSlider(settings);
-	const [TSTeamRef] = useKeenSlider(settings);
-	const [VETeamRef] = useKeenSlider(settings);
+	const PRTeamPersons = [
+		{ name: 'ahmed mohamed', role: 'CEO', img: '/cover.jpg' },
+		{ name: 'khaled mohamed', role: 'Head of WB', img: '/cover.jpg' },
+		{ name: 'george mohamed', role: 'CEO', img: '/cover.jpg' },
+		{ name: 'John mohamed', role: 'CEO', img: '/cover.jpg' },
+		{ name: 'safwt mohamed', role: 'Head HR', img: '/cover.jpg' },
+		{ name: 'elon mask', role: 'CEO', img: '/cover.jpg' },
+	];
 
 	return (
 		<>
 			<Nav />
 			<Title>Team</Title>
-			<section className='container py-12'>
+			{/* <section className='container py-12'>
 				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
 					PR Team
 				</h2>
@@ -53,7 +37,16 @@ const teams = () => {
 						/>
 					))}
 				</div>
-			</section>
+			</section> */}
+			<TeamSlider name='PR Team' persons={PRTeamPersons} />
+			<div className='container'>
+				<Separator color='bg-red-500' />
+			</div>
+			<TeamSlider name='HR Team' persons={PRTeamPersons} />
+			<div className='container'>
+				<Separator color='bg-red-500' />
+			</div>
+			<TeamSlider name='FR Team' persons={PRTeamPersons} />
 			<div className='container'>
 				<Separator color='bg-red-500' />
 			</div>
