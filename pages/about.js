@@ -90,7 +90,7 @@ const about = () => {
 				<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
 					TedX BeniSuefSTEM Leaders
 				</h2>
-				<div ref={sliderRef1} className='keen-slider cursor-move'>
+				<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
 					<PersonCard name='Yussof Waleed' role='Chairman' img='/person0.png' />
 					<PersonCard
 						name='Ahmed Sayed'
@@ -102,6 +102,16 @@ const about = () => {
 						name='Salma Ahmed'
 						role='Multi-Media Chef'
 						img='/person4.png'
+					/>
+					<PersonCard
+						name='Mohamed Hisham'
+						role='Digital-Marketing Chef'
+						img='/person3.png'
+					/>
+					<PersonCard
+						name='Mohamed Hisham'
+						role='Digital-Marketing Chef'
+						img='/person3.png'
 					/>
 					<PersonCard
 						name='Mohamed Hisham'

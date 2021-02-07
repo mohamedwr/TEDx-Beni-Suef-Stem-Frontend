@@ -53,6 +53,7 @@ const TeamSlider = ({ name, persons, arrows = true }) => {
 			<div ref={sliderRef} className='keen-slider cursor-move'>
 				{persons.map((person) => (
 					<PersonCard
+						isSlide
 						key={person.name}
 						img={person.img}
 						name={person.name}

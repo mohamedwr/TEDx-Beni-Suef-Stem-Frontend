@@ -1,7 +1,11 @@
 import 'keen-slider/keen-slider.min.css';
 
-const PersonCard = ({ img, name, role }) => (
-	<div className='keen-slider__slide inline-flex flex-col justify-start items-center'>
+const PersonCard = ({ img, name, role, isSlide }) => (
+	<div
+		className={`${
+			isSlide ? 'keen-slider__slide' : ''
+		} inline-flex flex-col justify-start items-center`}
+	>
 		<div className='rounded-full bg-gray-400 duration-200 ease-in-out hover:bg-red-500 mb-4'>
 			<img
 				src={img}
