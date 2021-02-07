@@ -57,9 +57,3 @@ body {
 }
 
 /* Soon effect */
-
-/* grayscale color */
-
-.grayscale {
-	filter: grayscale(1);
-}

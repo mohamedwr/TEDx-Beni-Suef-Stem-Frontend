@@ -6,7 +6,7 @@ import PersonCard from './PersonCard';
 import RightArrow from '../public/right-arrow.svg';
 import LeftArrow from '../public/left-arrow.svg';
 
-const TeamSlider = ({ name, persons }) => {
+const TeamSlider = ({ name, persons, arrows = true }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const settings = {
@@ -46,7 +46,7 @@ const TeamSlider = ({ name, persons }) => {
 	const [sliderRef, slider] = useKeenSlider(settings);
 
 	return (
-		<section className='container py-4 lg:py-12'>
+		<section className='container pt-8 pb-4'>
 			<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
 				{name}
 			</h2>
@@ -60,8 +60,8 @@ const TeamSlider = ({ name, persons }) => {
 					/>
 				))}
 			</div>
-			{slider && (
-				<div className='flex justify-between lg:justify-end items-center space-x-5 mt-5 px-6'>
+			{slider && arrows && (
+				<div className='flex justify-between lg:justify-end items-center space-x-5 mt-5 px-8'>
 					<LeftArrow
 						onClick={(e) => e.stopPropagation() || slider.prev()}
 						className={`fill-current 
