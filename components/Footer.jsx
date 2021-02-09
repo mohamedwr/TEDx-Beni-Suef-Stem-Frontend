@@ -17,10 +17,13 @@ const Footer = () => (
 				/>
 				<Icon
 					img='/icons/phone.png'
-					url='https://api.whatsapp.com/send?phone=201119210940'
+					url='https://api.whatsapp.com/send?phone=201555653764'
 				/>
-				<Icon img='/icons/email.png' url='mailto:yussofwaleed@gmail.com' />
-				<Icon img='/icons/youtube.png' url='' />
+				<Icon img='/icons/email.png' url='mailto:tedxbstem@gmail.com' />
+				<Icon
+					img='/icons/youtube.png'
+					url='https://www.youtube.com/channel/UCA-y2ItuAJGsWnlo1egpLtw'
+				/>
 			</ul>
 			<h4 className='text-gray-400 text-sm md:text-base font-roboto'>
 				© {new Date().getFullYear().toString()} All Rights Reserved |

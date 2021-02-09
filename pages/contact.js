@@ -61,7 +61,7 @@ const contact = () => {
 								</label>
 								<button
 									type='submit'
-									className='py-3 px-2 bg-blue-500 text-white font-roboto text-lg rounded-md ring-4 hover'
+									className='py-3 px-2 font-roboto bg-red-500 text-white font-roboto text-xl font-bold uppercase rounded-full ring-4'
 								>
 									Submit
 								</button>

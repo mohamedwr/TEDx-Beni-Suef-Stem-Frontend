@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			backgroundImage: (theme) => ({
 				mainImage: "url('/cover.jpg')",
+				errImage: "url('/error.png')",
 			}),
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
@@ -13,6 +14,9 @@ module.exports = {
 				'-10': '-10',
 			},
 		},
+		linearGradientColors: (theme) => theme('colors'),
+		radialGradientColors: (theme) => theme('colors'),
+		conicGradientColors: (theme) => theme('colors'),
 		container: {
 			center: true,
 			padding: {
@@ -24,5 +28,5 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [require('@tailwindcss/forms')],
+	plugins: [require('@tailwindcss/forms'), require('tailwindcss-gradients')],
 };

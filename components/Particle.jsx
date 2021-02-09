@@ -63,7 +63,7 @@ const Particle = ({ lineColor = '#fff', dotColor = '#e74c3c' }) => {
 							value: 0.5,
 						},
 						shape: {
-							type: ['image', 'circle'],
+							type: ['image'],
 							image: [
 								{
 									src: '/x.svg',

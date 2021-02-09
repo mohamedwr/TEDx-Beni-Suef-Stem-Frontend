@@ -17,8 +17,8 @@ const PersonCard = ({ img, name, role, isSlide }) => (
 			<h3 className='font-roboto capitalize text-xl lg:text-2xl font-bold'>
 				{name}
 			</h3>
-			<h4 className='font-roboto text-gray-800 capitalize text-lg lg:text-xl italic font-medium'>
-				"{role}"
+			<h4 className='font-roboto text-gray-800 capitalize text-lg lg:text-xl font-medium'>
+				{role}
 			</h4>
 		</div>
 	</div>

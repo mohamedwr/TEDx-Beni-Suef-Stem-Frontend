@@ -21,6 +21,7 @@
 		"@tailwindcss/forms": "^0.2.1",
 		"autoprefixer": "^10.0.4",
 		"babel-plugin-inline-react-svg": "^1.1.2",
+		"framer-motion": "^3.3.0",
 		"keen-slider": "^5.4.0",
 		"next": "^10.0.5",
 		"postcss": "^8.1.10",
@@ -30,7 +31,8 @@
 		"react-tsparticles": "^1.18.12",
 		"react-use": "^17.1.0",
 		"slick-carousel": "^1.8.1",
-		"tailwindcss": "^2.0.2"
+		"tailwindcss": "^2.0.2",
+		"tailwindcss-gradients": "^3.0.0"
 	},
 	"devDependencies": {
 		"faker": "^5.3.1"
