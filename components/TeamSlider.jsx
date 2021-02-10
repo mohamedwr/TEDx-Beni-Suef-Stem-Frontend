@@ -40,22 +40,12 @@ const TeamSlider = ({
 		},
 	};
 
-	// Autoplay function
-	// useEffect(() => {
-	// 	setInterval(() => {
-	// 		slider.next();
-	// 	}, 2500);
-	// 	return () => {
-	// 		clearInterval();
-	// 	};
-	// }, []);
-
 	const [sliderRef, slider] = useKeenSlider(settings);
 
 	return (
 		<section className='container pt-8 pb-4'>
 			<h2
-				className={`text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 ${color}`}
+				className={`text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 ${color}`}
 			>
 				{name}
 			</h2>

@@ -6,8 +6,8 @@ const Footer = () => (
 		<div className='container flex flex-col items-center justify-center space-y-5'>
 			<ul className='font-roboto select-none text-center flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg'>
 				<FooterLink name='home' path='/' />
-				<FooterLink name='our team' path='team' />
 				<FooterLink name='vision & mission' path='about' />
+				<FooterLink name='our team' path='team' />
 				<FooterLink name='contacts us' path='contact' />
 			</ul>
 			<ul className='flex space-x-4 md:space-x-10 select-none'>

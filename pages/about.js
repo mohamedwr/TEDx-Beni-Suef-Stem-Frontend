@@ -100,6 +100,7 @@ const about = () => {
 								principle of self-learning through introducing live examples,
 								solutions, and the way of applying them to our community.
 								<br />
+								<br />
 								<Word>Vision:</Word> TEDxYouth@BeniSuefSTEM aims to spot the
 								light on the idea and the concept of overcoming the tough times
 								and convert them into a huge success. In addition, spread and
