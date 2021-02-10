@@ -21,7 +21,7 @@ body {
 	height: 3px; /* border height */
 	bottom: -2px; /* border bottom padding */
 	left: 0;
-	background-color: #e74c3c;
+	background-color: #f34423;
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);

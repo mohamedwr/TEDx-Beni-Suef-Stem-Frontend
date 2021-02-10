@@ -1,11 +1,14 @@
+import { useKeenSlider } from 'keen-slider/react';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Separator from '../components/Separator';
 import Slider from '../components/Slider';
+import TeamSlider from '../components/TeamSlider';
 import Title from '../components/Title';
 import Word from '../components/Word';
 
 export default function Home() {
+	const [sliderRef] = useKeenSlider();
 	return (
 		<>
 			<Nav fixed autoTransparent />
@@ -75,6 +78,44 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
+			<TeamSlider
+				name='TEDx Youth@BeniSuefSTEM Management Board'
+				color='text-red-500'
+				persons={[
+					{
+						name: 'Yussof Waleed',
+						role: 'Chairman',
+						img: '/teams/leaders/Chairman.png',
+					},
+					{
+						name: 'Ahmed Sayed',
+						role: 'Co-Chairman',
+						img: '/teams/leaders/Co-Chairman.png',
+					},
+					{
+						name: 'Salma Ahmed',
+						role: 'CEO',
+						img: '/teams/leaders/CEO.png',
+					},
+					{
+						name: 'Salma Ahmed',
+						role: 'Multi-Media Chief',
+						img: '/teams/leaders/Multi-Media.png',
+					},
+					{
+						name: 'Mohamed Hisham',
+						role: 'Digital-Marketing Chief',
+						img: '/teams/leaders/Digital-Marketing-Chief.png',
+					},
+					{
+						name: 'Karem Nabil',
+						role: 'PR & FR Chief',
+						img: '/teams/leaders/PR-&-FR.png',
+					},
+				]}
+			/>
+
 			<Footer />
 		</>
 	);

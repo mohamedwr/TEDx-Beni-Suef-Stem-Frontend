@@ -6,12 +6,19 @@ import PersonCard from './PersonCard';
 import RightArrow from '../public/right-arrow.svg';
 import LeftArrow from '../public/left-arrow.svg';
 
-const TeamSlider = ({ name, persons, arrows = true }) => {
+const TeamSlider = ({
+	name,
+	persons,
+	color = 'text-black',
+	arrows = false,
+}) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const settings = {
 		initial: 0,
-		mode: 'free',
+		mode: 'free-snap',
+		centered: true,
+		loop: true,
 		spacing: 15,
 		// mobile
 		breakpoints: {
@@ -47,7 +54,9 @@ const TeamSlider = ({ name, persons, arrows = true }) => {
 
 	return (
 		<section className='container pt-8 pb-4'>
-			<h2 className='text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
+			<h2
+				className={`text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 ${color}`}
+			>
 				{name}
 			</h2>
 			<div ref={sliderRef} className='keen-slider cursor-move'>

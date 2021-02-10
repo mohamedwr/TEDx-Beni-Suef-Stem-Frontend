@@ -16,6 +16,9 @@ module.exports = {
 			colors: {
 				ted: '#f34423',
 			},
+			rotate: {
+				360: '360deg',
+			},
 		},
 		linearGradientColors: (theme) => theme('colors'),
 		radialGradientColors: (theme) => theme('colors'),

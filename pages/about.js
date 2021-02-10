@@ -1,5 +1,6 @@
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
+import Typewriter from 'typewriter-effect';
 
 // Components
 import Nav from '../components/Nav';
@@ -41,7 +42,25 @@ const about = () => {
 			<Title>About Us</Title>
 			<div className='flex h-screen justify-center items-center'>
 				<h1 className='capitalize text-black font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold'>
-					"One day or day one, you decide"
+					{/* "One day or day one, you decide" */}
+					<Typewriter
+						onInit={(typewriter) => {
+							typewriter
+								.typeString('<span class="text-ted">One Day</span>')
+								.typeString('<span> I Will Achieve My Goal...</span>')
+								.pauseFor(1000)
+								.deleteAll()
+								.typeString(
+									"<span>It's <span class='text-ted'>Day</span> Number <span class='text-ted'>One</span> Preparing For My Goal...</span>"
+								)
+								.pauseFor(1000)
+								.deleteAll()
+								.typeString(
+									'<span class="text-ted">"One Day</span><span> or </span><span class="text-ted">Day One</span><span>, You Decide</span><span class="text-ted">"</span>'
+								)
+								.start();
+						}}
+					/>
 				</h1>
 			</div>
 			<section className='flex justify-center items-center'>

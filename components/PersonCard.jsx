@@ -12,7 +12,7 @@ const PersonCard = ({ img, name, role, isSlide }) => {
 			} inline-flex flex-col justify-start items-center`}
 		>
 			<div
-				className='rounded-full bg-ted duration-200 ease-in-out hover:bg-black mb-4 relative overflow-hidden border border-black'
+				className='rounded-full bg-gray-600 duration-200 ease-in-out hover:bg-black mb-4 relative overflow-hidden border border-black'
 				onMouseEnter={() => setHover(true)}
 				onMouseLeave={() => setHover(false)}
 			>

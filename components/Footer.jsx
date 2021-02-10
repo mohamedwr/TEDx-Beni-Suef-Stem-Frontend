@@ -2,7 +2,7 @@ import FooterLink from './FooterLink';
 import Icon from './Icon';
 
 const Footer = () => (
-	<footer className='py-10 bg-gray-800 z-50'>
+	<footer className='py-10 bg-black z-50'>
 		<div className='container flex flex-col items-center justify-center space-y-5'>
 			<ul className='font-roboto select-none text-center flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-lg'>
 				<FooterLink name='home' path='/' />

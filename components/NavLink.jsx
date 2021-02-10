@@ -4,12 +4,12 @@ const NavLink = ({ link, soon, path }) => {
 	const router = useRouter();
 	return (
 		<li
-			className={`flex justify-center items-center cursor-pointer duration-200 transition-colors capitalize font-roboto
+			className={`flex justify-center items-center cursor-pointer duration-200 transition-colors uppercase font-roboto
 		${
 			soon
 				? 'soon cursor-not-allowed text-gray-500 py-1'
 				: 'cursor-pointer underline py-3 px-3'
-		} ${router.pathname.endsWith(path) ? 'active font-bold text-red-500' : ''}`}
+		} ${router.pathname.endsWith(path) ? 'active font-bold text-ted' : ''}`}
 			onClick={() => router.push(path)}
 		>
 			{link}

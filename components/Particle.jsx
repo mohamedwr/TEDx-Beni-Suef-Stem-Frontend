@@ -57,7 +57,7 @@ const Particle = ({ lineColor = '#fff', dotColor = '#e74c3c' }) => {
 								enable: true,
 								value_area: 800,
 							},
-							value: 80,
+							value: 25,
 						},
 						opacity: {
 							value: 0.5,
@@ -77,7 +77,7 @@ const Particle = ({ lineColor = '#fff', dotColor = '#e74c3c' }) => {
 							random: false,
 							anim: {
 								enable: true,
-								speed: 4,
+								speed: 2,
 								size_min: 10,
 								sync: false,
 							},
