@@ -113,7 +113,7 @@ const about = () => {
 					</div>
 				</div>
 			</section>
-			<div className='container'>
+			{/* <div className='container'>
 				<Separator color='bg-red-500' />
 			</div>
 			<section className='container py-12'>
@@ -172,7 +172,7 @@ const about = () => {
 						</button>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			<Footer />
 		</>

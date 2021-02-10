@@ -71,7 +71,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-around items-center flex-wrap'>
+					<div className='flex justify-center items-center flex-wrap'>
 						<PersonCard
 							name='Ahmed Sayed'
 							role='Co-Chairman'
@@ -96,6 +96,7 @@ const teams = () => {
 							role='Digital-Marketing Chief'
 							img='/teams/leaders/Digital-Marketing-Chief.png'
 						/>
+
 						<PersonCard
 							name='Karem Nabil'
 							role='PR & FR Chief'
