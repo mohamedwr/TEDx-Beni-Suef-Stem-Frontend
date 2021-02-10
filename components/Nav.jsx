@@ -47,7 +47,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					className='flex-1 flex justify-between items-center'
 					onClick={() => router.push('/')}
 				>
-					<img src='logoWhite.png' alt='logo' className='h-12 cursor-pointer' />
+					<img src='logoWhite.svg' alt='logo' className='h-12 cursor-pointer' />
 				</div>
 
 				<MenuIcon

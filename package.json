@@ -32,7 +32,9 @@
 		"react-use": "^17.1.0",
 		"slick-carousel": "^1.8.1",
 		"tailwindcss": "^2.0.2",
-		"tailwindcss-gradients": "^3.0.0"
+		"tailwindcss-debug-screens": "^2.0.0",
+		"tailwindcss-gradients": "^3.0.0",
+		"typewriter-effect": "^2.17.0"
 	},
 	"devDependencies": {
 		"faker": "^5.3.1"

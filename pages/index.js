@@ -10,21 +10,6 @@ export default function Home() {
 		<>
 			<Nav fixed autoTransparent />
 			<Title>Home</Title>
-			{/* <section className='h-screen w-full bg-mainImage bg-no-repeat bg-cover bg-center flex justify-center items-center'>
-				<div className='flex flex-col py-4 px-2 md:py-16 md:px-24 justify-center items-center backdrop rounded-2xl border-red-500 border-2 space-y-12'>
-					<h1 className='text-4xl md:text-6xl lg:text-7xl font-roboto font-bold text-white'>
-						HB Recruitment
-					</h1>
-					<div className='timer flex justify-center items-center'>
-						<Timer />
-					</div>
-					<div className='grid grid-cols-2 gap-4'>
-						<Button text='about us' />
-						<Button text='contact us' />
-						<Button text='join us' span='col-span-2' />
-					</div>
-				</div>
-			</section> */}
 
 			<Slider
 				images={[
@@ -35,7 +20,9 @@ export default function Home() {
 			<section className='flex justify-center items-center'>
 				<div className='container py-12 space-y-10'>
 					<div>
-						<h2 className='text-4xl font-bold font-roboto pb-4'>About TEDx</h2>
+						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
+							About TEDx
+						</h2>
 						<div className='flex lg:flex-row flex-col'>
 							<p className='font-roboto text-xl leading-relaxed h-full lg:w-3/4 border-l-8 rounded border-red-500 pl-4'>
 								<Word>TEDx</Word> is a grassroots initiative, created in the
@@ -57,13 +44,15 @@ export default function Home() {
 								</Word>
 							</p>
 							<div className='lg:w-1/4 flex justify-center items-center'>
-								<img src='/aboutTed.png' />
+								<img src='/aboutTed.png' className='md:w-8/12 lg:w-full' />
 							</div>
 						</div>
 					</div>
 					<Separator color='bg-red-500' />
 					<div>
-						<h2 className='text-4xl font-bold font-roboto pb-4'>About Us</h2>
+						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
+							About Us
+						</h2>
 						<div className='flex lg:flex-row flex-col'>
 							<p className='font-roboto text-xl leading-relaxed h-full lg:w-3/4 border-l-8 rounded border-red-500 pl-4'>
 								A peep at some distant orb has power to raise and purify our
@@ -80,7 +69,7 @@ export default function Home() {
 								the grander poets. It always does one good.
 							</p>
 							<div className='lg:w-1/4 flex justify-center items-center'>
-								<img src='/tedLogoCenter.png' />
+								<img src='/tedLogoCenter.png' className='w-8/12' />
 							</div>
 						</div>
 					</div>

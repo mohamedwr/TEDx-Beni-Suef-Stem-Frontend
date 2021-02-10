@@ -13,6 +13,9 @@ module.exports = {
 			zIndex: {
 				'-10': '-10',
 			},
+			colors: {
+				ted: '#f34423',
+			},
 		},
 		linearGradientColors: (theme) => theme('colors'),
 		radialGradientColors: (theme) => theme('colors'),
@@ -28,5 +31,9 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [require('@tailwindcss/forms'), require('tailwindcss-gradients')],
+	plugins: [
+		require('@tailwindcss/forms'),
+		require('tailwindcss-gradients'),
+		require('tailwindcss-debug-screens'),
+	],
 };

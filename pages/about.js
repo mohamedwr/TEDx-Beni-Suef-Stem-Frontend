@@ -9,8 +9,10 @@ import Word from '../components/Word';
 import PersonCard from '../components/PersonCard';
 import Title from '../components/Title';
 import Button from '../components/Button';
+import { useRouter } from 'next/router';
 
 const about = () => {
+	const router = useRouter();
 	const [sliderRef1] = useKeenSlider({
 		mode: 'free',
 		spacing: 15,
@@ -38,14 +40,16 @@ const about = () => {
 			<Nav fixed />
 			<Title>About Us</Title>
 			<div className='flex h-screen justify-center items-center'>
-				<h1 className='capitalize text-black font-roboto text-7xl font-bold'>
+				<h1 className='capitalize text-black font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold'>
 					"One day or day one, you decide"
 				</h1>
 			</div>
 			<section className='flex justify-center items-center'>
 				<div className='container py-12 grid grid-cols-1 lg:grid-cols-2 gap-8'>
 					<div>
-						<h2 className='text-4xl font-bold font-roboto pb-4'>About Us</h2>
+						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
+							About Us
+						</h2>
 						<div className='flex lg:flex-row flex-col'>
 							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left'>
 								A peep at some distant orb has power to raise and purify our
@@ -64,7 +68,7 @@ const about = () => {
 						</div>
 					</div>
 					<div>
-						<h2 className='text-4xl font-bold font-roboto pb-4'>
+						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
 							Mission & Vision
 						</h2>
 						<div className='flex lg:flex-row flex-col'>
@@ -108,7 +112,7 @@ const about = () => {
 						/>
 					</div>
 
-					<div className='flex justify-center items-center lg:space-x-10 lg:space-y-0 space-x-0 space-y-6 flex-wrap'>
+					<div className='flex justify-center items-center md:space-x-10 space-x-2 flex-wrap'>
 						<PersonCard
 							name='Ahmed Sayed'
 							role='Co-Chairman'
@@ -121,7 +125,7 @@ const about = () => {
 						/>
 					</div>
 
-					<div className='flex justify-center items-center lg:space-x-10 lg:space-y-0 space-x-0 space-y-6 flex-wrap'>
+					<div className='flex justify-center items-center md:space-x-10 space-2 flex-wrap'>
 						<PersonCard
 							name='Salma Ahmed'
 							role='Multi-Media Chief'
@@ -140,7 +144,10 @@ const about = () => {
 						/>
 					</div>
 					<div className='flex justify-center items-center'>
-						<button className='py-4 px-10 bg-transparent hover:bg-red-500 duration-300 ease-in-out text-red-500 hover:text-white font-roboto text-xl font-bold capitalize rounded-full border-4 border-red-500'>
+						<button
+							className='py-4 px-10 bg-transparent hover:bg-red-500 duration-300 ease-in-out text-red-500 hover:text-white font-roboto text-xl font-bold capitalize rounded-full border-4 border-red-500'
+							onClick={() => router.push('/team')}
+						>
 							rest of our team
 						</button>
 					</div>
