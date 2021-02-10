@@ -12,14 +12,14 @@ const PersonCard = ({ img, name, role, isSlide }) => {
 			} inline-flex flex-col justify-start items-center`}
 		>
 			<div
-				className='rounded-full bg-gray-500 duration-200 ease-in-out hover:bg-black mb-4 relative overflow-hidden hover:'
+				className='rounded-full bg-ted duration-200 ease-in-out hover:bg-black mb-4 relative overflow-hidden border border-black'
 				onMouseEnter={() => setHover(true)}
 				onMouseLeave={() => setHover(false)}
 			>
 				<div className='flex justify-center items-center absolute inset-0'>
 					<XLetter
-						className={`h-60 z-0 duration-150 ease-in-out ${
-							hover ? '' : 'transform translate-x-56'
+						className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
+							hover ? '' : 'transform rotate-180 translate-x-56 opacity-0'
 						}`}
 					/>
 				</div>

@@ -35,7 +35,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					fixed
 						? underNavHeight
 							? 'py-5 lg:px-16 px-6'
-							: 'py-10 lg:px-28 px-10'
+							: 'py-7 lg:py-10 lg:px-28 px-10'
 						: 'py-5 lg:px-16 px-6'
 				}
 				${autoTransparent ? (underNavHeight ? 'bg-black' : '') : 'bg-black'}
