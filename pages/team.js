@@ -116,37 +116,8 @@ const teams = () => {
 				>
 					Human Resources Committee
 				</h2>
-				<div ref={sliderRef1} className='keen-slider cursor-move'>
-					<PersonCard
-						isSlid
-						img='./cover.jpg'
-						name='Eman Saleh'
-						role='HR Director'
-					/>
-					<PersonCard
-						isSlid
-						img='./cover.jpg'
-						name='Medhat Atef'
-						role='HR Vice Director'
-					/>
-					<PersonCard
-						isSlid
-						img='./cover.jpg'
-						name='Reem Mahmoud'
-						role='HR Instructor'
-					/>
-				</div>
-				<div ref={sliderRef2} className='keen-slider cursor-move'>
-					{PRTeamPersons.map((person) => (
-						<PersonCard
-							isSlide
-							key={person.name}
-							img={person.img}
-							name={person.name}
-							role={person.role}
-						/>
-					))}
-				</div>
+				<TeamSlider persons={PRTeamPersons} />
+				<TeamSlider arrows center persons={PRTeamPersons} />
 			</section>
 			<Footer />
 		</>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 
 // Components
@@ -7,32 +7,32 @@ import RightArrow from '../public/right-arrow.svg';
 import LeftArrow from '../public/left-arrow.svg';
 
 const TeamSlider = ({
-	name,
 	persons,
-	color = 'text-black',
 	arrows = false,
+	loop = false,
+	center = false,
 }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const settings = {
 		initial: 0,
 		mode: 'free-snap',
-		centered: true,
-		loop: true,
+		centered: center,
+		loop: loop,
 		spacing: 15,
 		// mobile
 		breakpoints: {
-			// tablet
+			// tablet sm - md
 			'(min-width: 768px)': {
 				slidesPerView: 3,
 			},
-			// mini laptop
+			// mini laptop lg - xl
 			'(min-width: 1200px)': {
-				slidesPerView: 5,
+				slidesPerView: 4,
 			},
-			// laptop
+			// laptop 2xl
 			'(min-width: 1600px)': {
-				slidesPerView: 6,
+				slidesPerView: 5,
 			},
 		},
 		slideChanged(s) {
@@ -43,12 +43,7 @@ const TeamSlider = ({
 	const [sliderRef, slider] = useKeenSlider(settings);
 
 	return (
-		<section className='container pt-8 pb-4'>
-			<h2
-				className={`text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 ${color}`}
-			>
-				{name}
-			</h2>
+		<>
 			<div ref={sliderRef} className='keen-slider cursor-move'>
 				{persons.map((person) => (
 					<PersonCard
@@ -84,7 +79,7 @@ const TeamSlider = ({
 					/>
 				</div>
 			)}
-		</section>
+		</>
 	);
 };
 

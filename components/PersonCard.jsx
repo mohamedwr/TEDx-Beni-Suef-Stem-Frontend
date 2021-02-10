@@ -19,7 +19,9 @@ const PersonCard = ({ img, name, role, isSlide }) => {
 				<div className='flex justify-center items-center absolute inset-0'>
 					<XLetter
 						className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
-							hover ? '' : 'transform rotate-180 translate-x-56 opacity-0'
+							hover
+								? ''
+								: 'transform rotate-180 scale-0 translate-x-56 opacity-0'
 						}`}
 					/>
 				</div>
