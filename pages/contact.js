@@ -31,7 +31,7 @@ const contact = () => {
 									<span className='text-white'>Full Name</span>
 									<input
 										type='text'
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0'
+										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100'
 										placeholder='John Doe'
 									/>
 								</label>
@@ -39,7 +39,7 @@ const contact = () => {
 									<span className='text-white'>Email Address</span>
 									<input
 										type='email'
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0'
+										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100'
 										placeholder='john@example.com'
 									/>
 								</label>
@@ -47,14 +47,14 @@ const contact = () => {
 									<span className='text-white'>Subject</span>
 									<input
 										type='email'
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0'
+										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100'
 										placeholder='Hello There'
 									/>
 								</label>
 								<label className='block'>
 									<span className='text-white'>Message</span>
 									<textarea
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 resize-none'
+										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100 resize-none'
 										rows='6'
 										placeholder='Enter Message...'
 									></textarea>

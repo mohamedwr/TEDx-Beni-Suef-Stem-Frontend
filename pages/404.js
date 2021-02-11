@@ -7,7 +7,7 @@ const Error = () => {
 		<>
 			<div className='flex h-screen w-screen bg-errImage bg-no-repeat bg-cover relative'>
 				<div className='flex flex-col justify-center items-center h-full w-full z-20 space-y-6'>
-					<img src='/logoWhite.png' className='h-36' />
+					<img src='/logoWhite.svg' className='h-36' />
 					<h1 className='text-9xl text-red-500 font-roboto font-bold tracking-wide'>
 						404
 					</h1>

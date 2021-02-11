@@ -57,3 +57,13 @@ body {
 }
 
 /* Soon effect */
+
+/* grayscale */
+
+.grayscale {
+	filter: grayscale(1);
+}
+
+.grayscale:hover {
+	filter: grayscale(0);
+}

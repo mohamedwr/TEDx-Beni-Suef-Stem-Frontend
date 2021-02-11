@@ -8,7 +8,7 @@ import Separator from '../components/Separator';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Title from '../components/Title';
-import TeamSlider from '../components/TeamSlider';
+import TeamSection from '../components/TeamSection';
 
 const teams = () => {
 	const PRTeamPersons = [
@@ -56,7 +56,7 @@ const teams = () => {
 			<Nav />
 			<Title>Team</Title>
 			<section className='container py-12'>
-				<h2 className='text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
+				<h2 className='text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 text-black dark:text-white'>
 					<span className='text-red-500 font-black'>
 						TED<sup>x</sup>
 					</span>{' '}
@@ -71,7 +71,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-center items-center flex-wrap'>
+					<div className='flex justify-evenly items-center flex-wrap'>
 						<PersonCard
 							name='Ahmed Sayed'
 							role='Co-Chairman'
@@ -84,7 +84,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-around items-center flex-wrap'>
+					<div className='flex justify-evenly items-center flex-wrap'>
 						<PersonCard
 							name='Salma Ahmed'
 							role='Multi-Media Chief'
@@ -110,15 +110,7 @@ const teams = () => {
 				<Separator color='bg-red-500' />
 			</div>
 
-			<section className='container pt-8 pb-4'>
-				<h2
-					className={`text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 text-ted`}
-				>
-					Human Resources Committee
-				</h2>
-				<TeamSlider persons={PRTeamPersons} />
-				<TeamSlider arrows center persons={PRTeamPersons} />
-			</section>
+			<TeamSection name='HR Committee' />
 			<Footer />
 		</>
 	);

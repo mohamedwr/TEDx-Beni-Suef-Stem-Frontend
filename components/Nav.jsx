@@ -4,6 +4,9 @@ import MenuIcon from '../public/menu.svg';
 import { useRouter } from 'next/router';
 import { useWindowScroll } from 'react-use';
 
+import SunIcon from '../public/icons/sun.svg';
+import LampIcon from '../public/icons/lamp.svg';
+
 // autoTransparent => for controlling in transparent
 // NavHeight => navbar height
 // fixed => position fixed or sticky
@@ -12,6 +15,8 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	const { y } = useWindowScroll();
 	const router = useRouter();
 	const [menu, setMenu] = useState(false);
+	const [dark, setDark] = useState(false);
+	let DarkIcon = dark ? LampIcon : SunIcon;
 
 	const [underNavHeight, setUnderNavHeight] = useState(false);
 	// to get Nav Height
@@ -21,7 +26,10 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	useEffect(() => {
 		if (divRef.current.clientHeight < y) setUnderNavHeight(true);
 		else setUnderNavHeight(false);
-	}, [y]);
+		let Html = document.querySelector('html');
+		if (dark) Html.classList.add('dark');
+		else Html.classList.remove('dark');
+	}, [y, dark]);
 
 	return (
 		<div
@@ -73,11 +81,17 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 							<NavLink link='about us' path='about' />
 							<NavLink link='our team' path='team' />
 							<NavLink link='contact us' path='contact' />
-							<NavLink link='events news' soon path='events' />
-							<NavLink link='get certified' soon path='certified' />
+							<NavLink link='events news' soon />
+							<NavLink link='get certified' soon />
 						</ul>
 					</nav>
 				</div>
+				<DarkIcon
+					className='fill-current text-white w-6 h-6 ml-4'
+					onClick={() => {
+						setDark((prev) => !prev);
+					}}
+				/>
 			</header>
 		</div>
 	);

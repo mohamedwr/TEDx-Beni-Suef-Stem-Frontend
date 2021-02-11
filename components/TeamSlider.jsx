@@ -11,6 +11,10 @@ const TeamSlider = ({
 	arrows = false,
 	loop = false,
 	center = false,
+	md = 3,
+	lg = 4,
+	xl = 5,
+	grayscale = false,
 }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -24,15 +28,15 @@ const TeamSlider = ({
 		breakpoints: {
 			// tablet sm - md
 			'(min-width: 768px)': {
-				slidesPerView: 3,
+				slidesPerView: md,
 			},
 			// mini laptop lg - xl
 			'(min-width: 1200px)': {
-				slidesPerView: 4,
+				slidesPerView: lg,
 			},
 			// laptop 2xl
 			'(min-width: 1600px)': {
-				slidesPerView: 5,
+				slidesPerView: xl,
 			},
 		},
 		slideChanged(s) {
@@ -52,6 +56,7 @@ const TeamSlider = ({
 						img={person.img}
 						name={person.name}
 						role={person.role}
+						grayscale={grayscale}
 					/>
 				))}
 			</div>
