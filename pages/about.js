@@ -40,7 +40,7 @@ const about = () => {
 			<Nav fixed />
 			<Title>About Us</Title>
 			<div className='flex h-screen justify-center items-center'>
-				<h1 className='capitalize text-black dark:text-white font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold'>
+				<h1 className='capitalize text-black dark:text-white font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold duration-300 ease-in-out'>
 					{/* "One day or day one, you decide" */}
 					<Typewriter
 						onInit={(typewriter) => {
@@ -71,7 +71,7 @@ const about = () => {
 							About Us
 						</h2>
 						<div className='flex lg:flex-row flex-col'>
-							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white'>
+							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white duration-300 ease-in-out'>
 								A peep at some distant orb has power to raise and purify our
 								thoughts like a strain of sacred music, or a noble picture, or a
 								passage from the grander poets. It always does one good. A peep
@@ -92,7 +92,7 @@ const about = () => {
 							Mission & Vision
 						</h2>
 						<div className='flex lg:flex-row flex-col'>
-							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white'>
+							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white duration-300 ease-in-out'>
 								<Word>Mission:</Word> To spread knowledge and outstanding ideas
 								through organizing our TEDxYouth@BeniSuefSTEM event, in which
 								our speakers will cover discipline topics, and share their
@@ -114,67 +114,6 @@ const about = () => {
 					</div>
 				</div>
 			</section>
-			{/* <div className='container'>
-				<Separator color='bg-red-500' />
-			</div>
-			<section className='container py-12'>
-				<h2 className='text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8'>
-					<span className='text-red-500 font-black'>
-						TED<sup>x</sup>
-					</span>{' '}
-					Youth@BeniSuefSTEM Management Board
-				</h2>
-				<div className='flex flex-col space-y-6'>
-					<div className='flex justify-center items-center'>
-						<PersonCard
-							name='Yussof Waleed'
-							role='Chairman'
-							img='/teams/leaders/Chairman.png'
-						/>
-					</div>
-
-					<div className='flex justify-center items-center md:space-x-10 space-x-2 flex-wrap'>
-						<PersonCard
-							name='Ahmed Sayed'
-							role='Co-Chairman'
-							img='/teams/leaders/Co-Chairman.png'
-						/>
-						<PersonCard
-							name='Salma Ahmed'
-							role='CEO'
-							img='/teams/leaders/CEO.png'
-						/>
-					</div>
-
-					<div className='flex justify-center items-center md:space-x-10 space-2 flex-wrap'>
-						<PersonCard
-							name='Salma Ahmed'
-							role='Multi-Media Chief'
-							img='/teams/leaders/Multi-Media.png'
-						/>
-
-						<PersonCard
-							name='Mohamed Hisham'
-							role='Digital-Marketing Chief'
-							img='/teams/leaders/Digital-Marketing-Chief.png'
-						/>
-						<PersonCard
-							name='Karem Nabil'
-							role='PR & FR Chief'
-							img='/teams/leaders/PR-&-FR.png'
-						/>
-					</div>
-					<div className='flex justify-center items-center'>
-						<button
-							className='py-4 px-10 bg-transparent hover:bg-red-500 duration-300 ease-in-out text-red-500 hover:text-white font-roboto text-xl font-bold capitalize rounded-full border-4 border-red-500'
-							onClick={() => router.push('/team')}
-						>
-							rest of our team
-						</button>
-					</div>
-				</div>
-			</section> */}
-
 			<Footer />
 		</>
 	);

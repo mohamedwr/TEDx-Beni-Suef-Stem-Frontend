@@ -56,7 +56,7 @@ const teams = () => {
 			<Nav />
 			<Title>Team</Title>
 			<section className='container py-12'>
-				<h2 className='text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 text-black dark:text-white'>
+				<h2 className='text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 text-black dark:text-white duration-300 ease-in-out'>
 					<span className='text-red-500 font-black'>
 						TED<sup>x</sup>
 					</span>{' '}

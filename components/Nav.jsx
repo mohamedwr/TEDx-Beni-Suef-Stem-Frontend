@@ -2,7 +2,7 @@ import { createRef, useEffect, useState } from 'react';
 import NavLink from './NavLink';
 import MenuIcon from '../public/menu.svg';
 import { useRouter } from 'next/router';
-import { useWindowScroll } from 'react-use';
+import { useWindowScroll, useLocalStorage } from 'react-use';
 
 import SunIcon from '../public/icons/sun.svg';
 import LampIcon from '../public/icons/lamp.svg';
@@ -27,9 +27,18 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 		if (divRef.current.clientHeight < y) setUnderNavHeight(true);
 		else setUnderNavHeight(false);
 		let Html = document.querySelector('html');
-		if (dark) Html.classList.add('dark');
-		else Html.classList.remove('dark');
+		if (dark) {
+			Html.classList.add('dark');
+			localStorage.setItem('dark-mode', true);
+		} else {
+			Html.classList.remove('dark');
+			localStorage.setItem('dark-mode', false);
+		}
 	}, [y, dark]);
+
+	useEffect(() => {
+		setDark(localStorage.getItem('dark-mode'));
+	}, []);
 
 	return (
 		<div

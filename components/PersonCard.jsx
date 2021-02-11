@@ -34,7 +34,7 @@ const PersonCard = ({ img, name, role, isSlide, grayscale = false }) => {
 				/>
 			</div>
 
-			<div className='text-center'>
+			<div className='text-center duration-300 ease-in-out'>
 				<h3 className='font-roboto capitalize text-black dark:text-white text-xl lg:text-2xl font-bold'>
 					{name}
 				</h3>
