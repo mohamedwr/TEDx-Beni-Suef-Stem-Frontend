@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import TeamSlider from './TeamSlider';
 
-const TeamSection = ({ name }) => {
+const TeamSection = ({ name, leaders, members }) => {
 	const [visible, setVisible] = useState(false);
-	const PRTeamPersons = [
-		{ name: 'ahmed mohamed', role: 'CEO', img: '/cover.jpg' },
-		{ name: 'khaled mohamed', role: 'Head of WB', img: '/cover.jpg' },
-		{ name: 'george mohamed', role: 'CEO', img: '/cover.jpg' },
-	];
+	// const PRTeamPersons = [
+	// 	{ name: 'ahmed mohamed', role: 'CEO', img: '/cover.jpg' },
+	// 	{ name: 'khaled mohamed', role: 'Head of WB', img: '/cover.jpg' },
+	// 	{ name: 'george mohamed', role: 'CEO', img: '/cover.jpg' },
+	// ];
 
 	return (
 		<section className='container pt-8 pb-4'>
@@ -29,13 +29,13 @@ const TeamSection = ({ name }) => {
 				</button>
 			</div>
 			<TeamSlider
-				persons={PRTeamPersons}
+				persons={leaders}
 				md={1}
-				lg={Math.min(PRTeamPersons.length, 3)}
-				xl={Math.min(PRTeamPersons.length, 3)}
+				lg={Math.min(leaders.length, 3)}
+				xl={Math.min(leaders.length, 3)}
 			/>
 			<br />
-			{visible ? <TeamSlider persons={PRTeamPersons} grayscale /> : undefined}
+			{visible ? <TeamSlider persons={members} grayscale /> : undefined}
 		</section>
 	);
 };

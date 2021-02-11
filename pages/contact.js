@@ -8,9 +8,9 @@ import Particle from '../components/Particle';
 
 const contact = () => {
 	useEffect(() => {
-		document.body.style.backgroundColor = '#000';
+		document.body.classList.add('bg-black');
 		return () => {
-			document.body.style.backgroundColor = 'white';
+			document.body.classList.remove('bg-black');
 		};
 	}, []);
 	return (

@@ -16,7 +16,7 @@ class MyDocument extends Document {
 						rel='stylesheet'
 					></link>
 				</Head>
-				<body className='debug-screens dark:bg-gray-800'>
+				<body className='debug-screens dark:bg-gray-800 duration-300 ease-in-out'>
 					<Main />
 					<NextScript />
 				</body>
