@@ -8,9 +8,11 @@ import Particle from '../components/Particle';
 
 const contact = () => {
 	useEffect(() => {
+		document.body.classList.remove('dark:bg-gray-800');
 		document.body.classList.add('bg-black');
 		return () => {
 			document.body.classList.remove('bg-black');
+			document.body.classList.add('dark:bg-gray-800');
 		};
 	}, []);
 	return (

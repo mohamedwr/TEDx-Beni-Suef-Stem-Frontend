@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TeamSlider from './TeamSlider';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const TeamSection = ({ name, leaders, members }) => {
 	const [visible, setVisible] = useState(false);
@@ -8,6 +9,17 @@ const TeamSection = ({ name, leaders, members }) => {
 	// 	{ name: 'khaled mohamed', role: 'Head of WB', img: '/cover.jpg' },
 	// 	{ name: 'george mohamed', role: 'CEO', img: '/cover.jpg' },
 	// ];
+
+	useEffect(() => {
+		if (visible == true) {
+			setTimeout(() => {
+				setVisible(false);
+			}, 15000);
+		}
+		return () => {
+			clearTimeout();
+		};
+	}, [visible]);
 
 	return (
 		<section className='container pt-8 pb-4'>
@@ -35,7 +47,19 @@ const TeamSection = ({ name, leaders, members }) => {
 				xl={Math.min(leaders.length, 3)}
 			/>
 			<br />
-			{visible ? <TeamSlider persons={members} grayscale /> : undefined}
+			<AnimatePresence>
+				{visible && (
+					<motion.div
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						exit={{ opacity: 0, scale: 0 }}
+						transition={{ duration: 0.5 }}
+						className='origin-top'
+					>
+						<TeamSlider persons={members} grayscale />
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</section>
 	);
 };
