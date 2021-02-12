@@ -4,9 +4,9 @@ import { useLocalStorage } from 'react-use';
 const LayoutContext = createContext();
 
 const LayoutProvider = ({ children }) => {
-	const [dark, setDark, remove] = useLocalStorage('dark-mode', false);
+	const [dark, setDark, remove] = useLocalStorage('dark-mode');
 	const toggleDark = () => {
-		if (dark) setDark(false);
+		if (dark) remove();
 		else setDark(true);
 	};
 
