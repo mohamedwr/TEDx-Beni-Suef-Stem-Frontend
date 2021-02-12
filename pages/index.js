@@ -1,4 +1,5 @@
 import { useKeenSlider } from 'keen-slider/react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Section from '../components/Section';
@@ -9,7 +10,13 @@ import Title from '../components/Title';
 import Word from '../components/Word';
 
 export default function Home() {
-	const [sliderRef] = useKeenSlider();
+	const [dark, setDark] = useState(false);
+
+	useEffect(() => {
+		console.log(localStorage.getItem('dark-mode'));
+		setDark(localStorage.getItem('dark-mode'));
+	}, [dark]);
+
 	return (
 		<>
 			<Nav fixed autoTransparent />
@@ -45,7 +52,10 @@ export default function Home() {
 								</Word>
 							</p>
 							<div className='lg:w-1/4 flex justify-center items-center'>
-								<img src='/aboutTed.png' className='md:w-8/12 lg:w-full' />
+								<img
+									src={dark ? '/aboutTedBlack.png' : '/aboutTedWhite.png'}
+									className='md:w-8/12 lg:w-full'
+								/>
 							</div>
 						</div>
 					</Section>
@@ -69,7 +79,10 @@ export default function Home() {
 								the grander poets. It always does one good.
 							</p>
 							<div className='lg:w-1/4 flex justify-center items-center'>
-								<img src='/tedLogoCenter.png' className='w-8/12' />
+								<img
+									src={dark ? '/tedLogoBlack.png' : '/tedLogoWhite.png'}
+									className='w-8/12'
+								/>
 							</div>
 						</div>
 					</Section>

@@ -17,7 +17,8 @@ const PersonCard = ({ img, name, role, isSlide, grayscale = false }) => {
 				onMouseLeave={() => setHover(false)}
 			>
 				<div className='flex justify-center items-center absolute inset-0'>
-					<XLetter
+					<img
+						src='/x.svg'
 						className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
 							hover
 								? ''

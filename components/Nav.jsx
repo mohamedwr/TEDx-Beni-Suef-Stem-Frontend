@@ -1,11 +1,12 @@
-import { createRef, useEffect, useState } from 'react';
+import { createRef, useContext, useEffect, useState } from 'react';
 import NavLink from './NavLink';
 import MenuIcon from '../public/menu.svg';
 import { useRouter } from 'next/router';
-import { useWindowScroll, useLocalStorage } from 'react-use';
+import { useWindowScroll } from 'react-use';
 
 import SunIcon from '../public/icons/sun.svg';
 import LampIcon from '../public/icons/lamp.svg';
+import { LayoutContext } from '../context/LayoutContext';
 
 // autoTransparent => for controlling in transparent
 // NavHeight => navbar height
@@ -15,7 +16,8 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	const { y } = useWindowScroll();
 	const router = useRouter();
 	const [menu, setMenu] = useState(false);
-	const [dark, setDark] = useState(false);
+	const { dark, toggleDark } = useContext(LayoutContext);
+
 	let DarkIcon = dark ? LampIcon : SunIcon;
 
 	const [underNavHeight, setUnderNavHeight] = useState(false);
@@ -26,19 +28,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	useEffect(() => {
 		if (divRef.current.clientHeight < y) setUnderNavHeight(true);
 		else setUnderNavHeight(false);
-		let Html = document.querySelector('html');
-		if (dark) {
-			Html.classList.add('dark');
-			localStorage.setItem('dark-mode', true);
-		} else {
-			Html.classList.remove('dark');
-			localStorage.setItem('dark-mode', false);
-		}
-	}, [y, dark]);
-
-	useEffect(() => {
-		setDark(localStorage.getItem('dark-mode'));
-	}, []);
+	}, [y]);
 
 	return (
 		<div
@@ -98,7 +88,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				<DarkIcon
 					className='fill-current text-white w-6 h-6 ml-4'
 					onClick={() => {
-						setDark((prev) => !prev);
+						toggleDark();
 					}}
 				/>
 			</header>

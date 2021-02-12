@@ -39,7 +39,7 @@ const about = () => {
 		<>
 			<Nav fixed />
 			<Title>About Us</Title>
-			<div className='flex h-screen justify-center items-center'>
+			<div className='flex h-screen justify-center items-center bg-aboutSm lg:bg-aboutLg bg-cover bg-no-repeat'>
 				<h1 className='capitalize text-black dark:text-white font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold duration-300 ease-in-out'>
 					{/* "One day or day one, you decide" */}
 					<Typewriter
