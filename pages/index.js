@@ -1,5 +1,7 @@
 import { useKeenSlider } from 'keen-slider/react';
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+
+// Components
 import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import Section from '../components/Section';
@@ -9,13 +11,11 @@ import TeamSlider from '../components/TeamSlider';
 import Title from '../components/Title';
 import Word from '../components/Word';
 
-export default function Home() {
-	const [dark, setDark] = useState(false);
+// Layout Context
+import { LayoutContext } from '../context/LayoutContext';
 
-	useEffect(() => {
-		console.log(localStorage.getItem('dark-mode'));
-		setDark(localStorage.getItem('dark-mode'));
-	}, [dark]);
+export default function Home() {
+	const { dark } = useContext(LayoutContext);
 
 	return (
 		<>

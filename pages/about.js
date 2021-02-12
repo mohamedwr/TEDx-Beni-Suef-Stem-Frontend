@@ -40,7 +40,7 @@ const about = () => {
 			<Nav fixed />
 			<Title>About Us</Title>
 			<div className='flex h-screen justify-center items-center bg-aboutSm lg:bg-aboutLg bg-cover bg-no-repeat'>
-				<h1 className='capitalize text-black dark:text-white font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold duration-300 ease-in-out'>
+				<h1 className='capitalize text-white font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold duration-300 ease-in-out'>
 					{/* "One day or day one, you decide" */}
 					<Typewriter
 						onInit={(typewriter) => {
@@ -57,7 +57,7 @@ const about = () => {
 								.pauseFor(1000)
 								.deleteAll()
 								.typeString(
-									'<span class="text-ted dark:text-red-500">"One Day</span><span> or </span><span class="text-ted dark:text-red-500">Day One</span><span>, You Decide</span><span class="text-ted dark:text-red-500">"</span>'
+									'<span><span class="text-ted dark:text-red-500">"One Day</span> or <span class="text-ted dark:text-red-500">Day One</span>, You Decide<span class="text-ted dark:text-red-500">"</span></span>'
 								)
 								.start();
 						}}
@@ -65,7 +65,7 @@ const about = () => {
 				</h1>
 			</div>
 			<section className='flex justify-center items-center'>
-				<div className='container py-12 grid grid-cols-1 lg:grid-cols-2 gap-8'>
+				<div className='container py-12 grid grid-cols-1 lg:grid-cols-2 gap-14'>
 					<div>
 						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
 							About Us

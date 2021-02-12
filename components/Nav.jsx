@@ -39,11 +39,9 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 		>
 			<header
 				className={`${
-					fixed
-						? underNavHeight
-							? 'py-5 lg:px-16 px-6'
-							: 'py-6 lg:py-10 lg:px-28 px-10'
-						: 'py-5 lg:px-16 px-6'
+					fixed && underNavHeight
+						? 'py-5 lg:px-12 px-6'
+						: 'py-6 lg:py-10 lg:px-28 px-10'
 				}
 				${autoTransparent ? (underNavHeight ? 'bg-black' : '') : 'bg-black'}
 				${menu ? 'bg-black' : ''}
@@ -54,7 +52,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					className='flex-1 flex justify-between items-center'
 					onClick={() => router.push('/')}
 				>
-					<img src='logoWhite.svg' alt='logo' className='h-12 cursor-pointer' />
+					<img src='logoWhite.png' alt='logo' className='h-12 cursor-pointer' />
 				</div>
 
 				<MenuIcon
