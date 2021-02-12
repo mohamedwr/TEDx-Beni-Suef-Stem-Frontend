@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useWindowScroll } from 'react-use';
 
 import SunIcon from '../public/icons/sun.svg';
-import LampIcon from '../public/icons/lamp.svg';
+import MoonIcon from '../public/icons/moon.svg';
 import { LayoutContext } from '../context/LayoutContext';
 
 // autoTransparent => for controlling in transparent
@@ -18,7 +18,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	const [menu, setMenu] = useState(false);
 	const { dark, toggleDark } = useContext(LayoutContext);
 
-	let DarkIcon = dark ? LampIcon : SunIcon;
+	let LayoutIcon = dark ? MoonIcon : SunIcon;
 
 	const [underNavHeight, setUnderNavHeight] = useState(false);
 	// to get Nav Height
@@ -59,7 +59,6 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					className='pointer-cursor lg:hidden block fill-current text-white h-6 w-6'
 					onClick={() =>
 						setMenu((prev) => {
-							console.log(menu);
 							return !prev;
 						})
 					}
@@ -83,7 +82,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 						</ul>
 					</nav>
 				</div>
-				<DarkIcon
+				<LayoutIcon
 					className='fill-current text-white w-6 h-6 ml-4'
 					onClick={() => {
 						toggleDark();

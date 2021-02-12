@@ -116,12 +116,12 @@ const teams = () => {
 					{ name: 'Eman Saleh', role: 'HR Director', img: '/teams/eman.png' },
 					{
 						name: 'Medhat Atef',
-						role: 'HR Co Director',
+						role: 'Co Director',
 						img: '/teams/medhat_atef.png',
 					},
 					{
 						name: 'Reem Mohamed',
-						role: 'HR Instructor',
+						role: 'Instructor',
 						img: '/cover.jpg',
 					},
 				]}
@@ -141,17 +141,17 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Menna Ayman',
-						role: 'PR Director',
+						role: 'Director',
 						img: '/teams/menna_ayman.png',
 					},
 					{
 						name: 'Mera Ayman',
-						role: 'PR Co Director',
+						role: 'Co Director',
 						img: '/teams/mera_ayman.png',
 					},
 					{
 						name: 'Sara Ashraf',
-						role: 'PR Co Director',
+						role: 'Co Director',
 						img: '/teams/sara_ashraf.png',
 					},
 				]}
@@ -171,13 +171,13 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Habiba',
-						role: 'FR Director',
+						role: 'Director',
 						img: '/teams/habiba.png',
 					},
 					{
-						name: 'leqaa',
-						role: 'FR Co Director',
-						img: '/cover.jpg',
+						name: 'leqaa atef',
+						role: 'Co Director',
+						img: '/teams/leqaa_atef.png',
 					},
 				]}
 				members={[
@@ -196,12 +196,12 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Menna Ibrahim',
-						role: 'SM Director',
-						img: '/cover.jpg',
+						role: 'Director',
+						img: '/teams/menna_ibrahim.png',
 					},
 					{
 						name: 'Amany Essam',
-						role: 'SM Co Director',
+						role: 'Co Director',
 						img: '/teams/amany_essam.png',
 					},
 				]}
@@ -221,12 +221,12 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Shahd Adel',
-						role: 'CW Director',
+						role: 'Director',
 						img: '/teams/shahd_adel.png',
 					},
 					{
 						name: 'Rawda',
-						role: 'CW Co Director',
+						role: 'Co Director',
 						img: '/teams/rawda.png',
 					},
 				]}
@@ -246,8 +246,8 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Shahd Hitham',
-						role: 'GD Supervisor',
-						img: '/cover.jpg',
+						role: 'Supervisor',
+						img: '/teams/shahd_hitham.png',
 					},
 				]}
 				members={[
@@ -266,7 +266,7 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Mohamed Gamal',
-						role: 'VE Director',
+						role: 'Director',
 						img: '/teams/mohamed_gamal.png',
 					},
 				]}
@@ -286,12 +286,12 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Menna Mahmoud',
-						role: 'Couching Director',
+						role: 'Director',
 						img: '/teams/menna_mahmoud.png',
 					},
 					{
 						name: 'Ahmed Abdelhady',
-						role: 'Couching Co Director',
+						role: 'Co Director',
 						img: '/teams/ahmed_abdelhady.png',
 					},
 				]}
@@ -311,12 +311,12 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Renad Wael',
-						role: 'Organizing Director',
+						role: 'Director',
 						img: '/teams/renad_wael.png',
 					},
 					{
 						name: 'Shaza Mohamed',
-						role: 'Organizing Co Director',
+						role: 'Co Director',
 						img: '/teams/shaza_mohamed.png',
 					},
 				]}
@@ -336,12 +336,12 @@ const teams = () => {
 				leaders={[
 					{
 						name: 'Devien George',
-						role: 'TS Director',
+						role: 'Director',
 						img: '/teams/devien_george.png',
 					},
 					{
 						name: 'gassar',
-						role: 'TS Co Director',
+						role: 'Co Director',
 						img: '/teams/gasser.png',
 					},
 				]}
