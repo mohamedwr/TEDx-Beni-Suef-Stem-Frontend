@@ -1,6 +1,5 @@
-import { useKeenSlider } from 'keen-slider/react';
 import { useContext } from 'react';
-import CircularCard from '../components/CircularCard';
+import { useRouter } from 'next/router';
 
 // Components
 import Footer from '../components/Footer';
@@ -11,12 +10,15 @@ import Slider from '../components/Slider';
 import TeamSlider from '../components/TeamSlider';
 import Title from '../components/Title';
 import Word from '../components/Word';
+import Button from '../components/Button';
+import CircularCard from '../components/CircularCard';
 
 // Layout Context
 import { LayoutContext } from '../context/LayoutContext';
 
 export default function Home() {
 	const { dark } = useContext(LayoutContext);
+	const router = useRouter();
 
 	return (
 		<>
@@ -92,10 +94,14 @@ export default function Home() {
 
 					<section className='grid grid-cols-1 md:grid-cols-2 gap-4 py-6'>
 						<div className='flex justify-center items-center space-x-5'>
-							<CircularCard title='crew' num={135} />
+							<CircularCard title='crew' num={135} color='bg-transparent' />
 						</div>
 						<div className='flex justify-center items-center space-x-5'>
-							<CircularCard title='followers' num={3000} />
+							<CircularCard
+								title='followers'
+								num={3000}
+								color='bg-transparent'
+							/>
 						</div>
 					</section>
 
@@ -145,6 +151,14 @@ export default function Home() {
 									},
 								]}
 							/>
+						</div>
+						<div className='flex justify-center items-center pt-4'>
+							<button
+								className={`py-2 px-6 font-roboto font-black border-2 border-ted dark:border-red-500 bg-ted dark:bg-red-500 text-white dark:text-gray-800 text-lg capitalize rounded-lg md:rounded-full`}
+								onClick={() => router.push('/team')}
+							>
+								rest of out team
+							</button>
 						</div>
 					</Section>
 				</div>

@@ -10,6 +10,7 @@ import PersonCard from '../components/PersonCard';
 import Title from '../components/Title';
 import Button from '../components/Button';
 import { useRouter } from 'next/router';
+import Section from '../components/Section';
 
 const about = () => {
 	const router = useRouter();
@@ -45,19 +46,17 @@ const about = () => {
 					<Typewriter
 						onInit={(typewriter) => {
 							typewriter
-								.typeString(
-									'<span class="text-ted dark:text-red-500">One Day</span>'
-								)
+								.typeString('<span class="text-ted">One Day</span>')
 								.typeString('<span> I Will Achieve My Goal...</span>')
 								.pauseFor(1000)
 								.deleteAll()
 								.typeString(
-									"<span>It Is <span class='text-ted dark:text-red-500'>Day</span> Number <span class='text-ted'>One</span> Preparing For My Goal...</span>"
+									"<span>It Is <span class='text-ted'>Day</span> Number <span class='text-ted'>One</span> Preparing For My Goal...</span>"
 								)
 								.pauseFor(1000)
 								.deleteAll()
 								.typeString(
-									'<span><span class="text-ted dark:text-red-500">"One Day</span> or <span class="text-ted dark:text-red-500">Day One</span>, You Decide<span class="text-ted dark:text-red-500">"</span></span>'
+									'<span><span class="text-ted">"One Day</span> or <span class="text-ted">Day One</span>, You Decide<span class="text-ted">"</span></span>'
 								)
 								.start();
 						}}
@@ -66,10 +65,7 @@ const about = () => {
 			</div>
 			<section className='flex justify-center items-center'>
 				<div className='container py-12 grid grid-cols-1 lg:grid-cols-2 gap-14'>
-					<div>
-						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
-							About Us
-						</h2>
+					<Section title='About Us'>
 						<div className='flex lg:flex-row flex-col'>
 							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white duration-300 ease-in-out'>
 								A peep at some distant orb has power to raise and purify our
@@ -86,11 +82,9 @@ const about = () => {
 								the grander poets. It always does one good.
 							</p>
 						</div>
-					</div>
-					<div>
-						<h2 className='text-4xl font-bold font-roboto pb-4 text-red-500'>
-							Mission & Vision
-						</h2>
+					</Section>
+
+					<Section title='Mission & Vision'>
 						<div className='flex lg:flex-row flex-col'>
 							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white duration-300 ease-in-out'>
 								<Word>Mission:</Word> To spread knowledge and outstanding ideas
@@ -111,7 +105,7 @@ const about = () => {
 								and our lovely country, Egypt.
 							</p>
 						</div>
-					</div>
+					</Section>
 				</div>
 			</section>
 			<Footer />
