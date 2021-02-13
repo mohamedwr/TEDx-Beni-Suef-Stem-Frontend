@@ -343,7 +343,7 @@ const teams = () => {
 						img: '/teams/devien_george.png',
 					},
 					{
-						name: 'gassar',
+						name: 'Gasser Abdelraziik',
 						role: 'Co Director',
 						img: '/teams/gasser.png',
 					},

@@ -5,6 +5,7 @@ const LayoutContext = createContext();
 
 const LayoutProvider = ({ children }) => {
 	const [dark, setDark, remove] = useLocalStorage('dark-mode');
+
 	const toggleDark = () => {
 		if (dark) remove();
 		else setDark(true);

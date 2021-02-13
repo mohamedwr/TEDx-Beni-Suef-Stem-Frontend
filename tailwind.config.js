@@ -6,8 +6,8 @@ module.exports = {
 			backgroundImage: (theme) => ({
 				mainImage: "url('/cover.jpg')",
 				errImage: "url('/error.png')",
-				aboutLg: "url('/backgroundAboutlg.png')",
-				aboutSm: "url('/backgroundAboutsm.png')",
+				aboutLg: "url('/backgroundAboutlg.svg')",
+				aboutSm: "url('/backgroundAboutsm.svg')",
 			}),
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
