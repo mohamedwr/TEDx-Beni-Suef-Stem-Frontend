@@ -14,6 +14,7 @@ module.exports = {
 			},
 			zIndex: {
 				'-10': '-10',
+				60: '60',
 			},
 			colors: {
 				ted: '#f34423',

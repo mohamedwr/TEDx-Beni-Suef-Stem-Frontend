@@ -40,7 +40,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 		<div
 			className={`${
 				fixed ? 'fixed inset-x-0' : 'sticky inset-0'
-			} z-50 select-none`}
+			} z-40 select-none`}
 			ref={divRef}
 		>
 			<header
