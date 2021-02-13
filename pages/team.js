@@ -107,13 +107,13 @@ const teams = () => {
 			</section>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
 				name='HR Committee'
 				leaders={[
-					{ name: 'Eman Saleh', role: 'HR Director', img: '/teams/eman.png' },
+					{ name: 'Eman Saleh', role: 'Director', img: '/teams/eman.png' },
 					{
 						name: 'Medhat Atef',
 						role: 'Co Director',
@@ -126,14 +126,17 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -156,18 +159,18 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
-				name='FoundRasing Committee'
+				name='FundRasing Committee'
 				leaders={[
 					{
 						name: 'Habiba',
@@ -181,14 +184,14 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -206,14 +209,14 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -231,14 +234,14 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -251,14 +254,14 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -271,18 +274,18 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
-				name='Couching Committee'
+				name='Coaching Committee'
 				leaders={[
 					{
 						name: 'Menna Mahmoud',
@@ -296,14 +299,14 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -321,14 +324,14 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
 			<div className='container'>
-				<Separator color='bg-red-500' />
+				<Separator />
 			</div>
 
 			<TeamSection
@@ -346,9 +349,9 @@ const teams = () => {
 					},
 				]}
 				members={[
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'HR Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
+					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 			<Footer />

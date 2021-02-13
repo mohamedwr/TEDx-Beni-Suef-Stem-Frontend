@@ -3,12 +3,41 @@ import { useKeenSlider } from 'keen-slider/react';
 
 // Components
 import PersonCard from './PersonCard';
-import RightArrow from '../public/right-arrow.svg';
-import LeftArrow from '../public/left-arrow.svg';
+import RightArrow from '../public/icons/right-arrow.svg';
+import LeftArrow from '../public/icons/left-arrow.svg';
+
+const ArrowLeft = (props) => {
+	const disableId = props.disabled ? ' arrow--disabled' : '';
+	return (
+		<svg
+			onClick={props.onClick}
+			className={'arrow arrow--left' + disableId}
+			xmlns='http://www.w3.org/2000/svg'
+			viewBox='0 0 24 24'
+		>
+			<path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
+		</svg>
+	);
+};
+
+const ArrowRight = (props) => {
+	const disableId = props.disabled ? ' arrow--disabled' : '';
+	return (
+		<svg
+			onClick={props.onClick}
+			className={'arrow arrow--right' + disableId}
+			xmlns='http://www.w3.org/2000/svg'
+			viewBox='0 0 24 24'
+		>
+			<path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
+		</svg>
+	);
+};
 
 const TeamSlider = ({
 	persons,
 	arrows = false,
+	dots = false,
 	loop = false,
 	center = false,
 	md = 3,
@@ -61,27 +90,30 @@ const TeamSlider = ({
 				))}
 			</div>
 			{slider && arrows && (
-				<div className='flex justify-between lg:justify-end items-center space-x-5 mt-5 px-8'>
-					<LeftArrow
+				<>
+					<ArrowLeft
 						onClick={(e) => e.stopPropagation() || slider.prev()}
-						className={`fill-current 
-						${
-							currentSlide === 0
-								? 'text-gray-400 border-gray-400 hover:text-white hover:bg-gray-400 cursor-not-allowed'
-								: 'text-red-500 border-red-500 hover:text-white hover:bg-red-500 cursor-pointer'
-						} 
-						h-16 p-3 rounded-full border-2 duration-300 ease-in-out`}
+						disabled={currentSlide === 0}
 					/>
-					<RightArrow
+					<ArrowRight
 						onClick={(e) => e.stopPropagation() || slider.next()}
-						className={`fill-current 
-						${
-							currentSlide === slider.details().size - 1
-								? 'text-gray-400 border-gray-400 hover:text-white hover:bg-gray-400 cursor-not-allowed'
-								: 'text-red-500 border-red-500 hover:text-white hover:bg-red-500 cursor-pointer'
-						} 
-						h-16 p-3 rounded-full border-2 duration-300 ease-in-out`}
+						disabled={currentSlide === slider.details().size - 1}
 					/>
+				</>
+			)}
+			{slider && dots && (
+				<div className='dots flex md:hidden'>
+					{[...Array(slider.details().size).keys()].map((idx) => {
+						return (
+							<button
+								key={idx}
+								onClick={() => {
+									slider.moveToSlideRelative(idx);
+								}}
+								className={'dot' + (currentSlide === idx ? ' active' : '')}
+							/>
+						);
+					})}
 				</div>
 			)}
 		</>

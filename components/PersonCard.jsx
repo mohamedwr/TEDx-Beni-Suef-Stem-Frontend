@@ -9,7 +9,7 @@ const PersonCard = ({ img, name, role, isSlide, grayscale = false }) => {
 		<div
 			className={`${
 				isSlide ? 'keen-slider__slide' : ''
-			} inline-flex flex-col justify-start items-center`}
+			} inline-flex flex-col justify-start items-center select-none`}
 		>
 			<div
 				className='rounded-full bg-gray-600 dark:bg-gray-100 duration-200 ease-in-out hover:bg-black dark:hover:bg-black mb-4 relative overflow-hidden border border-black'

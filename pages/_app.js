@@ -1,5 +1,6 @@
 import { LayoutProvider } from '../context/LayoutContext';
 import '../styles/globals.css';
+import '../components/TeamSlider.css';
 
 function MyApp({ Component, pageProps }) {
 	return (

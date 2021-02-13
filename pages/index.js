@@ -1,5 +1,6 @@
 import { useKeenSlider } from 'keen-slider/react';
 import { useContext } from 'react';
+import CircularCard from '../components/CircularCard';
 
 // Components
 import Footer from '../components/Footer';
@@ -60,7 +61,7 @@ export default function Home() {
 						</div>
 					</Section>
 
-					<Separator color='bg-red-500' />
+					<Separator />
 
 					<Section title='About Us'>
 						<div className='flex lg:flex-row flex-col'>
@@ -87,50 +88,64 @@ export default function Home() {
 						</div>
 					</Section>
 
-					<Separator color='bg-red-500' />
+					<Separator />
+
+					<section className='grid grid-cols-1 md:grid-cols-2 gap-4 py-6'>
+						<div className='flex justify-center items-center space-x-5'>
+							<CircularCard title='crew' num={135} />
+						</div>
+						<div className='flex justify-center items-center space-x-5'>
+							<CircularCard title='followers' num={3000} />
+						</div>
+					</section>
+
+					<Separator />
 
 					<Section
 						title='TEDx Youth@BeniSuefSTEM Management Board'
 						biggerMargin
 					>
-						<TeamSlider
-							loop
-							center
-							name=''
-							color='text-red-500'
-							persons={[
-								{
-									name: 'Yussof Waleed',
-									role: 'Chairman',
-									img: '/teams/leaders/Chairman.png',
-								},
-								{
-									name: 'Ahmed Sayed',
-									role: 'Co-Chairman',
-									img: '/teams/leaders/Co-Chairman.png',
-								},
-								{
-									name: 'Salma Ahmed',
-									role: 'CEO',
-									img: '/teams/leaders/CEO.png',
-								},
-								{
-									name: 'Salma Ahmed',
-									role: 'Multi-Media Chief',
-									img: '/teams/leaders/Multi-Media.png',
-								},
-								{
-									name: 'Mohamed Hisham',
-									role: 'Digital-Marketing Chief',
-									img: '/teams/leaders/Digital-Marketing-Chief.png',
-								},
-								{
-									name: 'Karem Nabil',
-									role: 'PR & FR Chief',
-									img: '/teams/leaders/PR-&-FR.png',
-								},
-							]}
-						/>
+						<div className='relative'>
+							<TeamSlider
+								loop
+								dots
+								center
+								name=''
+								color='text-red-500'
+								persons={[
+									{
+										name: 'Yussof Waleed',
+										role: 'Chairman',
+										img: '/teams/leaders/Chairman.png',
+									},
+									{
+										name: 'Ahmed Sayed',
+										role: 'Co-Chairman',
+										img: '/teams/leaders/Co-Chairman.png',
+									},
+									{
+										name: 'Salma Ahmed',
+										role: 'CEO',
+										img: '/teams/leaders/CEO.png',
+									},
+									{
+										name: 'Salma Ahmed',
+										role: 'Multi-Media Chief',
+										img: '/teams/leaders/Multi-Media.png',
+									},
+									{
+										name: 'Mohamed Hisham',
+										role: 'Digital-Marketing Chief',
+										img: '/teams/leaders/Digital-Marketing-Chief.png',
+									},
+									{
+										name: 'Karem Nabil',
+										role: 'PR & FR Chief',
+										img: '/teams/leaders/PR-&-FR.png',
+									},
+								]}
+							/>
+						</div>
 					</Section>
 				</div>
 			</section>

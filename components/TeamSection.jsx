@@ -4,17 +4,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const TeamSection = ({ name, leaders, members }) => {
 	const [visible, setVisible] = useState(false);
-	// const PRTeamPersons = [
-	// 	{ name: 'ahmed mohamed', role: 'CEO', img: '/cover.jpg' },
-	// 	{ name: 'khaled mohamed', role: 'Head of WB', img: '/cover.jpg' },
-	// 	{ name: 'george mohamed', role: 'CEO', img: '/cover.jpg' },
-	// ];
 
 	useEffect(() => {
 		if (visible == true) {
 			setTimeout(() => {
 				setVisible(false);
-			}, 15000);
+			}, 1500000);
 		}
 		return () => {
 			clearTimeout();
@@ -23,7 +18,7 @@ const TeamSection = ({ name, leaders, members }) => {
 
 	return (
 		<section className='container pt-8 pb-4'>
-			<div className='flex justify-between items-center mb-8'>
+			<div className='flex flex-col md:flex-row md:justify-between md:items-center mb-8 space-y-4 md:space-y-0'>
 				<h2
 					className={`text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 text-ted dark:text-red-500`}
 				>
@@ -34,7 +29,7 @@ const TeamSection = ({ name, leaders, members }) => {
 						!visible
 							? 'bg-ted dark:bg-red-500 text-white dark:text-gray-800'
 							: 'bg-transparent text-ted dark:text-red-500'
-					} text-lg font-bold uppercase rounded-full`}
+					} text-lg font-bold uppercase rounded-lg md:rounded-full`}
 					onClick={() => setVisible((prev) => !prev)}
 				>
 					{!visible ? 'View Members' : 'Hide Members'}
@@ -45,6 +40,7 @@ const TeamSection = ({ name, leaders, members }) => {
 				md={1}
 				lg={Math.min(leaders.length, 3)}
 				xl={Math.min(leaders.length, 3)}
+				dots
 			/>
 			<br />
 			<AnimatePresence>
@@ -54,9 +50,9 @@ const TeamSection = ({ name, leaders, members }) => {
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
 						transition={{ duration: 0.5 }}
-						className='origin-top'
+						className='origin-top relative'
 					>
-						<TeamSlider persons={members} grayscale />
+						<TeamSlider persons={members} grayscale arrows />
 					</motion.div>
 				)}
 			</AnimatePresence>

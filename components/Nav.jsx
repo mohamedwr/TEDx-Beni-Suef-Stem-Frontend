@@ -1,12 +1,16 @@
 import { createRef, useContext, useEffect, useState } from 'react';
 import NavLink from './NavLink';
-import MenuIcon from '../public/menu.svg';
 import { useRouter } from 'next/router';
 import { useWindowScroll } from 'react-use';
 
+// Context(s)
+import { LayoutContext } from '../context/LayoutContext';
+
+// SVG(s)
+import OpenIcon from '../public/icons/menu.svg';
+import CloseIcon from '../public/icons/close.svg';
 import SunIcon from '../public/icons/sun.svg';
 import MoonIcon from '../public/icons/moon.svg';
-import { LayoutContext } from '../context/LayoutContext';
 
 // autoTransparent => for controlling in transparent
 // NavHeight => navbar height
@@ -19,6 +23,8 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	const { dark, toggleDark } = useContext(LayoutContext);
 
 	let LayoutIcon = dark ? MoonIcon : SunIcon;
+
+	let MenuIcon = menu ? CloseIcon : OpenIcon;
 
 	const [underNavHeight, setUnderNavHeight] = useState(false);
 	// to get Nav Height
@@ -40,8 +46,8 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 			<header
 				className={`${
 					fixed && underNavHeight
-						? 'py-5 lg:px-12 px-6'
-						: 'py-6 lg:py-10 lg:px-28 px-10'
+						? 'py-5 xl:px-12 px-6'
+						: 'py-6 xl:py-10 xl:px-28 px-10'
 				}
 				${autoTransparent ? (underNavHeight ? 'bg-black' : '') : 'bg-black'}
 				${menu ? 'bg-black' : ''}
@@ -54,7 +60,12 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				>
 					<img src='logoWhite.png' alt='logo' className='h-12 cursor-pointer' />
 				</div>
-
+				<LayoutIcon
+					className='fill-current text-white w-6 h-6 mr-4 block md:hidden'
+					onClick={() => {
+						toggleDark();
+					}}
+				/>
 				<MenuIcon
 					className='pointer-cursor lg:hidden block fill-current text-white h-6 w-6'
 					onClick={() =>
@@ -65,6 +76,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				/>
 
 				{/* Nav */}
+
 				<div
 					className={`${
 						menu ? 'block' : 'hidden'
@@ -83,7 +95,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					</nav>
 				</div>
 				<LayoutIcon
-					className='fill-current text-white w-6 h-6 ml-4'
+					className='fill-current text-white w-6 h-6 ml-4 hidden md:block'
 					onClick={() => {
 						toggleDark();
 					}}
