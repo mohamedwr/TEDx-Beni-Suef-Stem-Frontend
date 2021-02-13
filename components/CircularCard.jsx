@@ -20,13 +20,15 @@ const CircularCard = ({ title, num, color = 'bg-red-500' }) => {
 			start();
 			setStarted(true);
 		}
+		console.log(top, y);
 	}, [y]);
 
 	const { countUp, start } = useCountUp({
 		start: 0,
 		end: num,
 		duration: 3,
-		delay: 1000,
+		delay: 3000,
+		useEasing: true,
 	});
 
 	return (
