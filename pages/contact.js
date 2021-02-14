@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 // Components
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Title from '../components/Title';
 import Particle from '../components/Particle';
-
-//
 
 const contact = () => {
 	useEffect(() => {
@@ -75,10 +72,6 @@ const contact = () => {
 						</div>
 					</div>
 				</div>
-				<MessengerCustomerChat
-					pageId='100148515225265'
-					appId='884572085427135'
-				/>
 			</section>
 			<Footer />
 		</>

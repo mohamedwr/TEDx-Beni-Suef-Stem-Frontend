@@ -71,7 +71,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-evenly items-center flex-wrap'>
+					<div className='flex justify-center items-center flex-wrap'>
 						<PersonCard
 							name='Ahmed Sayed'
 							role='Co-Chairman'
@@ -84,7 +84,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-evenly items-center flex-wrap'>
+					<div className='flex justify-center items-center flex-wrap'>
 						<PersonCard
 							name='Salma Ahmed'
 							role='Multi-Media Chief'
