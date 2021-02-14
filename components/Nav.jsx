@@ -58,7 +58,11 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					className='flex-1 flex justify-between items-center'
 					onClick={() => router.push('/')}
 				>
-					<img src='logoWhite.png' alt='logo' className='h-12 cursor-pointer' />
+					<img
+						src='/logoWhite.png'
+						alt='logo'
+						className='h-12 cursor-pointer'
+					/>
 				</div>
 				<LayoutIcon
 					className='fill-current text-white w-6 h-6 mr-4 block md:hidden'

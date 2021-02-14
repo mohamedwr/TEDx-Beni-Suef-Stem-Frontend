@@ -122,7 +122,7 @@ const teams = () => {
 					{
 						name: 'Reem Mohamed',
 						role: 'Instructor',
-						img: '/cover.jpg',
+						img: '/teams/reem_mohamed.png',
 					},
 				]}
 				members={[

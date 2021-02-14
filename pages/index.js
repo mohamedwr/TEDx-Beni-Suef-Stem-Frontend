@@ -157,7 +157,7 @@ export default function Home() {
 								className={`py-2 px-6 font-roboto font-black border-2 border-ted dark:border-red-500 bg-ted dark:bg-red-500 text-white dark:text-gray-800 text-lg capitalize rounded-lg md:rounded-full`}
 								onClick={() => router.push('/team')}
 							>
-								rest of out team
+								rest of our team
 							</button>
 						</div>
 					</Section>
