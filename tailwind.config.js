@@ -3,6 +3,9 @@ module.exports = {
 	darkMode: 'class', // or 'media' or 'class'
 	theme: {
 		extend: {
+			borderWidth: {
+				16: '16px',
+			},
 			backgroundImage: (theme) => ({
 				mainImage: "url('/cover.jpg')",
 				errImage: "url('/error.png')",
@@ -18,6 +21,7 @@ module.exports = {
 			},
 			colors: {
 				ted: '#f34423',
+				'red-500-alpha': 'rgba(239, 68, 68, 0.75)',
 			},
 			rotate: {
 				360: '360deg',
