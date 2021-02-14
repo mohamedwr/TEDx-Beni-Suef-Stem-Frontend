@@ -86,11 +86,11 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					<nav className='py-6 lg:py-0'>
 						<ul className='flex flex-col lg:flex-row items-center justify-between text-white space-x-0 space-y-4 lg:space-x-4 lg:space-y-0'>
 							<NavLink link='home' path='/' />
+							<NavLink link='news' path='news' />
 							<NavLink link='about us' path='about' />
 							<NavLink link='our team' path='team' />
 							<NavLink link='contact us' path='contact' />
 							<NavLink link='events news' soon />
-							<NavLink link='get certified' soon />
 						</ul>
 					</nav>
 				</div>
