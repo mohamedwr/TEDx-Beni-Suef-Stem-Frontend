@@ -10,7 +10,7 @@ const Card = () => {
 			onMouseOut={() => setIsHover(false)}
 		>
 			<motion.img
-				animate={isHover ? { scale: 1.15, filter: 'brightness(0.7)' } : {}}
+				animate={isHover ? { filter: 'brightness(0.7)' } : {}}
 				transition={{ type: 'spring', stiffness: 150 }}
 				class='absolute rounded-xl object-cover border-l-16 border-red-500'
 				src='/cover.jpg'
