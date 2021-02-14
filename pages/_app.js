@@ -1,4 +1,8 @@
 import { useEffect } from 'react';
+import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
+
+// Components
+import SideLoader from '../components/SideLoader';
 
 // Global Styles
 import '../styles/globals.css';
@@ -8,7 +12,6 @@ import '../components/TeamSlider.css';
 
 // Contexts
 import { LayoutProvider } from '../context/LayoutContext';
-import SideLoader from '../components/SideLoader';
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {
@@ -18,6 +21,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<LayoutProvider>
 			<SideLoader />
+			<MessengerCustomerChat pageId='100148515225265' appId='884572085427135' />
 			<Component {...pageProps} />
 		</LayoutProvider>
 	);

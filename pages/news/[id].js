@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
+
+// Components
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
 const postPage = () => {
+	const router = useRouter();
 	return (
 		<>
 			<Nav />
@@ -37,6 +41,14 @@ const postPage = () => {
 					temporibus deleniti facere. Quo ullam possimus excepturi deleniti
 					vero, minus dolores commodi nobis.
 				</p>
+				<div className='flex justify-center items-center'>
+					<button
+						className='py-4 px-12 font-roboto bg-red-500 text-white text-xl font-bold uppercase rounded-full shadow-md'
+						onClick={() => router.push('/news')}
+					>
+						Back
+					</button>
+				</div>
 			</div>
 			<Footer />
 		</>

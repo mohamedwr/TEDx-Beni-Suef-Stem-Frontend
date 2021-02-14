@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 const Card = () => {
 	const [isHover, setIsHover] = useState(false);
+	const router = useRouter();
 	return (
 		<div
 			class='md:flex aspect-h-9 aspect-w-16 bg-gray-100 rounded-xl overflow-hidden relative select-none'
@@ -31,6 +33,7 @@ const Card = () => {
 					isHover ? { width: '100%', opacity: 1 } : { width: '0%', opacity: 0 }
 				}
 				transition={{ type: 'keyframes', easings: 'easeInOut' }}
+				onClick={() => router.push('/news/55')}
 			>
 				<button className='py-4 px-8 font-roboto bg-ted text-white text-xl font-bold uppercase rounded-full shadow-md'>
 					View Post
