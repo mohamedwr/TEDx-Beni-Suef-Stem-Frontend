@@ -2,14 +2,23 @@ import 'keen-slider/keen-slider.min.css';
 import { useState } from 'react';
 import XLetter from '../public/x.svg';
 
-const PersonCard = ({ img, name, role, isSlide, grayscale = false }) => {
+const PersonCard = ({
+	img,
+	name,
+	role,
+	isSlide,
+	grayscale = false,
+	margin = false,
+}) => {
 	const [hover, setHover] = useState(false);
 
 	return (
 		<div
 			className={`${
 				isSlide ? 'keen-slider__slide' : ''
-			} inline-flex flex-col justify-start items-center select-none  sm:mx-12`}
+			} inline-flex flex-col justify-start items-center select-none ${
+				margin ? 'sm:mx-12' : ''
+			}`}
 		>
 			<div
 				className='rounded-full bg-gray-600 dark:bg-gray-100 duration-200 ease-in-out hover:bg-black dark:hover:bg-black mb-4 relative overflow-hidden border border-black'

@@ -68,6 +68,7 @@ const teams = () => {
 							name='Yussof Waleed'
 							role='Chairman'
 							img='/teams/leaders/Chairman.png'
+							margin
 						/>
 					</div>
 
@@ -76,11 +77,13 @@ const teams = () => {
 							name='Ahmed Sayed'
 							role='Co-Chairman'
 							img='/teams/leaders/Co-Chairman.png'
+							margin
 						/>
 						<PersonCard
 							name='Salma Ahmed'
 							role='CEO'
 							img='/teams/leaders/CEO.png'
+							margin
 						/>
 					</div>
 
@@ -89,18 +92,21 @@ const teams = () => {
 							name='Salma Ahmed'
 							role='Multi-Media Chief'
 							img='/teams/leaders/Multi-Media.png'
+							margin
 						/>
 
 						<PersonCard
 							name='Mohamed Hisham'
 							role='Digital-Marketing Chief'
 							img='/teams/leaders/Digital-Marketing-Chief.png'
+							margin
 						/>
 
 						<PersonCard
 							name='Karem Nabil'
 							role='PR & FR Chief'
 							img='/teams/leaders/PR-&-FR.png'
+							margin
 						/>
 					</div>
 				</div>
