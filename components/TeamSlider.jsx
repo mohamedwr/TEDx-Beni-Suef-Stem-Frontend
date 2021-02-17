@@ -75,7 +75,7 @@ const TeamSlider = ({
 
 	return (
 		<>
-			<div ref={sliderRef} className='keen-slider cursor-move'>
+			<div ref={sliderRef} className='cursor-move keen-slider'>
 				{persons.map((person) => (
 					<PersonCard
 						isSlide
@@ -100,7 +100,7 @@ const TeamSlider = ({
 				</>
 			)}
 			{slider && dots && (
-				<div className='dots flex md:hidden'>
+				<div className='flex dots md:hidden'>
 					{[...Array(slider.details().size).keys()].map((idx) => {
 						return (
 							<button

@@ -19,7 +19,7 @@ const Slider = ({ images = [] }) => (
 			<img
 				key={image}
 				src={image}
-				className='w-screen h-screen object-cover object-center'
+				className='object-cover object-center w-screen h-screen'
 			/>
 		))}
 	</SlickSlider>

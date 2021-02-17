@@ -19,10 +19,10 @@ const contact = () => {
 		<>
 			<Nav />
 			<Title>Contact Us</Title>
-			<section className='flex justify-center items-center z-20'>
+			<section className='z-20 flex items-center justify-center'>
 				<Particle />
 				<div className='container py-10 space-y-5'>
-					<h2 className='text-4xl font-bold font-roboto pb-4 uppercase text-center text-white'>
+					<h2 className='pb-4 text-4xl font-bold text-center text-white uppercase font-roboto'>
 						contact us
 					</h2>
 					<div className='flex items-center justify-center '>
@@ -33,7 +33,7 @@ const contact = () => {
 									<span className='text-white'>Full Name</span>
 									<input
 										type='text'
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100'
+										className='block w-full mt-1 duration-200 ease-in-out bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:bg-white focus:ring-0 opacity-70 hover:opacity-100 focus:opacity-100'
 										placeholder='John Doe'
 									/>
 								</label>
@@ -41,7 +41,7 @@ const contact = () => {
 									<span className='text-white'>Email Address</span>
 									<input
 										type='email'
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100'
+										className='block w-full mt-1 duration-200 ease-in-out bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:bg-white focus:ring-0 opacity-70 hover:opacity-100 focus:opacity-100'
 										placeholder='john@example.com'
 									/>
 								</label>
@@ -49,21 +49,21 @@ const contact = () => {
 									<span className='text-white'>Subject</span>
 									<input
 										type='email'
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100'
+										className='block w-full mt-1 duration-200 ease-in-out bg-gray-100 border-transparent rounded-md focus:border-gray-500 focus:bg-white focus:ring-0 opacity-70 hover:opacity-100 focus:opacity-100'
 										placeholder='Hello There'
 									/>
 								</label>
 								<label className='block'>
 									<span className='text-white'>Message</span>
 									<textarea
-										className='mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 duration-200 ease-in-out opacity-70 hover:opacity-100 focus:opacity-100 resize-none'
+										className='block w-full mt-1 duration-200 ease-in-out bg-gray-100 border-transparent rounded-md resize-none focus:border-gray-500 focus:bg-white focus:ring-0 opacity-70 hover:opacity-100 focus:opacity-100'
 										rows='6'
 										placeholder='Enter Message...'
 									></textarea>
 								</label>
 								<button
 									type='submit'
-									className='py-3 px-2 font-roboto bg-red-500 text-white text-xl font-bold uppercase rounded-full'
+									className='px-2 py-3 text-xl font-bold text-white uppercase bg-red-500 rounded-full font-roboto'
 								>
 									Submit
 								</button>

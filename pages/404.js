@@ -5,15 +5,15 @@ const Error = () => {
 	const router = useRouter();
 	return (
 		<>
-			<div className='flex h-screen w-screen bg-errImage bg-no-repeat bg-cover relative'>
-				<div className='flex flex-col justify-center items-center h-full w-full z-20 space-y-6'>
+			<div className='relative flex w-screen h-screen bg-no-repeat bg-cover bg-errImage'>
+				<div className='z-20 flex flex-col items-center justify-center w-full h-full space-y-6'>
 					<img src='/logoWhite.png' className='h-36' />
-					<h1 className='text-9xl text-red-500 font-roboto font-bold tracking-wide'>
+					<h1 className='font-bold tracking-wide text-red-500 text-9xl font-roboto'>
 						404
 					</h1>
 					<Button text='Back To Home' onClick={() => router.push('/')} />
 				</div>
-				<div className='z-10 absolute inset-0 bg-black opacity-70 flex flex-col justify-center items-center'></div>
+				<div className='absolute inset-0 z-10 flex flex-col items-center justify-center bg-black opacity-70'></div>
 			</div>
 		</>
 	);

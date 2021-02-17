@@ -28,10 +28,6 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 
 	let LayoutIcon = dark ? MoonIcon : SunIcon;
 
-	useEffect(() => {
-		console.log(LayoutIcon);
-	}, [LayoutIcon]);
-
 	let MenuIcon = menu ? CloseIcon : OpenIcon;
 
 	const { divRef, underNavHeight } = useHeight();
@@ -55,7 +51,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 			>
 				{/* Logo */}
 				<div
-					className='flex-1 flex justify-between items-center'
+					className='flex items-center justify-between flex-1'
 					onClick={() => router.push('/')}
 				>
 					<img
@@ -66,12 +62,12 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				</div>
 
 				<LayoutIcon
-					className='fill-current text-white w-6 h-6 mr-4 block md:hidden'
+					className='block w-6 h-6 mr-4 text-white fill-current md:hidden'
 					onClick={() => toggleDark()}
 				/>
 
 				<MenuIcon
-					className='pointer-cursor lg:hidden block fill-current text-white h-6 w-6'
+					className='block w-6 h-6 text-white fill-current pointer-cursor lg:hidden'
 					onClick={() =>
 						setMenu((prev) => {
 							return !prev;
@@ -88,18 +84,18 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					id='menu'
 				>
 					<nav className='py-6 lg:py-0'>
-						<ul className='flex flex-col lg:flex-row items-center justify-between text-white space-x-0 space-y-4 lg:space-x-4 lg:space-y-0'>
+						<ul className='flex flex-col items-center justify-between space-x-0 space-y-4 text-white lg:flex-row lg:space-x-4 lg:space-y-0'>
 							<NavLink link='home' path='/' />
-							<NavLink link='news' path='news' />
-							<NavLink link='about us' path='about' />
-							<NavLink link='our team' path='team' />
-							<NavLink link='contact us' path='contact' />
+							<NavLink link='news' path='/news' />
+							<NavLink link='about us' path='/about' />
+							<NavLink link='our team' path='/team' />
+							<NavLink link='contact us' path='/contact' />
 							<NavLink link='events news' soon />
 						</ul>
 					</nav>
 				</div>
 				<LayoutIcon
-					className='fill-current text-white w-6 h-6 ml-4 hidden md:block'
+					className='hidden w-6 h-6 ml-4 text-white fill-current md:block'
 					onClick={() => toggleDark()}
 				/>
 			</header>

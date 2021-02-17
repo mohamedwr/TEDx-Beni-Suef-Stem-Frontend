@@ -18,7 +18,7 @@ const TeamSection = ({ name, leaders, members }) => {
 
 	return (
 		<section className='container pt-8 pb-4'>
-			<div className='flex flex-col md:flex-row md:justify-between md:items-center mb-8 space-y-4 md:space-y-0'>
+			<div className='flex flex-col mb-8 space-y-4 md:flex-row md:justify-between md:items-center md:space-y-0'>
 				<h2
 					className={`text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 text-ted dark:text-red-500`}
 				>
@@ -50,7 +50,7 @@ const TeamSection = ({ name, leaders, members }) => {
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
 						transition={{ duration: 0.5 }}
-						className='origin-top relative'
+						className='relative origin-top'
 					>
 						<TeamSlider persons={members} grayscale arrows />
 					</motion.div>

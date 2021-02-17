@@ -16,7 +16,7 @@ const CircularCard = ({ title, num, color = 'bg-red-500' }) => {
 	}, []);
 
 	useEffect(() => {
-		if (top <= y && !started) {
+		if (top - divRef.current.clientHeight * 2 <= y && !started) {
 			start();
 			setStarted(true);
 		}
@@ -25,8 +25,8 @@ const CircularCard = ({ title, num, color = 'bg-red-500' }) => {
 	const { countUp, start } = useCountUp({
 		start: 0,
 		end: num,
-		duration: 3,
-		delay: 3000,
+		duration: 8,
+		delay: 2000,
 		useEasing: true,
 	});
 
@@ -36,7 +36,7 @@ const CircularCard = ({ title, num, color = 'bg-red-500' }) => {
 			className={`h-64 w-64 ${color} rounded-full border-4 border-ted flex flex-col justify-center items-center font-bold font-roboto`}
 		>
 			<span className='text-7xl dark:text-white'>{countUp}</span>
-			<h3 className='text-2xl uppercase text-red-500'>{title}</h3>
+			<h3 className='text-2xl text-red-500 uppercase'>{title}</h3>
 		</div>
 	);
 };

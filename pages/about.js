@@ -11,6 +11,7 @@ import Title from '../components/Title';
 import Button from '../components/Button';
 import { useRouter } from 'next/router';
 import Section from '../components/Section';
+import RectangleCard from '../components/RectangleCard';
 
 const about = () => {
 	const router = useRouter();
@@ -40,8 +41,8 @@ const about = () => {
 		<>
 			<Nav fixed />
 			<Title>About Us</Title>
-			<div className='flex h-screen justify-center items-center bg-aboutSm lg:bg-aboutLg bg-cover bg-no-repeat'>
-				<h1 className='capitalize text-white font-roboto text-4xl md:text-5xl lg:text-7xl text-center font-bold duration-300 ease-in-out'>
+			<div className='flex items-center justify-center h-screen bg-no-repeat bg-cover bg-aboutSm lg:bg-aboutLg'>
+				<h1 className='text-4xl font-bold text-center text-white capitalize duration-300 ease-in-out font-roboto md:text-5xl lg:text-7xl'>
 					{/* "One day or day one, you decide" */}
 					<Typewriter
 						onInit={(typewriter) => {
@@ -63,30 +64,33 @@ const about = () => {
 					/>
 				</h1>
 			</div>
-			<section className='flex justify-center items-center'>
-				<div className='container py-12 grid grid-cols-1 lg:grid-cols-2 gap-14'>
+			<section className='flex items-center justify-center'>
+				<div className='container grid grid-cols-1 py-12 lg:grid-cols-2 gap-14'>
 					<Section title='About Us'>
-						<div className='flex lg:flex-row flex-col'>
-							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white duration-300 ease-in-out'>
-								A peep at some distant orb has power to raise and purify our
-								thoughts like a strain of sacred music, or a noble picture, or a
-								passage from the grander poets. It always does one good. A peep
-								at some distant orb has power to raise and purify our thoughts
-								like a strain of sacred music, or a noble picture, or a passage
-								from the grander poets. It always does one good. A peep at some
-								distant orb has power to raise and purify our thoughts like a
-								strain of sacred music, or a noble picture, or a passage from
-								the grander poets. It always does one good. A peep at some
-								distant orb has power to raise and purify our thoughts like a
-								strain of sacred music, or a noble picture, or a passage from
-								the grander poets. It always does one good.
+						<div className='flex flex-col lg:flex-row'>
+							<p className='pl-4 text-lg leading-relaxed text-justify text-black duration-300 ease-in-out border-l-8 border-red-500 rounded font-cairo md:text-left dark:text-white'>
+								“IDEAS WORTH SPREADING”, under this slogan,
+								TEDxYouth@BeniSuefSTEM has arisen as a nonprofit organization.
+								It holds events where Technology, Entertainment, Design,
+								science, business, and global issues converge. Hence, we set up
+								a community of curious souls to spread various thoughts through
+								our local event with shined speakers who have meaningful
+								messages and aspire to put their unique fingerprints. Thus, our
+								mission as a TEDx distributor in BS STEM School is to spread
+								TED's valuable aims in BeniSuef, exposing insights, beliefs, and
+								inspirations. They can rise with us. It makes the subtle ideas
+								soar in the sky of our society because we have the faith in
+								every thought which was rejected before. And we spot the light
+								on; the intrinsic ideas deserve the opportunity to raise in our
+								community, turning from being rejected to respected because they
+								are "IDEAS WORTH SPREADING".
 							</p>
 						</div>
 					</Section>
 
 					<Section title='Mission & Vision'>
-						<div className='flex lg:flex-row flex-col'>
-							<p className='font-roboto text-lg leading-relaxed border-l-8 rounded border-red-500 pl-4 text-justify md:text-left text-black dark:text-white duration-300 ease-in-out'>
+						<div className='flex flex-col lg:flex-row'>
+							<p className='pl-4 text-lg leading-relaxed text-justify text-black duration-300 ease-in-out border-l-8 border-red-500 rounded font-cairo md:text-left dark:text-white'>
 								<Word>Mission:</Word> To spread knowledge and outstanding ideas
 								through organizing our TEDxYouth@BeniSuefSTEM event, in which
 								our speakers will cover discipline topics, and share their
@@ -108,6 +112,36 @@ const about = () => {
 					</Section>
 				</div>
 			</section>
+			<div className='container pb-12'>
+				<Section title='Special Thanks'>
+					<div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+						<RectangleCard
+							name='Youssef Waled'
+							role='was editing on web development'
+						/>
+						<RectangleCard
+							name='Youssef Waled'
+							role='was editing on web development'
+						/>
+						<RectangleCard
+							name='Youssef Waled'
+							role='was editing on web development'
+						/>
+						<RectangleCard
+							name='Youssef Waled'
+							role='was editing on web development'
+						/>
+						<RectangleCard
+							name='Youssef Waled'
+							role='was editing on web development'
+						/>
+						<RectangleCard
+							name='Youssef Waled'
+							role='was editing on web development'
+						/>
+					</div>
+				</Section>
+			</div>
 			<Footer />
 		</>
 	);

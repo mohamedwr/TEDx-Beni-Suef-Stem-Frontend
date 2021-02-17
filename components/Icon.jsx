@@ -1,7 +1,7 @@
 const Icon = ({ img, url = '#' }) => (
 	<li className=''>
 		<a
-			className='h-11 w-11 md:h-12 md:w-12 block cursor-pointer transform duration-200 ease-in-out hover:scale-110 hover:rotate-360'
+			className='block duration-200 ease-in-out transform cursor-pointer h-11 w-11 md:h-12 md:w-12 hover:scale-110 hover:rotate-360'
 			href={url}
 			target='_blank'
 		>

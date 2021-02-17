@@ -21,11 +21,11 @@ const PersonCard = ({
 			}`}
 		>
 			<div
-				className='rounded-full bg-gray-600 dark:bg-gray-100 duration-200 ease-in-out hover:bg-black dark:hover:bg-black mb-4 relative overflow-hidden border border-black'
+				className='relative mb-4 overflow-hidden duration-200 ease-in-out bg-gray-600 border border-black rounded-full dark:bg-gray-100 hover:bg-black dark:hover:bg-black'
 				onMouseEnter={() => setHover(true)}
 				onMouseLeave={() => setHover(false)}
 			>
-				<div className='flex justify-center items-center absolute inset-0'>
+				<div className='absolute inset-0 flex items-center justify-center'>
 					<img
 						src='/x.svg'
 						className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
@@ -45,10 +45,10 @@ const PersonCard = ({
 			</div>
 
 			<div className='text-center duration-300 ease-in-out'>
-				<h3 className='font-roboto capitalize text-black dark:text-white text-xl lg:text-2xl font-bold'>
+				<h3 className='text-xl font-bold text-black capitalize font-roboto dark:text-white lg:text-2xl'>
 					{name}
 				</h3>
-				<h4 className='font-roboto text-gray-800 dark:text-gray-200 capitalize text-lg lg:text-xl font-medium'>
+				<h4 className='text-lg font-medium text-gray-800 capitalize font-roboto dark:text-gray-200 lg:text-xl'>
 					{role}
 				</h4>
 			</div>

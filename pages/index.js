@@ -31,11 +31,11 @@ export default function Home() {
 					'/cover.jpg',
 				]}
 			/>
-			<section className='flex justify-center items-center'>
+			<section className='flex items-center justify-center'>
 				<div className='container py-12 space-y-10'>
 					<Section title='About TEDx'>
-						<div className='flex lg:flex-row flex-col'>
-							<p className='font-roboto text-xl leading-relaxed h-full lg:w-3/4 border-l-8 rounded border-red-500 pl-4 text-black dark:text-white duration-300 ease-in-out'>
+						<div className='flex flex-col lg:flex-row'>
+							<p className='h-full pl-4 text-xl leading-relaxed text-black duration-300 ease-in-out border-l-8 border-red-500 rounded font-cairo lg:w-3/4 dark:text-white'>
 								<Word>TEDx</Word> is a grassroots initiative, created in the
 								spirit of TED’s overall mission to research and discover{' '}
 								<Word>“Ideas Worth Spreading”</Word>. TEDx brings the spirit of
@@ -54,7 +54,7 @@ export default function Home() {
 									Read More About TEDx
 								</Word>
 							</p>
-							<div className='lg:w-1/4 flex justify-center items-center'>
+							<div className='flex items-center justify-center pt-8 lg:w-1/4 md:pt-1'>
 								<img
 									src={dark ? '/aboutTedBlack.png' : '/aboutTedWhite.png'}
 									className='md:w-8/12 lg:w-full'
@@ -66,22 +66,25 @@ export default function Home() {
 					<Separator />
 
 					<Section title='About Us'>
-						<div className='flex lg:flex-row flex-col'>
-							<p className='font-roboto text-xl leading-relaxed h-full lg:w-3/4 border-l-8 rounded border-red-500 pl-4 text-black dark:text-white duration-300 ease-in-out'>
-								A peep at some distant orb has power to raise and purify our
-								thoughts like a strain of sacred music, or a noble picture, or a
-								passage from the grander poets. It always does one good. A peep
-								at some distant orb has power to raise and purify our thoughts
-								like a strain of sacred music, or a noble picture, or a passage
-								from the grander poets. It always does one good. A peep at some
-								distant orb has power to raise and purify our thoughts like a
-								strain of sacred music, or a noble picture, or a passage from
-								the grander poets. It always does one good. A peep at some
-								distant orb has power to raise and purify our thoughts like a
-								strain of sacred music, or a noble picture, or a passage from
-								the grander poets. It always does one good.
+						<div className='flex flex-col lg:flex-row'>
+							<p className='h-full pl-4 text-xl leading-relaxed text-black duration-300 ease-in-out border-l-8 border-red-500 rounded font-cairo lg:w-3/4 dark:text-white'>
+								“IDEAS WORTH SPREADING”, under this slogan,
+								TEDxYouth@BeniSuefSTEM has arisen as a nonprofit organization.
+								It holds events where Technology, Entertainment, Design,
+								science, business, and global issues converge. Hence, we set up
+								a community of curious souls to spread various thoughts through
+								our local event with shined speakers who have meaningful
+								messages and aspire to put their unique fingerprints. Thus, our
+								mission as a TEDx distributor in BS STEM School is to spread
+								TED's valuable aims in BeniSuef, exposing insights, beliefs, and
+								inspirations. They can rise with us. It makes the subtle ideas
+								soar in the sky of our society because we have the faith in
+								every thought which was rejected before. And we spot the light
+								on; the intrinsic ideas deserve the opportunity to raise in our
+								community, turning from being rejected to respected because they
+								are "IDEAS WORTH SPREADING".
 							</p>
-							<div className='lg:w-1/4 flex justify-center items-center'>
+							<div className='flex items-center justify-center lg:w-1/4'>
 								<img
 									src={dark ? '/tedLogoBlack.png' : '/tedLogoWhite.png'}
 									className='w-8/12'
@@ -92,11 +95,11 @@ export default function Home() {
 
 					<Separator />
 
-					<section className='grid grid-cols-1 md:grid-cols-2 gap-4 py-6'>
-						<div className='flex justify-center items-center space-x-5'>
+					<section className='grid grid-cols-1 gap-4 py-6 md:grid-cols-2'>
+						<div className='flex items-center justify-center space-x-5'>
 							<CircularCard title='crew' num={135} color='bg-transparent' />
 						</div>
-						<div className='flex justify-center items-center space-x-5'>
+						<div className='flex items-center justify-center space-x-5'>
 							<CircularCard
 								title='followers'
 								num={3000}
@@ -152,7 +155,7 @@ export default function Home() {
 								]}
 							/>
 						</div>
-						<div className='flex justify-center items-center pt-4'>
+						<div className='flex items-center justify-center pt-4'>
 							<button
 								className={`py-2 px-6 font-roboto font-black border-2 border-ted dark:border-red-500 bg-ted dark:bg-red-500 text-white dark:text-gray-800 text-lg capitalize rounded-lg md:rounded-full`}
 								onClick={() => router.push('/team')}

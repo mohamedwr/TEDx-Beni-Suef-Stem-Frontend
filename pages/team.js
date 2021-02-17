@@ -56,14 +56,14 @@ const teams = () => {
 			<Nav />
 			<Title>Team</Title>
 			<section className='container py-12'>
-				<h2 className='text-3xl lg:text-4xl font-bold font-roboto border-l-8 rounded border-red-500 pl-4 mb-8 text-black dark:text-white duration-300 ease-in-out'>
-					<span className='text-red-500 font-black'>
+				<h2 className='pl-4 mb-8 text-3xl font-bold text-black duration-300 ease-in-out border-l-8 border-red-500 rounded lg:text-4xl font-roboto dark:text-white'>
+					<span className='font-black text-red-500'>
 						TED<sup>x</sup>
 					</span>{' '}
 					Youth@BeniSuefSTEM Management Board
 				</h2>
 				<div className='flex flex-col space-y-6'>
-					<div className='flex justify-center items-center'>
+					<div className='flex items-center justify-center'>
 						<PersonCard
 							name='Yussof Waleed'
 							role='Chairman'
@@ -72,7 +72,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-center items-center flex-wrap'>
+					<div className='flex flex-wrap items-center justify-center'>
 						<PersonCard
 							name='Ahmed Sayed'
 							role='Co-Chairman'
@@ -87,7 +87,7 @@ const teams = () => {
 						/>
 					</div>
 
-					<div className='flex justify-center items-center flex-wrap'>
+					<div className='flex flex-wrap items-center justify-center'>
 						<PersonCard
 							name='Salma Ahmed'
 							role='Multi-Media Chief'

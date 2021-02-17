@@ -9,12 +9,12 @@ const postPage = () => {
 	return (
 		<>
 			<Nav />
-			<div className='container lg:px-20 py-4 lg:py-14 space-y-1 lg:space-y-3'>
-				<h1 className='text-2xl lg:text-5xl font-black font-roboto'>
+			<div className='container py-4 space-y-1 lg:px-20 lg:py-14 lg:space-y-3'>
+				<h1 className='text-2xl font-black text-gray-800 lg:text-5xl font-roboto dark:text-white'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
 					quae?
 				</h1>
-				<div className='flex justify-between items-center space-x-2'>
+				<div className='flex items-center justify-between space-x-2 text-gray-700 dark:text-white'>
 					<h4>
 						By <span className='font-medium'>Devien George</span>
 					</h4>
@@ -23,9 +23,9 @@ const postPage = () => {
 				<img
 					src='/cover.jpg'
 					alt='post image'
-					className='rounded-xl aspect-h-4 shadow-lg'
+					className='shadow-lg rounded-xl aspect-h-4'
 				/>
-				<p className='text-md lg:text-xl text-justify lg:text-left'>
+				<p className='text-justify text-gray-800 font-cairo text-md lg:text-xl lg:text-left dark:text-white'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
 					consectetur eius tempore esse voluptas ipsum possimus hic atque
 					quaerat sapiente a illo repellat, nihil eaque inventore ut ex
@@ -41,9 +41,17 @@ const postPage = () => {
 					temporibus deleniti facere. Quo ullam possimus excepturi deleniti
 					vero, minus dolores commodi nobis.
 				</p>
-				<div className='flex justify-center items-center'>
+				<div className='flex flex-col items-center justify-center space-y-2'>
+					<a
+						className='flex items-center justify-center px-12 py-4 text-xl font-bold text-white uppercase duration-200 ease-in-out bg-blue-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-blue-600'
+						href='https://www.facebook.com'
+						target='_blank'
+					>
+						View In
+						<img src='/icons/facebook.png' className='pl-2 h-7' alt='' />
+					</a>
 					<button
-						className='py-4 px-12 font-roboto bg-red-500 text-white text-xl font-bold uppercase rounded-full shadow-md'
+						className='px-12 py-4 text-xl font-bold text-white uppercase duration-200 ease-in-out bg-red-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-red-600'
 						onClick={() => router.push('/news')}
 					>
 						Back

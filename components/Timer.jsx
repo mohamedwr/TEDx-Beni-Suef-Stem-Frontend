@@ -1,16 +1,16 @@
 const Tile = ({ text, value }) => (
 	<>
-		<h4 className='text-4xl md:text-6xl lg:text-8xl xl:text-9xl capitalize text-white'>
+		<h4 className='text-4xl text-white capitalize md:text-6xl lg:text-8xl xl:text-9xl'>
 			{value}
 		</h4>
-		<h5 className='text-4xl md:text-5xl lg:text-6xl xl:text-6xl capitalize text-white'>
+		<h5 className='text-4xl text-white capitalize md:text-5xl lg:text-6xl xl:text-6xl'>
 			{text}
 		</h5>
 	</>
 );
 
 const Timer = () => (
-	<ul className='grid grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-x-6'>
+	<ul className='grid grid-cols-2 gap-8 xl:grid-cols-4 xl:gap-x-6'>
 		<li className='flex flex-col items-center text-white'>
 			<Tile text='weeks' value='05' />
 		</li>

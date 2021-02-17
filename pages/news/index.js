@@ -1,8 +1,15 @@
 import Nav from '../../components/Nav';
 import Card from '../../components/Card';
 import Footer from '../../components/Footer';
+import { useEffect } from 'react';
 
 const news = () => {
+	useEffect(() => {
+		document.body.classList.add('bg-bg');
+		return () => {
+			document.body.classList.remove('bg-bg');
+		};
+	}, []);
 	return (
 		<>
 			<Nav />

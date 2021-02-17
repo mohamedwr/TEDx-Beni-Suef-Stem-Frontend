@@ -11,9 +11,11 @@ module.exports = {
 				errImage: "url('/error.png')",
 				aboutLg: "url('/backgroundAboutlg.svg')",
 				aboutSm: "url('/backgroundAboutsm.svg')",
+				bg: "url('/bg.png')",
 			}),
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
+				cairo: ['Cairo', 'sans-serif'],
 			},
 			zIndex: {
 				'-10': '-10',
