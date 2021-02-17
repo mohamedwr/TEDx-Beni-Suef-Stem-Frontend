@@ -3,8 +3,6 @@ import { useKeenSlider } from 'keen-slider/react';
 
 // Components
 import PersonCard from './PersonCard';
-import RightArrow from '../public/icons/right-arrow.svg';
-import LeftArrow from '../public/icons/left-arrow.svg';
 
 const ArrowLeft = (props) => {
 	const disableId = props.disabled ? ' arrow--disabled' : '';
@@ -81,7 +79,7 @@ const TeamSlider = ({
 				{persons.map((person) => (
 					<PersonCard
 						isSlide
-						key={person.name}
+						key={`${person.name}-${person.role}`}
 						img={person.img}
 						name={person.name}
 						role={person.role}

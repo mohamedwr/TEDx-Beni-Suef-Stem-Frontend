@@ -4,10 +4,11 @@ import { useLocalStorage } from 'react-use';
 const LayoutContext = createContext();
 
 const LayoutProvider = ({ children }) => {
-	const [dark, setDark, remove] = useLocalStorage('dark-mode');
+	const [dark, setDark] = useState(false);
+	const [firstLoad, setFirstLoad] = useState(false);
 
 	const toggleDark = () => {
-		if (dark) remove();
+		if (dark) setDark(false);
 		else setDark(true);
 	};
 
@@ -19,11 +20,14 @@ const LayoutProvider = ({ children }) => {
 			Html.classList.remove('dark');
 		}
 	}, [dark]);
+
 	return (
 		<LayoutContext.Provider
 			value={{
 				dark,
 				toggleDark,
+				firstLoad,
+				setFirstLoad,
 			}}
 		>
 			{children}

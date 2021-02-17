@@ -1,40 +1,40 @@
-import { createRef, useContext, useEffect, useState } from 'react';
-import NavLink from './NavLink';
+import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { useWindowScroll } from 'react-use';
+
+// Custom Hooks
+import { useHeight } from '../hooks/useHeight';
 
 // Context(s)
 import { LayoutContext } from '../context/LayoutContext';
 
+// Components
+import NavLink from './NavLink';
+
 // SVG(s)
 import OpenIcon from '../public/icons/menu.svg';
 import CloseIcon from '../public/icons/close.svg';
-import SunIcon from '../public/icons/sun.svg';
 import MoonIcon from '../public/icons/moon.svg';
+import SunIcon from '../public/icons/sun.svg';
 
-// autoTransparent => for controlling in transparent
-// NavHeight => navbar height
+// Props:
 // fixed => position fixed or sticky
+// autoTransparent => for controlling in transparent
 
 const Nav = ({ fixed = false, autoTransparent = false }) => {
-	const { y } = useWindowScroll();
+	// const { y } = useWindowScroll();
 	const router = useRouter();
 	const [menu, setMenu] = useState(false);
 	const { dark, toggleDark } = useContext(LayoutContext);
 
 	let LayoutIcon = dark ? MoonIcon : SunIcon;
 
+	useEffect(() => {
+		console.log(LayoutIcon);
+	}, [LayoutIcon]);
+
 	let MenuIcon = menu ? CloseIcon : OpenIcon;
 
-	const [underNavHeight, setUnderNavHeight] = useState(false);
-	// to get Nav Height
-	const divRef = createRef();
-
-	// get Nav Height When the Page is fully loaded
-	useEffect(() => {
-		if (divRef.current.clientHeight < y) setUnderNavHeight(true);
-		else setUnderNavHeight(false);
-	}, [y]);
+	const { divRef, underNavHeight } = useHeight();
 
 	return (
 		<div
@@ -64,12 +64,12 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 						className='h-12 cursor-pointer'
 					/>
 				</div>
+
 				<LayoutIcon
 					className='fill-current text-white w-6 h-6 mr-4 block md:hidden'
-					onClick={() => {
-						toggleDark();
-					}}
+					onClick={() => toggleDark()}
 				/>
+
 				<MenuIcon
 					className='pointer-cursor lg:hidden block fill-current text-white h-6 w-6'
 					onClick={() =>
@@ -100,9 +100,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				</div>
 				<LayoutIcon
 					className='fill-current text-white w-6 h-6 ml-4 hidden md:block'
-					onClick={() => {
-						toggleDark();
-					}}
+					onClick={() => toggleDark()}
 				/>
 			</header>
 		</div>
