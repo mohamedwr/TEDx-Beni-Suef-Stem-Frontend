@@ -7,6 +7,7 @@ const PersonCard = ({
 	name,
 	role,
 	isSlide,
+	isMember = false,
 	grayscale = false,
 	margin = false,
 }) => {
@@ -25,21 +26,23 @@ const PersonCard = ({
 				onMouseEnter={() => setHover(true)}
 				onMouseLeave={() => setHover(false)}
 			>
-				<div className='absolute inset-0 flex items-center justify-center'>
-					<img
-						src='/x.svg'
-						className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
-							hover
-								? ''
-								: 'transform rotate-180 scale-0 translate-x-56 opacity-0'
-						}`}
-					/>
-				</div>
+				{!isMember && (
+					<div className='absolute inset-0 flex items-center justify-center'>
+						<img
+							src='/x.svg'
+							className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
+								hover
+									? ''
+									: 'transform rotate-180 scale-0 translate-x-56 opacity-0'
+							}`}
+						/>
+					</div>
+				)}
 				<img
 					src={img}
 					alt={name}
 					className={`w-44 h-44 lg:h-52 lg:w-52 object-cover rounded-full relative z-20 duration-200 ease-in-out ${
-						grayscale ? 'grayscale' : ''
+						grayscale && isMember ? 'grayscale' : ''
 					}`}
 				/>
 			</div>

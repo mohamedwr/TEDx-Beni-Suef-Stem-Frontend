@@ -41,6 +41,7 @@ const TeamSlider = ({
 	md = 3,
 	lg = 4,
 	xl = 5,
+	isMembers = false,
 	grayscale = false,
 }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -84,6 +85,7 @@ const TeamSlider = ({
 						name={person.name}
 						role={person.role}
 						grayscale={grayscale}
+						isMember={isMembers}
 					/>
 				))}
 			</div>

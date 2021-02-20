@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import TeamSlider from './TeamSlider';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const TeamSection = ({ name, leaders, members }) => {
+const TeamSection = ({ name, leaders = [], members = [] }) => {
 	const [visible, setVisible] = useState(false);
 
 	useEffect(() => {
@@ -24,16 +24,18 @@ const TeamSection = ({ name, leaders, members }) => {
 				>
 					{name}
 				</h2>
-				<button
-					className={`py-2 px-6 font-roboto font-black border-2 border-ted dark:border-red-500 ${
-						!visible
-							? 'bg-ted dark:bg-red-500 text-white dark:text-gray-800'
-							: 'bg-transparent text-ted dark:text-red-500'
-					} text-lg font-bold uppercase rounded-lg md:rounded-full`}
-					onClick={() => setVisible((prev) => !prev)}
-				>
-					{!visible ? 'View Members' : 'Hide Members'}
-				</button>
+				{members.length > 0 && (
+					<button
+						className={`py-2 px-6 font-roboto font-black border-2 border-ted dark:border-red-500 ${
+							!visible
+								? 'bg-ted dark:bg-red-500 text-white dark:text-gray-800'
+								: 'bg-transparent text-ted dark:text-red-500'
+						} text-lg font-bold uppercase rounded-lg md:rounded-full`}
+						onClick={() => setVisible((prev) => !prev)}
+					>
+						{!visible ? 'View Members' : 'Hide Members'}
+					</button>
+				)}
 			</div>
 			<TeamSlider
 				persons={leaders}
@@ -42,20 +44,24 @@ const TeamSection = ({ name, leaders, members }) => {
 				xl={Math.min(leaders.length, 3)}
 				dots
 			/>
-			<br />
-			<AnimatePresence>
-				{visible && (
-					<motion.div
-						initial={{ opacity: 0, scale: 0 }}
-						animate={{ opacity: 1, scale: 1 }}
-						exit={{ opacity: 0, scale: 0 }}
-						transition={{ duration: 0.5 }}
-						className='relative origin-top'
-					>
-						<TeamSlider persons={members} grayscale arrows />
-					</motion.div>
-				)}
-			</AnimatePresence>
+			{members.length > 0 && (
+				<>
+					<br />
+					<AnimatePresence>
+						{visible && (
+							<motion.div
+								initial={{ opacity: 0, scale: 0 }}
+								animate={{ opacity: 1, scale: 1 }}
+								exit={{ opacity: 0, scale: 0 }}
+								transition={{ duration: 0.5 }}
+								className='relative origin-top'
+							>
+								<TeamSlider persons={members} grayscale arrows isMembers />
+							</motion.div>
+						)}
+					</AnimatePresence>
+				</>
+			)}
 		</section>
 	);
 };
