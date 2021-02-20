@@ -1,7 +1,3 @@
-import { useState } from 'react';
-import faker from 'faker';
-import { useKeenSlider } from 'keen-slider/react';
-
 // Components
 import PersonCard from '../components/PersonCard';
 import Separator from '../components/Separator';
@@ -11,46 +7,6 @@ import Title from '../components/Title';
 import TeamSection from '../components/TeamSection';
 
 const teams = () => {
-	const PRTeamPersons = [
-		{ name: 'ahmed mohamed', role: 'CEO', img: '/cover.jpg' },
-		{ name: 'khaled mohamed', role: 'Head of WB', img: '/cover.jpg' },
-		{ name: 'george mohamed', role: 'CEO', img: '/cover.jpg' },
-		{ name: 'John mohamed', role: 'CEO', img: '/cover.jpg' },
-		{ name: 'safwt mohamed', role: 'Head HR', img: '/cover.jpg' },
-		{ name: 'elon mask', role: 'CEO', img: '/cover.jpg' },
-	];
-
-	const [currentSlide, setCurrentSlide] = useState(0);
-
-	const settings = {
-		initial: 0,
-		mode: 'free-snap',
-		centered: true,
-		loop: true,
-		spacing: 15,
-		// mobile
-		breakpoints: {
-			// tablet
-			'(min-width: 768px)': {
-				slidesPerView: 3,
-			},
-			// mini laptop
-			'(min-width: 1200px)': {
-				slidesPerView: 4,
-			},
-			// laptop
-			'(min-width: 1600px)': {
-				slidesPerView: 6,
-			},
-		},
-		slideChanged(s) {
-			setCurrentSlide(s.details().relativeSlide);
-		},
-	};
-
-	const [sliderRef1] = useKeenSlider(settings);
-	const [sliderRef2] = useKeenSlider(settings);
-
 	return (
 		<>
 			<Nav />

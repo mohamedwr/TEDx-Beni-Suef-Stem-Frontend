@@ -4,12 +4,14 @@ import { useEffect } from 'react';
 import Nav from '../../components/Nav';
 import Card from '../../components/Card';
 import Footer from '../../components/Footer';
+import Title from '../../components/Title';
 
 export async function getServerSideProps(context) {
 	const res = await fetch(
 		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613863296/posts_lljihp.json`
 	);
 	const posts = await res.json();
+	posts.reverse();
 
 	return {
 		props: {
@@ -29,6 +31,7 @@ const news = ({ posts }) => {
 	return (
 		<>
 			<Nav />
+			<Title>News</Title>
 			<div className='container py-5 md:px-52'>
 				<div className='grid grid-cols-1 gap-5'>
 					{posts.map((post) => (

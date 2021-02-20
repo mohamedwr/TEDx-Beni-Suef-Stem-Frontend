@@ -1,10 +1,14 @@
 import Button from '../components/Button';
 import { useRouter } from 'next/router';
 
+// Components
+import Title from '../../components/Title';
+
 const Error = () => {
 	const router = useRouter();
 	return (
 		<>
+			<Title>404</Title>
 			<div className='relative flex w-screen h-screen bg-no-repeat bg-cover bg-errImage'>
 				<div className='z-20 flex flex-col items-center justify-center w-full h-full space-y-6'>
 					<img src='/logoWhite.png' className='h-36' />

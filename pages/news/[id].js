@@ -3,9 +3,10 @@ import ReactMarkdown from 'react-markdown';
 
 // Components
 import Nav from '../../components/Nav';
+import Title from '../../components/Title';
 import Footer from '../../components/Footer';
 
-export async function getServerSideProps({ params, query }) {
+export async function getServerSideProps({ query }) {
 	const res = await fetch(
 		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613863296/posts_lljihp.json`
 	);
@@ -23,14 +24,12 @@ export async function getServerSideProps({ params, query }) {
 const postPage = ({ post }) => {
 	const router = useRouter();
 	const id = router.query.id;
-	// const { getSinglePost } = useContext(PostsContext);
 	console.log(id);
-
-	// const post = getSinglePost(id);
 
 	return (
 		<>
 			<Nav />
+			<Title>{post.title}</Title>
 			<div className='container py-4 space-y-1 lg:px-20 lg:py-14 lg:space-y-3'>
 				<h1 className='text-2xl font-black text-gray-800 lg:text-5xl font-roboto dark:text-white'>
 					{post.title}

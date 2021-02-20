@@ -10,7 +10,6 @@ import Slider from '../components/Slider';
 import TeamSlider from '../components/TeamSlider';
 import Title from '../components/Title';
 import Word from '../components/Word';
-import Button from '../components/Button';
 import CircularCard from '../components/CircularCard';
 
 // Layout Context
