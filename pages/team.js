@@ -82,6 +82,11 @@ const teams = () => {
 						img: '/teams/medhat_atef.png',
 					},
 					{
+						name: 'Ahmed Rashed',
+						role: 'Co Director',
+						img: '/teams/medhat_atef.png',
+					},
+					{
 						name: 'Reem Mohamed',
 						role: 'Instructor',
 						img: '/teams/reem_mohamed.png',
@@ -276,14 +281,14 @@ const teams = () => {
 				name='FundRasing Committee'
 				leaders={[
 					{
-						name: 'Habiba',
+						name: 'leqaa atef',
 						role: 'Director',
-						img: '/teams/habiba.png',
+						img: '/teams/leqaa_atef.png',
 					},
 					{
-						name: 'leqaa atef',
+						name: 'Kholod',
 						role: 'Co Director',
-						img: '/teams/leqaa_atef.png',
+						img: '/cover.jpg',
 					},
 				]}
 				members={[

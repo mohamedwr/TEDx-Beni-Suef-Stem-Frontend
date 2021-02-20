@@ -26,6 +26,19 @@ const Footer = () => (
 					url='https://www.youtube.com/channel/UCA-y2ItuAJGsWnlo1egpLtw'
 				/>
 			</ul>
+			<form className='flex w-5/12'>
+				<label className='w-full'>
+					<input
+						type='text'
+						name='subject'
+						className='block w-full duration-200 ease-in-out bg-gray-100 rounded-tl-xl rounded-bl-xl opacity-70 hover:opacity-100 focus:opacity-100'
+						placeholder='Enter Your Email For Our Mailing Services..'
+					/>
+				</label>
+				<button className='px-4 py-2 text-black duration-150 bg-gray-100 rounded-tr-xl rounded-br-xl hover:bg-gray-200'>
+					Subscribe
+				</button>
+			</form>
 			<h4 className='text-sm text-gray-400 md:text-base font-roboto'>
 				© {new Date().getFullYear().toString()} All Rights Reserved |
 				TEDxYouthBSTEM

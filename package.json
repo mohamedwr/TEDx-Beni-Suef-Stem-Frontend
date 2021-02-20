@@ -36,6 +36,7 @@
 		"react-hook-form": "^6.15.2",
 		"react-markdown": "^5.0.3",
 		"react-messenger-customer-chat": "^0.8.0",
+		"react-remark": "^2.0.3",
 		"react-slick": "^0.28.0",
 		"react-tsparticles": "^1.18.12",
 		"react-use": "^17.1.0",
@@ -43,6 +44,7 @@
 		"sweetalert2": "^10.15.5",
 		"sweetalert2-react-content": "^3.3.1",
 		"tailwindcss": "^2.0.2",
+		"tailwindcss-children": "^2.1.0",
 		"tailwindcss-debug-screens": "^2.0.0",
 		"tailwindcss-gradients": "^3.0.0",
 		"typewriter-effect": "^2.17.0"

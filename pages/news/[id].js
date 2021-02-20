@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 
 // Components
 import Nav from '../../components/Nav';
 import Title from '../../components/Title';
 import Footer from '../../components/Footer';
+import { Remark } from 'react-remark';
 
 export async function getServerSideProps({ query }) {
 	const res = await fetch(
@@ -48,10 +49,27 @@ const postPage = ({ post }) => {
 				{/* <p className='text-justify text-gray-800 font-cairo text-md lg:text-xl lg:text-left dark:text-white'>
 					{post.content}
 				</p> */}
-
-				<ReactMarkdown className='pt-3 prose prose-lg font-cairo'>
-					{post.content}
-				</ReactMarkdown>
+				<div className='flex items-center justify-center'>
+					<article className='pt-3 prose prose-xl font-cairo dark:children:text-gray-100'>
+						<Remark
+							remarkParseOptions={{ commonmark: true }}
+							remarkToRehypeOptions={{ commonmark: true }}
+							rehypeReactOptions={{
+								components: {
+									a: (props) => (
+										<a
+											className='inline-flex items-center justify-center px-12 py-4 text-xl font-bold text-white no-underline uppercase duration-200 ease-in-out bg-blue-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-blue-600'
+											target='_blank'
+											{...props}
+										/>
+									),
+								},
+							}}
+						>
+							{post.content}
+						</Remark>
+					</article>
+				</div>
 
 				<div className='flex flex-col items-center justify-center space-y-2'>
 					<a
