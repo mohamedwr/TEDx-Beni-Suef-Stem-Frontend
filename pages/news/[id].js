@@ -6,7 +6,9 @@ import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
 export async function getServerSideProps({ params, query }) {
-	const res = await fetch(`${process.env.URL}/posts.json`);
+	const res = await fetch(
+		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613863296/posts_lljihp.json`
+	);
 	const data = await res.json();
 
 	const post = data.find((el) => el.id == query.id);

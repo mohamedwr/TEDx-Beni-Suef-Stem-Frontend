@@ -5,8 +5,10 @@ import Nav from '../../components/Nav';
 import Card from '../../components/Card';
 import Footer from '../../components/Footer';
 
-export async function getStaticProps(context) {
-	const res = await fetch(`${process.env.URL}/posts.json`);
+export async function getServerSideProps(context) {
+	const res = await fetch(
+		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613863296/posts_lljihp.json`
+	);
 	const posts = await res.json();
 
 	return {
