@@ -41,16 +41,18 @@ const postPage = ({ post }) => {
 					<h5>At {post.createdAt}</h5>
 				</div>
 				<img
-					src='/cover.jpg'
-					alt='post image'
+					src={post.img}
+					alt={post.title}
 					className='shadow-lg rounded-xl aspect-h-4'
 				/>
 				{/* <p className='text-justify text-gray-800 font-cairo text-md lg:text-xl lg:text-left dark:text-white'>
 					{post.content}
 				</p> */}
-				<ReactMarkdown className='pt-3 prose prose-xl'>
+
+				<ReactMarkdown className='pt-3 prose prose-xl lg:prose-2xl font-cairo'>
 					{post.content}
 				</ReactMarkdown>
+
 				<div className='flex flex-col items-center justify-center space-y-2'>
 					<a
 						className='flex items-center justify-center px-12 py-4 text-xl font-bold text-white uppercase duration-200 ease-in-out bg-blue-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-blue-600'
@@ -58,7 +60,11 @@ const postPage = ({ post }) => {
 						target='_blank'
 					>
 						View In
-						<img src='/icons/facebook.png' className='pl-2 h-7' alt='' />
+						<img
+							src='/icons/facebook.png'
+							className='pl-2 h-7'
+							alt='facebook logo button'
+						/>
 					</a>
 					<button
 						className='px-12 py-4 text-xl font-bold text-white uppercase duration-200 ease-in-out bg-red-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-red-600'
