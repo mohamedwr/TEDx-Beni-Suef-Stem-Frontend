@@ -1,12 +1,22 @@
 import { useEffect } from 'react';
-import posts from '../../posts.json';
 
 // Components
 import Nav from '../../components/Nav';
 import Card from '../../components/Card';
 import Footer from '../../components/Footer';
 
-const news = () => {
+export async function getStaticProps(context) {
+	const res = await fetch('http://localhost:3000/posts.json');
+	const posts = await res.json();
+
+	return {
+		props: {
+			posts,
+		},
+	};
+}
+
+const news = ({ posts }) => {
 	useEffect(() => {
 		document.body.classList.add('bg-bg');
 		return () => {

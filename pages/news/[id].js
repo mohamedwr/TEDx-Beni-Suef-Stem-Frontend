@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import ReactMarkdown from 'react-markdown';
 
@@ -6,16 +5,26 @@ import ReactMarkdown from 'react-markdown';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
-// Context(s)
-import { PostsContext } from '../../context/PostsContext';
+export async function getServerSideProps({ params, query }) {
+	const res = await fetch('http://localhost:3000/posts.json');
+	const data = await res.json();
 
-const postPage = () => {
+	const post = data.find((el) => el.id == query.id);
+
+	return {
+		props: {
+			post,
+		},
+	};
+}
+
+const postPage = ({ post }) => {
 	const router = useRouter();
 	const id = router.query.id;
-	const { getSinglePost } = useContext(PostsContext);
+	// const { getSinglePost } = useContext(PostsContext);
 	console.log(id);
 
-	const post = getSinglePost(id);
+	// const post = getSinglePost(id);
 
 	return (
 		<>
