@@ -6,7 +6,7 @@ import Card from '../../components/Card';
 import Footer from '../../components/Footer';
 
 export async function getStaticProps(context) {
-	const res = await fetch('http://localhost:3000/posts.json');
+	const res = await fetch(`${process.env.URL}/posts.json`);
 	const posts = await res.json();
 
 	return {

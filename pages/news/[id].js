@@ -6,7 +6,7 @@ import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
 export async function getServerSideProps({ params, query }) {
-	const res = await fetch('http://localhost:3000/posts.json');
+	const res = await fetch(`${process.env.URL}/posts.json`);
 	const data = await res.json();
 
 	const post = data.find((el) => el.id == query.id);
