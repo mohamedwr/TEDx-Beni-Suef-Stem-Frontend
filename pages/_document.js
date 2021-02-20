@@ -14,11 +14,11 @@ class MyDocument extends Document {
 					<link
 						href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'
 						rel='stylesheet'
-					></link>
+					/>
 					<link
 						href='https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap'
 						rel='stylesheet'
-					></link>
+					/>
 				</Head>
 				<body className='duration-300 ease-in-out bg-fixed bg-no-repeat bg-cover debug-screens dark:bg-gray-800 '>
 					<Main />

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
-import Router from 'next/router';
 
 // Components
 import SideLoader from '../components/SideLoader';
@@ -13,6 +12,7 @@ import '../components/TeamSlider.css';
 
 // Contexts
 import { LayoutProvider } from '../context/LayoutContext';
+import { PostsProvider } from '../context/PostsContext';
 import NextNProgress from 'nextjs-progressbar';
 
 function MyApp({ Component, pageProps }) {
@@ -22,16 +22,21 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<LayoutProvider>
-			<NextNProgress
-				color='#f34423'
-				height='6'
-				startPosition={0.3}
-				stopDelayMs={200}
-				options={{ showSpinner: true }}
-			/>
-			<SideLoader />
-			<MessengerCustomerChat pageId='100148515225265' appId='884572085427135' />
-			<Component {...pageProps} />
+			<PostsProvider>
+				<NextNProgress
+					color='#f34423'
+					height='6'
+					startPosition={0.3}
+					stopDelayMs={200}
+					options={{ showSpinner: true }}
+				/>
+				<SideLoader />
+				<MessengerCustomerChat
+					pageId='100148515225265'
+					appId='884572085427135'
+				/>
+				<Component {...pageProps} />
+			</PostsProvider>
 		</LayoutProvider>
 	);
 }

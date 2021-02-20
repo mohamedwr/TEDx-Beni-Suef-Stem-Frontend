@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from 'react';
-import { useLocalStorage } from 'react-use';
 
 const LayoutContext = createContext();
 
