@@ -2,7 +2,7 @@ import Button from '../components/Button';
 import { useRouter } from 'next/router';
 
 // Components
-import Title from '../../components/Title';
+import Title from '../components/Title';
 
 const Error = () => {
 	const router = useRouter();
