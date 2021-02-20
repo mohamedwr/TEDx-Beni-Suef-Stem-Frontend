@@ -39,7 +39,7 @@ const about = () => {
 
 	return (
 		<>
-			<Nav fixed />
+			<Nav fixed autoTransparent />
 			<Title>About Us</Title>
 			<div className='flex items-center justify-center h-screen bg-no-repeat bg-cover bg-aboutSm lg:bg-aboutLg'>
 				<h1 className='text-4xl font-bold text-center text-white capitalize duration-300 ease-in-out font-roboto md:text-5xl lg:text-7xl'>
