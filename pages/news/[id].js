@@ -43,13 +43,13 @@ const postPage = ({ post }) => {
 				<img
 					src={post.img}
 					alt={post.title}
-					className='shadow-lg rounded-xl aspect-h-4'
+					className='w-full shadow-lg rounded-xl aspect-h-4'
 				/>
 				{/* <p className='text-justify text-gray-800 font-cairo text-md lg:text-xl lg:text-left dark:text-white'>
 					{post.content}
 				</p> */}
 
-				<ReactMarkdown className='pt-3 prose prose-xl lg:prose-2xl font-cairo'>
+				<ReactMarkdown className='pt-3 prose prose-lg font-cairo'>
 					{post.content}
 				</ReactMarkdown>
 
