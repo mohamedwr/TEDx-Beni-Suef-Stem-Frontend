@@ -1,8 +1,7 @@
 import TelegramBot from 'node-telegram-bot-api';
 import db from '../../db/config';
 
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
 	if (req.method === 'POST') {
 		const token = process.env.TELEGRAM_BOT_API;
 		let bot = new TelegramBot(token);

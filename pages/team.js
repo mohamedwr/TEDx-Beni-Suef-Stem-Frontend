@@ -84,7 +84,8 @@ const teams = () => {
 					{
 						name: 'Ahmed Rashed',
 						role: 'Co Director',
-						img: '/teams/medhat_atef.png',
+						img:
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613963958/HR/ahmed_rasheed_kkydkf.png',
 					},
 					{
 						name: 'Reem Mohamed',
@@ -281,20 +282,16 @@ const teams = () => {
 				name='FundRasing Committee'
 				leaders={[
 					{
-						name: 'leqaa atef',
+						name: 'Leqaa Atef',
 						role: 'Director',
 						img: '/teams/leqaa_atef.png',
 					},
 					{
-						name: 'Kholod',
+						name: 'Kholoud Khaled',
 						role: 'Co Director',
-						img: '/cover.jpg',
+						img:
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613964090/FR/Shrouq_Khaled_gq5be4.png',
 					},
-				]}
-				members={[
-					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
@@ -308,7 +305,8 @@ const teams = () => {
 					{
 						name: 'Menna Ibrahim',
 						role: 'Director',
-						img: '/teams/menna_ibrahim.png',
+						img:
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613964021/Social%20Media/menna_ibrahim_jn6wiz.png',
 					},
 					{
 						name: 'Amany Essam',
@@ -533,11 +531,6 @@ const teams = () => {
 						role: 'Director',
 						img: '/teams/mohamed_gamal.png',
 					},
-				]}
-				members={[
-					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
-					{ name: 'SOON SOON', role: 'Member', img: '/cover.jpg' },
 				]}
 			/>
 
