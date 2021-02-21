@@ -9,7 +9,7 @@ import { Remark } from 'react-remark';
 
 export async function getServerSideProps({ query }) {
 	const res = await fetch(
-		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613863296/posts_lljihp.json`
+		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613967961/posts_i86uog.json`
 	);
 	const data = await res.json();
 

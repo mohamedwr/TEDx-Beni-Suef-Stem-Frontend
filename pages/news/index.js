@@ -8,7 +8,7 @@ import Title from '../../components/Title';
 
 export async function getServerSideProps(context) {
 	const res = await fetch(
-		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613863296/posts_lljihp.json`
+		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613967961/posts_i86uog.json`
 	);
 	const posts = await res.json();
 	posts.reverse();

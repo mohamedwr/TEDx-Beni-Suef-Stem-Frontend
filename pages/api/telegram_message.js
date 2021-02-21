@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import db from '../../db/config';
+// import db from '../../db/config';
 
 export default function handler(req, res) {
 	if (req.method === 'POST') {
@@ -16,24 +16,25 @@ export default function handler(req, res) {
 		);
 
 		// Saving contact info to sqlite DB
-		db('contact')
-			.insert({ email, name, subject, message })
-			.then(() => {
-				res.status(201).json({
-					message: 'Successful Inserting',
-					email,
-					name,
-					message,
-					subject,
-				});
-			});
+		// db('contact')
+		// 	.insert({ email, name, subject, message })
+		// 	.then(() => {
+		// 	});
 
+		res.status(201).json({
+			message: 'Successful Inserting',
+			email,
+			name,
+			message,
+			subject,
+		});
 		res.status(200).json();
 	} else if (req.method === 'GET') {
-		db('contact')
-			.select('*')
-			.then((data) => {
-				res.status(200).json({ message: 'GET Request', contact: data });
-			});
+		// db('contact')
+		// 	.select('*')
+		// 	.then((data) => {
+		// , contact: data
+		// 	});
+		res.status(200).json({ message: 'GET Request' });
 	}
 }
