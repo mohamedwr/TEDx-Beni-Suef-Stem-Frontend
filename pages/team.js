@@ -116,7 +116,7 @@ const teams = () => {
 						name: 'Alaa AbuElwafa',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613866801/HR/Alaa_AbuElwafa_cx75sh.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968317/HR/alaa_abo_alwafa_y9l2qo.png',
 					},
 					{
 						name: 'Kerolos Talaat',
@@ -125,10 +125,10 @@ const teams = () => {
 							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613866838/HR/Kerolos_Talaat_rffcfn.png',
 					},
 					{
-						name: 'Moaz Mohamed',
+						name: 'Mazen Mohamed',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613866878/HR/Moaz_Mohamed_ylmpkm.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968401/HR/mazen_mohamed_slc5vz.png',
 					},
 					{
 						name: 'Naden Mohamed',
@@ -140,7 +140,7 @@ const teams = () => {
 						name: 'Nouran Elgharabawy',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613866963/HR/Nouran_Elgharabawy_crikqy.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968320/HR/nourhan_elghrbawe_jj8hus.png',
 					},
 					{
 						name: 'Roaa Gamal',
@@ -152,7 +152,7 @@ const teams = () => {
 						name: 'Rovana Magdy',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613867054/HR/Rovana_Magdy_HR_rer22a.jpg',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968811/HR/rovana_magdy_awhdx7.png',
 					},
 					{
 						name: 'Tawfik',
@@ -221,7 +221,7 @@ const teams = () => {
 						name: 'Aya Reda',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613869356/pr/Aya_Reda_vcgpmj.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968501/pr/aya_rida_svtnax.png',
 					},
 					{
 						name: 'Ayman Ahmed',
@@ -325,7 +325,7 @@ const teams = () => {
 						name: 'Eman Nashaat',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613869792/Social%20Media/Eman_Nashaat_SM_l1p178.jpg',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968914/Social%20Media/eman_nashaat_rjrrvl.png',
 					},
 					{
 						name: 'Roaa Hani',
@@ -514,7 +514,7 @@ const teams = () => {
 						name: 'Youssef Elkady',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613866418/Graphic%20Design/Youssef_Elkady_ugmrpr.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968858/Graphic%20Design/youssef_waleed_wkeklx.png',
 					},
 				]}
 			/>
@@ -663,7 +663,7 @@ const teams = () => {
 						name: 'Raghad Mohamed',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613868257/OC/Raghad_Mohamed_f1zvix.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968719/OC/raghad_mohamed_xqna6u.png',
 					},
 					{
 						name: 'Omnia Mostafa',
@@ -675,7 +675,7 @@ const teams = () => {
 						name: 'Nour Baz',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613868130/OC/Nour_Baz_qd3ykz.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968679/OC/Nour_Baz_bocm1t.png',
 					},
 					{
 						name: 'Mohanad Ahmed',
@@ -699,7 +699,7 @@ const teams = () => {
 						name: 'Marina Nabil',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613867875/OC/Marina_Nabil_OC_svsnlw.jpg',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968669/OC/marina_nabil_nwthoq.png',
 					},
 					{
 						name: 'Maram Mohamed',
@@ -735,7 +735,7 @@ const teams = () => {
 						name: 'Donia Farid',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613867546/OC/Donia_Farid_nwg7tw.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968660/OC/donia_farid_gviuo4.png',
 					},
 					{
 						name: 'Amany Osman',

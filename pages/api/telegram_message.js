@@ -23,12 +23,7 @@ export default function handler(req, res) {
 
 		res.status(201).json({
 			message: 'Successful Inserting',
-			email,
-			name,
-			message,
-			subject,
 		});
-		res.status(200).json();
 	} else if (req.method === 'GET') {
 		// db('contact')
 		// 	.select('*')
