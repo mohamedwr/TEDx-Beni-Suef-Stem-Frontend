@@ -1,9 +1,11 @@
-import db from '../../db/config';
+import db from '../../../db/config';
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
 	if (req.method === 'GET') {
-		// let mails = await db('mailing').select('*');
-
-		res.status(200).json({ message: 'GET Request' });
+		db('posts')
+			.select('*')
+			.then((posts) => {
+				res.status(200).json(posts);
+			});
 	}
 }
