@@ -21,11 +21,10 @@ export default function handler(req, res) {
 				res.status(201).json({ message: 'Successful Inserting' });
 			});
 	} else if (req.method === 'GET') {
-		// db('mailing')
-		// 	.select('*')
-		// 	.then((data) => {
-		// mails: data;
-		// 	});
-		res.status(200).json({ message: 'GET Request' });
+		db('mailing')
+			.select('*')
+			.then((data) => {
+				res.status(200).json({ message: 'GET Request', mails: data });
+			});
 	}
 }

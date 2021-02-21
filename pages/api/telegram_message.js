@@ -30,11 +30,10 @@ export default function handler(req, res) {
 
 		res.status(200).json();
 	} else if (req.method === 'GET') {
-		// db('contact')
-		// 	.select('*')
-		// 	.then((data) => {
-		// 		, contact: data
-		// 	});
-		res.status(200).json({ message: 'GET Request' });
+		db('contact')
+			.select('*')
+			.then((data) => {
+				res.status(200).json({ message: 'GET Request', contact: data });
+			});
 	}
 }
