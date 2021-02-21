@@ -557,7 +557,7 @@ const teams = () => {
 						name: 'Ahmed Zidan',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613865476/Coaching/Ahmed_Zidan_glqtay.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968134/Coaching/ahmed_zidan_t5iltq.png',
 					},
 					{
 						name: 'Amira Ahmed',
@@ -587,7 +587,7 @@ const teams = () => {
 						name: 'Mohamed Abdelrazik',
 						role: 'Member',
 						img:
-							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613865493/Coaching/Mohamed_Abdelrazik_vz64zl.png',
+							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613968135/Coaching/mohamed_abdo_zun6vp.png',
 					},
 					{
 						name: 'Nayrouz Ahmed',
