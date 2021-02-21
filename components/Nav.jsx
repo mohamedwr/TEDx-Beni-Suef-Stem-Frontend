@@ -62,7 +62,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				</div>
 
 				<LayoutIcon
-					className='block w-6 h-6 mr-4 text-white fill-current md:hidden'
+					className='block w-6 h-6 mr-4 text-white fill-current xl:hidden'
 					onClick={() => toggleDark()}
 				/>
 
@@ -95,7 +95,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					</nav>
 				</div>
 				<LayoutIcon
-					className='hidden w-6 h-6 ml-4 text-white fill-current md:block'
+					className='hidden w-6 h-6 ml-4 text-white fill-current xl:block'
 					onClick={() => toggleDark()}
 				/>
 			</header>

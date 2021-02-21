@@ -1,7 +1,7 @@
 import TelegramBot from 'node-telegram-bot-api';
 import db from '../../db/config';
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
 	if (req.method === 'POST') {
 		const token = process.env.TELEGRAM_BOT_API;
 		let bot = new TelegramBot(token);
@@ -16,15 +16,21 @@ export default async function handler(req, res) {
 		);
 
 		// Saving contact info to sqlite DB
-		await db('contact')
+		db('contact')
 			.insert({ email, name, subject, message })
 			.then(() => {
-				res.status(201).json({ message: 'Successful Inserting' });
+				res.status(201).json({
+					message: 'Successful Inserting',
+					email,
+					name,
+					message,
+					subject,
+				});
 			});
 
-		res.status(200).json({ email, name, message, subject });
+		res.status(200).json();
 	} else if (req.method === 'GET') {
-		let contact = await db('contact').select('*');
-		res.status(200).json({ message: 'GET Request', contact: contact });
+		// let contact = db('contact').select('*');
+		res.status(200).json({ message: 'GET Request' });
 	}
 }

@@ -15,14 +15,14 @@ export default async function handler(req, res) {
 		);
 
 		// Saving mail info into sqlite DB
-		await db('mailing')
+		db('mailing')
 			.insert({ email: email })
 			.then(() => {
 				res.status(201).json({ message: 'Successful Inserting' });
 			});
 	} else if (req.method === 'GET') {
-		let mails = await db('mailing').select('*');
+		// let mails = db('mailing').select('*');
 
-		res.status(200).json({ message: 'GET Request', mails: mails });
+		res.status(200).json({ message: 'GET Request' });
 	}
 }
