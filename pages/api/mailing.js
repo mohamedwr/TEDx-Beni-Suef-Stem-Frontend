@@ -4,12 +4,18 @@ import TelegramBot from 'node-telegram-bot-api';
 export default function handler(req, res) {
 	if (req.method === 'POST') {
 		const token = process.env.TELEGRAM_BOT_API;
-		let bot = new TelegramBot(token);
+		let bot = new TelegramBot(token, { polling: true });
 		let { email } = req.body;
 
 		// Sending mail info to youssef telegram chat
 		bot.sendMessage(
 			process.env.TELEGRAM_YOUSSEF_CHAT_ID,
+			`<i><b>MAILING</b></i>\n\n<b>Email:</b> \t${email}`,
+			{ parse_mode: 'HTML' }
+		);
+
+		bot.sendMessage(
+			process.env.TELEGRAM_DEVIEN_CHAT_ID,
 			`<i><b>MAILING</b></i>\n\n<b>Email:</b> \t${email}`,
 			{ parse_mode: 'HTML' }
 		);
