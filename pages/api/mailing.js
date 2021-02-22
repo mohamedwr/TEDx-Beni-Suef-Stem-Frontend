@@ -1,10 +1,7 @@
-import TelegramBot from 'node-telegram-bot-api';
-// import db from '../../db/config';
+import { bot } from '../../utils/bot';
 
 export default function handler(req, res) {
 	if (req.method === 'POST') {
-		const token = process.env.TELEGRAM_BOT_API;
-		let bot = new TelegramBot(token, { polling: true });
 		let { email } = req.body;
 
 		// Sending mail info to youssef telegram chat
