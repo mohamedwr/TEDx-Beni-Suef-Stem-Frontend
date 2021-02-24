@@ -21,13 +21,16 @@ const MailingForm = () => {
 	};
 
 	const handleClick = async () => {
-		const { value: email } = await Swal.fire({
+		await Swal.fire({
 			title: 'Join More Than 3000 Followers',
 			input: 'email',
 			inputLabel: 'To Get Updated With Our News, Events, Offers, and Updates.',
 			inputPlaceholder: 'Enter Your E-mail Address',
+			preConfirm: (email) => {
+				console.log(email);
+				sendEmail(email);
+			},
 		});
-		sendEmail(email);
 	};
 
 	return (

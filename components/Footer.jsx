@@ -31,7 +31,7 @@ const Footer = () => (
 			<MailingForm />
 			<h4 className='text-sm text-gray-400 md:text-base font-roboto'>
 				© {new Date().getFullYear().toString()} All Rights Reserved |
-				TEDxYouthBSTEM
+				TEDxYouth@BeniSuefSTEM
 			</h4>
 		</div>
 	</footer>
