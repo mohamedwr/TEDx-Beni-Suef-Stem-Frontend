@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 				parse_mode: 'HTML',
 			});
 			res.status(200).json({ completed: true });
-		} catch (err) {
+		} catch () {
 			res.status(403).json({ completed: false });
 		}
 	} else if (req.method === 'GET') {

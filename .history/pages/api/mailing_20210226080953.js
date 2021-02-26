@@ -2,10 +2,10 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
 	if (req.method === 'POST') {
-		const { email } = req.body;
-		const chatId = process.env.TELEGRAM_DEVIEN_CHAT_ID;
-		const botToken = process.env.TELEGRAM_BOT_API;
-
+		let { email } = req.body;
+		let chatId = process.env.TELEGRAM_DEVIEN_CHAT_ID;
+		let botToken = process.env.TELEGRAM_BOT_API;
+		console.log(botToken, chatId);
 		try {
 			await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
 				chat_id: chatId,
