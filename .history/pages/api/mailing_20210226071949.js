@@ -10,19 +10,16 @@ export default function handler(req, res) {
 				text: `<i><b>MAILING</b></i>\n\n<b>Email:</b> \t${email}`,
 				parse_mode: 'HTML',
 			})
-			.then(() => {
-				axios
-					.post(`https://api.telegram.org/bot${apiToken}/sendMessage`, {
-						chat_id: process.env.TELEGRAM_DEVIEN_CHAT_ID,
-						text: `<i><b>MAILING</b></i>\n\n<b>Email:</b> \t${email}`,
-						parse_mode: 'HTML',
-					})
-					.then((res) => {
-						res.status(200).send(res);
-					});
+			.then((response) => {
+				axios.post(`https://api.telegram.org/bot${apiToken}/sendMessage`, {
+					chat_id: process.env.TELEGRAM_YOUSSEF_CHAT_ID,
+					text: `<i><b>MAILING</b></i>\n\n<b>Email:</b> \t${email}`,
+					parse_mode: 'HTML',
+				});
+				res.status(200).send(response);
 			})
-			.catch((err) => {
-				res.send(err);
+			.catch((error) => {
+				res.send(error);
 			});
 	} else if (req.method === 'GET') {
 		res.status(200).json({ message: 'GET Request' });

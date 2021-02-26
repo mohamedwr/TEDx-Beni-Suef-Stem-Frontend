@@ -10,7 +10,7 @@ export default function handler(req, res) {
 				text: `<i><b>MAILING</b></i>\n\n<b>Email:</b> \t${email}`,
 				parse_mode: 'HTML',
 			})
-			.then(() => {
+			.then((res) => {
 				axios
 					.post(`https://api.telegram.org/bot${apiToken}/sendMessage`, {
 						chat_id: process.env.TELEGRAM_DEVIEN_CHAT_ID,
