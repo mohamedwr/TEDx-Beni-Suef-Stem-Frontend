@@ -17,7 +17,7 @@ export default function handler(req, res) {
 				res.status(200).send(res);
 			})
 			.catch((err) => {
-				res.status(500).send(err);
+				res.send(err);
 			});
 	} else if (req.method === 'GET') {
 		res.status(200).json({ message: 'GET Request' });

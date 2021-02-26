@@ -4,6 +4,8 @@ export default function handler(req, res) {
 	if (req.method === 'POST') {
 		let { email } = req.body;
 
+		// has he play
+
 		axios
 			.post(
 				`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_API}/sendMessage`,
