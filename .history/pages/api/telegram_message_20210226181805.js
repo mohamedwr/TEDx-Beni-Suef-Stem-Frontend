@@ -10,13 +10,13 @@ export default async function handler(req, res) {
 		try {
 			await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
 				chat_id: chatIdYoussef,
-				text: `<b>---|Start CONTACT US|---</b>\n\n<b>Name:</b> \t${name}\n\n<b>Email:</b> \t${email}\n\n<b>Subject:</b> \t${subject}\n\n<b>Message:</b> \t${message}\n\n<b>---|End CONTACT US|---</b>`,
+				text: `<i><b>CONTACT US<b></i>\n\n<b>Name:</b> \t${name}\n\n<b>Email:</b> \t${email}\n\n<b>Subject:</b> \t${subject}\n\n<b>Message:</b> \t${message}`,
 				parse_mode: 'HTML',
 			});
 
 			await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
 				chat_id: chatIdDevien,
-				text: `<b>---|Start CONTACT US|---</b>\n\n<b>Name:</b> \t${name}\n\n<b>Email:</b> \t${email}\n\n<b>Subject:</b> \t${subject}\n\n<b>Message:</b> \t${message}\n\n<b>---|End CONTACT US|---</b>`,
+				text: `<i><b>----|CONTACT US|----<b></i>\n\n<b>Name:</b> \t${name}\n\n<b>Email:</b> \t${email}\n\n<b>Subject:</b> \t${subject}\n\n<b>Message:</b> \t${message}`,
 				parse_mode: 'HTML',
 			});
 			res.status(200).json({ completed: true });
