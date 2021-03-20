@@ -71,7 +71,7 @@ module.exports = {
 		require('tailwindcss-children'),
 		require('@tailwindcss/forms'),
 		require('tailwindcss-gradients'),
-		require('tailwindcss-debug-screens'),
+		// require('tailwindcss-debug-screens'),
 		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/typography'),
 	],
