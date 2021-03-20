@@ -9,7 +9,7 @@ const NavLink = ({ link, soon, path = false }) => {
 			soon
 				? 'soon cursor-not-allowed text-gray-500 py-1'
 				: 'cursor-pointer underline py-3 px-3'
-		} ${router.pathname.includes(path) ? 'active font-bold text-ted' : ''}`}
+		} ${router.pathname.endsWith(path) ? 'active font-bold text-ted' : ''}`}
 			onClick={() => {
 				if (path != '') {
 					router.push(path);
