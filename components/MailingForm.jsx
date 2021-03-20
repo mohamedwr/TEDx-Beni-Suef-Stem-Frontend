@@ -27,7 +27,6 @@ const MailingForm = () => {
 			inputLabel: 'To Get Updated With Our News, Events, Offers, and Updates.',
 			inputPlaceholder: 'Enter Your E-mail Address',
 			preConfirm: (email) => {
-				console.log(email);
 				sendEmail(email);
 			},
 		});

@@ -156,7 +156,7 @@ export default function Home() {
 						</div>
 						<div className='flex items-center justify-center pt-4'>
 							<button
-								className={`py-2 px-6 font-roboto font-black border-2 border-ted dark:border-red-500 bg-ted dark:bg-red-500 text-white dark:text-gray-800 text-lg capitalize rounded-lg md:rounded-full`}
+								className='px-6 py-2 text-lg font-black text-white capitalize border-2 rounded-lg font-roboto border-ted dark:border-red-500 bg-ted dark:bg-red-500 dark:text-gray-800 md:rounded-full hover:bg-red-600'
 								onClick={() => router.push('/team')}
 							>
 								rest of our team

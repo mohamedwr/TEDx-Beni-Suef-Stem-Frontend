@@ -46,11 +46,8 @@ const postPage = ({ post }) => {
 					alt={post.title}
 					className='w-full shadow-lg rounded-xl aspect-h-4'
 				/>
-				{/* <p className='text-justify text-gray-800 font-cairo text-md lg:text-xl lg:text-left dark:text-white'>
-					{post.content}
-				</p> */}
 				<div className='flex items-center justify-center'>
-					<article className='pt-3 prose prose-xl font-cairo dark:children:text-gray-100'>
+					<article className='pt-3 font-cairo dark:children:text-gray-100 space-y-4'>
 						<Remark
 							remarkParseOptions={{ commonmark: true }}
 							remarkToRehypeOptions={{ commonmark: true }}
@@ -58,8 +55,50 @@ const postPage = ({ post }) => {
 								components: {
 									a: (props) => (
 										<a
-											className='inline-flex items-center justify-center px-12 py-4 text-xl font-bold text-white no-underline uppercase duration-200 ease-in-out bg-blue-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-blue-600'
+											className='underline px-0 py-2 text-xl text-red-500 font-bold uppercase duration-200 ease-in-out cursor-pointer font-roboto'
 											target='_blank'
+											{...props}
+										/>
+									),
+									h1: (props) => (
+										<h1
+											className='text-6xl text-black dark:text-white'
+											{...props}
+										/>
+									),
+									h2: (props) => (
+										<h2
+											className='text-5xl text-black dark:text-white'
+											{...props}
+										/>
+									),
+									h3: (props) => (
+										<h3
+											className='text-3xl text-black dark:text-white'
+											{...props}
+										/>
+									),
+									h4: (props) => (
+										<h4
+											className='text-2xl text-black dark:text-white'
+											{...props}
+										/>
+									),
+									h5: (props) => (
+										<h5
+											className='text-xl text-black dark:text-white'
+											{...props}
+										/>
+									),
+									h6: (props) => (
+										<h6
+											className='text-lg text-black dark:text-white'
+											{...props}
+										/>
+									),
+									p: (props) => (
+										<h6
+											className='text-lg text-black dark:text-white'
 											{...props}
 										/>
 									),
