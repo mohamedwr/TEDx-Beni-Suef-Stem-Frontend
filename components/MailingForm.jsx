@@ -7,7 +7,7 @@ const MailingForm = () => {
 
 	const sendEmail = (email) => {
 		axios
-			.post('/api/mailing', { email })
+			.post('https://tedx-beni-suef-api.herokuapp.com/api/mailing', { email })
 			.then(() => {
 				Swal.fire(
 					'SuccessFull',

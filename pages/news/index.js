@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import axios from 'axios';
+
 
 // Components
 import Nav from '../../components/Nav';
@@ -7,11 +9,8 @@ import Footer from '../../components/Footer';
 import Title from '../../components/Title';
 
 export async function getServerSideProps(context) {
-	const res = await fetch(
-		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613967961/posts_i86uog.json`
-	);
-	const posts = await res.json();
-	posts.reverse();
+	const backend_url = process.env.BACKEND_URL;
+	const { data: posts } = await axios.get(`${backend_url}/api/post`);
 
 	return {
 		props: {
@@ -39,8 +38,8 @@ const news = ({ posts }) => {
 							id={post.id}
 							title={post.title}
 							author={post.author}
-							time={post.createdAt}
-							img={post.img}
+							time={post.created_at}
+							img={post.image}
 						/>
 					))}
 				</div>

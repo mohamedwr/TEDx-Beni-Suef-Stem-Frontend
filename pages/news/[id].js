@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 // import ReactMarkdown from 'react-markdown';
+import axios from 'axios';
 
 // Components
 import Nav from '../../components/Nav';
@@ -8,12 +9,8 @@ import Footer from '../../components/Footer';
 import { Remark } from 'react-remark';
 
 export async function getServerSideProps({ query }) {
-	const res = await fetch(
-		`https://res.cloudinary.com/dxaqlmgag/raw/upload/v1613967961/posts_i86uog.json`
-	);
-	const data = await res.json();
-
-	const post = data.find((el) => el.id == query.id);
+	const backend_url = process.env.BACKEND_URL;
+	const { data: post } = await axios.get(`${backend_url}/api/post/${query.id}`);
 
 	return {
 		props: {
@@ -26,6 +23,7 @@ const postPage = ({ post }) => {
 	const router = useRouter();
 	const id = router.query.id;
 	console.log(id);
+	axios;
 
 	return (
 		<>
@@ -39,10 +37,10 @@ const postPage = ({ post }) => {
 					<h4>
 						By <span className='font-medium'>{post.author}</span>
 					</h4>
-					<h5>At {post.createdAt}</h5>
+					<h5>At {post.created_at}</h5>
 				</div>
 				<img
-					src={post.img}
+					src={post.image}
 					alt={post.title}
 					className='w-full shadow-lg rounded-xl aspect-h-4'
 				/>

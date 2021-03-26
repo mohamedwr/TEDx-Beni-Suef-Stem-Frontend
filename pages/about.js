@@ -1,5 +1,7 @@
 import { useKeenSlider } from 'keen-slider/react';
 import Typewriter from 'typewriter-effect';
+import axios from 'axios';
+
 
 // Components
 import Nav from '../components/Nav';
@@ -13,7 +15,18 @@ import { useRouter } from 'next/router';
 import Section from '../components/Section';
 import RectangleCard from '../components/RectangleCard';
 
-const about = () => {
+export async function getServerSideProps(context) {
+	const backend_url = process.env.BACKEND_URL;
+	const { data: thanks } = await axios.get(`${backend_url}/api/thank`);
+
+	return {
+		props: {
+			thanks,
+		},
+	};
+}
+
+const about = ({thanks}) => {
 	const router = useRouter();
 	const [sliderRef1] = useKeenSlider({
 		mode: 'free',
@@ -115,30 +128,13 @@ const about = () => {
 			<div className='container pb-12'>
 				<Section title='Special Thanks'>
 					<div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-						<RectangleCard
-							name='Youssef Waled'
-							role='was editing on web development'
-						/>
-						<RectangleCard
-							name='Youssef Waled'
-							role='was editing on web development'
-						/>
-						<RectangleCard
-							name='Youssef Waled'
-							role='was editing on web development'
-						/>
-						<RectangleCard
-							name='Youssef Waled'
-							role='was editing on web development'
-						/>
-						<RectangleCard
-							name='Youssef Waled'
-							role='was editing on web development'
-						/>
-						<RectangleCard
-							name='Youssef Waled'
-							role='was editing on web development'
-						/>
+						{thanks.map((thank) => (
+							<RectangleCard
+								key={thank.id}
+								name={thank.name}
+								content={thank.content}
+							/>
+						))}
 					</div>
 				</Section>
 			</div>

@@ -21,14 +21,15 @@ const contact = () => {
 	}, []);
 
 	const { register, handleSubmit, errors } = useForm();
+	const backend_url = process.env.BACKEND_URL;
 	const onSubmit = (data) => {
 		let { email, message, name, subject } = data;
 		axios
-			.post('/api/telegram_message', {
-				email,
-				message,
+			.post(`https://tedx-beni-suef-api.herokuapp.com/api/contact`, {
 				name,
+				email,
 				subject,
+				message,
 			})
 			.then(() => {
 				Swal.fire(
