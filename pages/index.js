@@ -28,7 +28,7 @@ export default function Home() {
 				images={[
 					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483066/Slider/1_nklc4l.png',
 					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483079/Slider/2_vleb2f.png',
-					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483096/Slider/3_pvdstf.png'
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483096/Slider/3_pvdstf.png',
 				]}
 			/>
 			<section className='flex items-center justify-center'>
@@ -124,33 +124,33 @@ export default function Home() {
 								persons={[
 									{
 										name: 'Yussof Waleed',
-										role: 'Chairman',
-										img: '/teams/leaders/Chairman.png',
+										title: 'Chairman',
+										image: '/teams/leaders/Chairman.png',
 									},
 									{
 										name: 'Ahmed Sayed',
-										role: 'Co-Chairman',
-										img: '/teams/leaders/Co-Chairman.png',
+										title: 'Co-Chairman',
+										image: '/teams/leaders/Co-Chairman.png',
 									},
 									{
 										name: 'Salma Ahmed',
-										role: 'CEO',
-										img: '/teams/leaders/CEO.png',
+										title: 'CEO',
+										image: '/teams/leaders/CEO.png',
 									},
 									{
 										name: 'Salma Ahmed',
-										role: 'Multi-Media Chief',
-										img: '/teams/leaders/Multi-Media.png',
+										title: 'Multi-Media Chief',
+										image: '/teams/leaders/Multi-Media.png',
 									},
 									{
 										name: 'Mohamed Hisham',
-										role: 'Digital-Marketing Chief',
-										img: '/teams/leaders/Digital-Marketing-Chief.png',
+										title: 'Digital-Marketing Chief',
+										image: '/teams/leaders/Digital-Marketing-Chief.png',
 									},
 									{
 										name: 'Karem Nabil',
-										role: 'PR & FR Chief',
-										img: '/teams/leaders/PR-&-FR.png',
+										title: 'PR & FR Chief',
+										image: '/teams/leaders/PR-&-FR.png',
 									},
 								]}
 							/>
