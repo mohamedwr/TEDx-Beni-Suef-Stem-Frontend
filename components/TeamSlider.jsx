@@ -81,9 +81,9 @@ const TeamSlider = ({
 					<PersonCard
 						isSlide
 						key={`${person.name}-${person.role}`}
-						img={person.img}
+						img={person.image}
 						name={person.name}
-						role={person.role}
+						role={person.title}
 						grayscale={grayscale}
 						isMember={isMembers}
 					/>

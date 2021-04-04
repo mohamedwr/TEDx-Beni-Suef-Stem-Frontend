@@ -1,3 +1,6 @@
+import { Fragment, useEffect, useState } from 'react';
+import axios from 'axios';
+
 // Components
 import PersonCard from '../components/PersonCard';
 import Separator from '../components/Separator';
@@ -6,7 +9,20 @@ import Footer from '../components/Footer';
 import Title from '../components/Title';
 import TeamSection from '../components/TeamSection';
 
-const teams = () => {
+export async function getServerSideProps(context) {
+	const backend_url = process.env.BACKEND_URL;
+	const { data: committees } = await axios.get(`${backend_url}/api/committee`);
+
+	committees.shift();
+
+	return {
+		props: {
+			committees,
+		},
+	};
+}
+
+const teams = ({ committees }) => {
 	return (
 		<>
 			<Nav />
@@ -68,7 +84,20 @@ const teams = () => {
 				</div>
 			</section>
 
-			<div className='container'>
+			{committees.map((committee) => (
+				<Fragment key={committee.id}>
+					<div className='container'>
+						<Separator />
+					</div>
+
+					<TeamSection
+						name={committee.title}
+						leaders={committee.leaders}
+						members={committee.members}
+					/>
+				</Fragment>
+			))}
+			{/* <div className='container'>
 				<Separator />
 			</div>
 
@@ -179,9 +208,9 @@ const teams = () => {
 							'https://res.cloudinary.com/dxaqlmgag/image/upload/v1613870303/HR/Shahd_Mostafa_sqac6p.png',
 					},
 				]}
-			/>
+			/> */}
 
-			<div className='container'>
+			{/* <div className='container'>
 				<Separator />
 			</div>
 
@@ -782,7 +811,7 @@ const teams = () => {
 						img: '/teams/gasser.png',
 					},
 				]}
-			/>
+			/> */}
 			<Footer />
 		</>
 	);

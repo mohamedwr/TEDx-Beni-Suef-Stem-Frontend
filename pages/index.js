@@ -26,8 +26,9 @@ export default function Home() {
 
 			<Slider
 				images={[
-					'https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80',
-					'/cover.jpg',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483066/Slider/1_nklc4l.png',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483079/Slider/2_vleb2f.png',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617483096/Slider/3_pvdstf.png'
 				]}
 			/>
 			<section className='flex items-center justify-center'>
