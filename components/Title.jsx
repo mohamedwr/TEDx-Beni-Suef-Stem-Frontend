@@ -15,7 +15,7 @@ const Title = ({ children = '' }) => (
 		/>
 		<meta
 			property='og:image'
-			content='https://tedxbenisuef.vercel.app/logoWhite.png'
+			content='https://tedxbenisuef.vercel.app/tedLogoWhite.png'
 		/>
 		<meta property='og:url' content='https://tedxbenisuef.vercel.app' />
 		<meta name='twitter:title' content='TEDx Youth@BeniSuefSTEM Website' />
@@ -31,7 +31,7 @@ const Title = ({ children = '' }) => (
 		/>
 		<meta
 			name='twitter:image'
-			content=' https://tedxbenisuef.vercel.app/logoWhite.png'
+			content=' https://tedxbenisuef.vercel.app/tedLogoWhite.png'
 		/>
 		<meta name='twitter:card' content='summary_large_image' />
 		<meta
