@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 
-
 // Components
 import Nav from '../../components/Nav';
 import Card from '../../components/Card';
@@ -20,13 +19,6 @@ export async function getServerSideProps(context) {
 }
 
 const news = ({ posts }) => {
-	useEffect(() => {
-		document.body.classList.add('bg-bg');
-		return () => {
-			document.body.classList.remove('bg-bg');
-		};
-	}, []);
-
 	return (
 		<>
 			<Nav />
