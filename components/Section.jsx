@@ -4,9 +4,10 @@ const Section = ({
 	color = 'text-ted',
 	withBorder = false,
 	biggerMargin = false,
+	className,
 }) => {
 	return (
-		<section>
+		<section className={className}>
 			<h2
 				className={`text-3xl lg:text-4xl font-bold font-roboto ${
 					withBorder ? 'border-l-8 rounded border-red-500 pl-4' : ''

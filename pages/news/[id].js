@@ -21,14 +21,13 @@ export async function getServerSideProps({ query }) {
 
 const postPage = ({ post }) => {
 	const router = useRouter();
-	const id = router.query.id;
-	console.log(id);
-	axios;
 
 	return (
 		<>
 			<Nav />
-			<Title>{post.title}</Title>
+			<Title description={post.content} title={post.title} image={post.image}>
+				{post.title}
+			</Title>
 			<div className='container py-4 space-y-1 lg:px-20 lg:py-14 lg:space-y-3'>
 				<h1 className='text-2xl font-black text-gray-800 lg:text-5xl font-roboto dark:text-white'>
 					{post.title}
@@ -45,7 +44,7 @@ const postPage = ({ post }) => {
 					className='w-full shadow-lg rounded-xl aspect-h-4'
 				/>
 				<div className='flex items-center justify-center'>
-					<article className='pt-3 font-cairo dark:children:text-gray-100 space-y-4'>
+					<article className='pt-3 space-y-4 font-cairo dark:children:text-gray-100'>
 						<Remark
 							remarkParseOptions={{ commonmark: true }}
 							remarkToRehypeOptions={{ commonmark: true }}
@@ -53,7 +52,7 @@ const postPage = ({ post }) => {
 								components: {
 									a: (props) => (
 										<a
-											className='underline px-0 py-2 text-xl text-red-500 font-bold uppercase duration-200 ease-in-out cursor-pointer font-roboto'
+											className='px-0 py-2 text-xl font-bold text-red-500 underline uppercase duration-200 ease-in-out cursor-pointer font-roboto'
 											target='_blank'
 											{...props}
 										/>

@@ -30,7 +30,12 @@ module.exports = {
 			},
 		},
 		linearGradientColors: (theme) => theme('colors'),
-		radialGradientColors: (theme) => theme('colors'),
+		radialGradientColors: {
+			// defaults to {}
+			// 'gray-black': ['#f1f1f1', '#000'],
+		},
+
+		// radialGradientColors: (theme) => theme('colors'),
 		conicGradientColors: (theme) => theme('colors'),
 		container: {
 			center: true,
