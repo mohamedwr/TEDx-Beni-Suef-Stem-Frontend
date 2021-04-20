@@ -4,3 +4,6 @@ Allow: /
 
 # Host
 Host: https://tedxyouthbstem.com
+
+# Sitemaps
+Sitemap: https://tedxyouthbstem.com/sitemap.xml
