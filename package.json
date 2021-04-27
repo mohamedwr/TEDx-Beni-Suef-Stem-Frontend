@@ -27,10 +27,8 @@
 		"babel-plugin-inline-react-svg": "^1.1.2",
 		"framer-motion": "^3.3.0",
 		"keen-slider": "^5.4.0",
-		"knex": "^0.21.17",
 		"next": "^10.0.5",
 		"nextjs-progressbar": "0.0.7",
-		"node-telegram-bot-api": "^0.51.0",
 		"postcss": "^8.1.10",
 		"react": "^16.14.0",
 		"react-countup": "^4.3.3",
@@ -43,7 +41,6 @@
 		"react-tsparticles": "^1.18.12",
 		"react-use": "^17.1.0",
 		"slick-carousel": "^1.8.1",
-		"sqlite3": "^5.0.2",
 		"string-replace-all": "^1.0.3",
 		"sweetalert2": "^10.15.5",
 		"sweetalert2-react-content": "^3.3.1",
@@ -51,7 +48,6 @@
 		"tailwindcss-children": "^2.1.0",
 		"tailwindcss-debug-screens": "^2.0.0",
 		"tailwindcss-gradients": "^3.0.0",
-		"telegraf": "^4.1.0",
 		"typewriter-effect": "^2.17.0"
 	},
 	"devDependencies": {

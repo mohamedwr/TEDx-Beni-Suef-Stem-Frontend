@@ -1,6 +1,7 @@
-import 'keen-slider/keen-slider.min.css';
 import { useState } from 'react';
-import XLetter from '../public/x.svg';
+
+// Styles
+import 'keen-slider/keen-slider.min.css';
 
 const PersonCard = ({
 	img,

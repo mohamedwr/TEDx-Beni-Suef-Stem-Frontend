@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 const Section = ({
 	children,
 	title,
@@ -7,7 +9,7 @@ const Section = ({
 	className,
 }) => {
 	return (
-		<section className={className}>
+		<section>
 			<h2
 				className={`text-3xl lg:text-4xl font-bold font-roboto ${
 					withBorder ? 'border-l-8 rounded border-red-500 pl-4' : ''
@@ -15,7 +17,7 @@ const Section = ({
 			>
 				{title}
 			</h2>
-			{children}
+			<div className={className}>{children}</div>
 		</section>
 	);
 };

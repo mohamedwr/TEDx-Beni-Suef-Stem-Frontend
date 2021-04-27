@@ -15,7 +15,7 @@ const Title = ({
 	console.log(router.asPath);
 	let EditedDescription = mdToText(description);
 	EditedDescription =
-		EditedDescription.length <= 950
+		EditedDescription.length <= 750
 			? EditedDescription
 			: EditedDescription.slice(0, 750);
 	console.log(EditedDescription);
