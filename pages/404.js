@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import { FilledButton } from '../components/Button';
 import { useRouter } from 'next/router';
 
 // Components
@@ -15,7 +15,9 @@ const Error = () => {
 					<h1 className='font-bold tracking-wide text-red-500 text-9xl font-roboto'>
 						404
 					</h1>
-					<Button text='Back To Home' onClick={() => router.push('/')} />
+					<FilledButton onClick={() => router.push('/')}>
+						Back To Home
+					</FilledButton>
 				</div>
 				<div className='absolute inset-0 z-10 flex flex-col items-center justify-center bg-black opacity-70'></div>
 			</div>

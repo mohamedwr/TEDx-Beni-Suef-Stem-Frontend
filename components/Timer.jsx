@@ -19,7 +19,7 @@ const Timer = () => {
 	let countDownDate = new Date('May 21, 2021 00:00:00').getTime();
 
 	// Update the count down every 1 second
-	let x = setInterval(function () {
+	setInterval(() => {
 		let now = new Date().getTime();
 
 		let distance = countDownDate - now;
@@ -37,7 +37,7 @@ const Timer = () => {
 		setSecond(seconds);
 	}, 1000);
 	return (
-		<ul className='grid grid-cols-1 divide-y-2 md:divide-y-0 md:divide-x-2 md:grid-cols-2 xl:grid-cols-4'>
+		<ul className='grid grid-cols-1 divide-y-2 md:divide-y-0 md:divide-x-2 md:grid-cols-4'>
 			<li className='flex flex-col items-center justify-center py-3 md:py-0'>
 				<Tile text='days' value={day} />
 			</li>
