@@ -32,7 +32,7 @@ const event = () => {
 				<Separator color='bg-red-500' />
 
 				<Section withBorder title='Event Description'>
-					<p className='font-light text-black'>
+					<p className='font-light text-black dark:text-white'>
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
 						corrupti autem natus illo, harum quam suscipit molestiae voluptates
 						omnis reprehenderit deserunt aperiam sit doloremque itaque neque qui
