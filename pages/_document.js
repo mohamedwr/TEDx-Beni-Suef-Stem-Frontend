@@ -11,10 +11,6 @@ class MyDocument extends Document {
 			<Html>
 				<Head>
 					<meta charset='utf-8' />
-					<meta
-						name='viewport'
-						content='width=device-width, initial-scale=1.0'
-					/>
 					<meta name='language' content='english' />
 					<meta http-equiv='content-type' content='text/html' />
 					<meta name='robots' content='index,follow' />
@@ -34,11 +30,7 @@ class MyDocument extends Document {
 
 					{/* Open Graph Meta Tags */}
 					<meta property='og:type' content='website' />
-					<meta property='og:url' content='http://tedxyouthbstem.com' />
 					<meta property='og:site_name' content='TEDx Youth@BeniSuef STEM' />
-					<meta property='og:url' content='http://tedxyouthbstem.com' />
-
-					<meta name='twitter:site' content='http://tedxyouthbstem.com' />
 
 					{/* Author, Design, Publisher */}
 					<meta name='author' content='Devien George' />

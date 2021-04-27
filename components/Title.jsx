@@ -1,41 +1,55 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+
+// Utils
+import { mdToText } from '../utils/mdToText';
 
 const Title = ({
 	children = '',
 	description = 'TEDxYouth@BeniSuefSTEM aims to spot the light on the idea and the concept of overcoming the tough times and convert them into a huge success. In addition, spread and discuss the ideas of our local STEM community, which includes hundreds of students with bright minds. We plan to spread practical steps for success, to rise with our people, community, and our lovely country, Egypt.',
 	title = 'TEDx Youth@BeniSuefSTEM Website',
 	image = 'https://tedxyouthbstem.com/tedLogoWhite.png',
-}) => (
-	<Head>
-		<meta property='og:title' content={title} />
-		<meta
-			property='og:description'
-			content={
-				description.length <= 950 ? description : description.slice(0, 950)
-			}
-		/>
-		<meta name='keywords' content='TEDx, benisuef, stem, youth' />
+	keywords = ['tedx', 'benisuef', 'stem', 'youth'],
+}) => {
+	const router = useRouter();
+	console.log(router.asPath);
+	let EditedDescription = mdToText(description);
+	EditedDescription =
+		EditedDescription.length <= 950
+			? EditedDescription
+			: EditedDescription.slice(0, 750);
+	console.log(EditedDescription);
+	return (
+		<Head>
+			{/* Viewport Meta Tag */}
+			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
-		<meta property='og:image' content={image} />
-		<meta name='twitter:title' content={title} />
-		<meta
-			name='twitter:description'
-			content={
-				description.length <= 950 ? description : description.slice(0, 950)
-			}
-		/>
-		<meta name='twitter:image' content={image} />
-		<meta name='twitter:card' content='summary_large_image' />
-		<meta name='twitter:image' content={image} />
+			{/* Keywords Meta Tag */}
+			<meta name='keywords' content={keywords.join(', ')} />
 
-		<meta
-			name='description'
-			content={
-				description.length <= 950 ? description : description.slice(0, 950)
-			}
-		/>
+			{/* Open Graph Meta Tags */}
+			<meta property='og:image' content={image} />
+			<meta property='og:title' content={title} />
+			<meta property='og:description' content={EditedDescription} />
+			<meta
+				property='og:url'
+				content={`http://tedxyouthbstem.com/${router.asPath}`}
+			/>
 
-		<title>{children} | TEDx BeniSuefStem</title>
-	</Head>
-);
+			{/* Twitter Meta Tags */}
+			<meta name='twitter:image' content={image} />
+			<meta name='twitter:card' content='summary_large_image' />
+			<meta name='twitter:title' content={title} />
+			<meta name='twitter:description' content={EditedDescription} />
+			<meta
+				name='twitter:site'
+				content={`http://tedxyouthbstem.com/${router.asPath}`}
+			/>
+
+			<meta name='description' content={EditedDescription} />
+
+			<title>{children} | TEDx BeniSuefStem</title>
+		</Head>
+	);
+};
 export default Title;
