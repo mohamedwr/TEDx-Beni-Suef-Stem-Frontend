@@ -63,7 +63,7 @@ const event = () => {
 					<h1 className='text-4xl font-bold text-center text-white'>
 						Event Date
 					</h1>
-					<Timer />
+					<Timer time='May 29, 2021' />
 				</section>
 
 				{/* <section className='flex flex-col justify-around space-y-2 md:flex-row md:space-y-0'>

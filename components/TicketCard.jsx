@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router';
+
+// Components
 import Separator from './Separator';
 import { FilledButton } from './Button';
 
@@ -10,7 +12,7 @@ const TicketCard = ({
 		'Lorem, ipsum dolor.',
 		'Lorem, ipsum dolor.',
 	],
-	form = 'https://www.facebook.com/TEDxBSTEM',
+	form = '/error',
 }) => {
 	const router = useRouter();
 	return (
@@ -21,9 +23,9 @@ const TicketCard = ({
 				{price} <span className='text-xl font-normal'>EGP</span>
 			</h4>
 			<div className='flex flex-col space-y-3'>
-				{benefits.map((benefit) => (
+				{benefits.map((benefit, index) => (
 					<h3
-						key={benefit}
+						key={`${index}-${benefit}`}
 						className='text-xl font-medium text-gray-500 dark:text-white'
 					>
 						{benefit}

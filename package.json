@@ -34,6 +34,7 @@
 		"react-countup": "^4.3.3",
 		"react-dom": "^16.14.0",
 		"react-hook-form": "^6.15.2",
+		"react-image-lightbox": "^5.1.1",
 		"react-markdown": "^5.0.3",
 		"react-messenger-customer-chat": "^0.8.0",
 		"react-remark": "^2.0.3",

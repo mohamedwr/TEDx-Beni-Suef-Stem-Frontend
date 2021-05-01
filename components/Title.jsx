@@ -12,7 +12,6 @@ const Title = ({
 	keywords = ['tedx', 'benisuef', 'stem', 'youth'],
 }) => {
 	const router = useRouter();
-	console.log(router.asPath);
 	let EditedDescription = mdToText(description);
 	EditedDescription =
 		EditedDescription.length <= 750

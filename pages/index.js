@@ -126,32 +126,32 @@ export default function Home() {
 									{
 										name: 'Yussof Waleed',
 										title: 'Chairman',
-										image: '/teams/leaders/Chairman.png',
+										image: '/leaders/Chairman.png',
 									},
 									{
 										name: 'Ahmed Sayed',
 										title: 'Co-Chairman',
-										image: '/teams/leaders/Co-Chairman.png',
+										image: '/leaders/Co-Chairman.png',
 									},
 									{
 										name: 'Salma Ahmed',
 										title: 'CEO',
-										image: '/teams/leaders/CEO.png',
+										image: '/leaders/CEO.png',
 									},
 									{
 										name: 'Salma Ahmed',
 										title: 'Multi-Media Chief',
-										image: '/teams/leaders/Multi-Media.png',
+										image: '/leaders/Multi-Media.png',
 									},
 									{
 										name: 'Mohamed Hisham',
 										title: 'Digital-Marketing Chief',
-										image: '/teams/leaders/Digital-Marketing-Chief.png',
+										image: '/leaders/Digital-Marketing-Chief.png',
 									},
 									{
 										name: 'Karem Nabil',
 										title: 'PR & FR Chief',
-										image: '/teams/leaders/PR-&-FR.png',
+										image: '/leaders/PR-&-FR.png',
 									},
 								]}
 							/>

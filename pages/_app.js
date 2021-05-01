@@ -8,6 +8,7 @@ import SideLoader from '../components/SideLoader';
 // Styles
 import '../styles/globals.css';
 import '../components/TeamSlider.css';
+import 'react-image-lightbox/style.css';
 
 // Contexts
 import { LayoutProvider } from '../context/LayoutContext';

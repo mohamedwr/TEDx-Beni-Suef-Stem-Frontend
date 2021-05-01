@@ -1,8 +1,14 @@
+import { useState } from 'react';
+import Lightbox from 'react-image-lightbox';
+
+// Components
 import Nav from '../components/Nav';
 import Title from '../components/Title';
 import Footer from '../components/Footer';
 
 const gallery = () => {
+	const [isOpen, setOpen] = useState(false);
+	const [imageIndex, setImageIndex] = useState(0);
 	const images = [
 		'https://res.cloudinary.com/dxaqlmgag/image/upload/v1618755915/Gallery/photo_2021-04-11_14-37-20_jmxtz6.jpg',
 		'https://res.cloudinary.com/dxaqlmgag/image/upload/v1618755871/Gallery/photo_2021-04-11_14-37-17_kztaty.jpg',
@@ -31,7 +37,6 @@ const gallery = () => {
 		'https://res.cloudinary.com/dxaqlmgag/image/upload/v1618755396/Gallery/photo_2021-04-10_04-10-58_fzbjaa.jpg',
 		'https://res.cloudinary.com/dxaqlmgag/image/upload/v1618755396/Gallery/photo_2021-04-10_04-10-57_jrhxmf.jpg',
 	];
-	// const rowsNumber = images / 2;
 	return (
 		<>
 			<Nav />
@@ -46,6 +51,10 @@ const gallery = () => {
 						key={index}
 						src={image}
 						alt={`image ${index + 1}`}
+						onClick={() => {
+							setImageIndex(index);
+							setOpen(true);
+						}}
 						className={`object-cover w-full h-full ${
 							Math.floor((index + 1) / 2) % 2 == 1 ? 'col-span-1' : 'col-span-2'
 						} rounded-lg shadow-xl`}
@@ -59,6 +68,20 @@ const gallery = () => {
 					/>
 				))}
 			</section>
+			{isOpen && (
+				<Lightbox
+					mainSrc={images[imageIndex]}
+					nextSrc={images[(imageIndex + 1) % images.length]}
+					prevSrc={images[(imageIndex + images.length - 1) % images.length]}
+					onCloseRequest={() => setOpen(false)}
+					onMovePrevRequest={() =>
+						setImageIndex((imageIndex + images.length - 1) % images.length)
+					}
+					onMoveNextRequest={() =>
+						setImageIndex((imageIndex + 1) % images.length)
+					}
+				/>
+			)}
 			<Footer />
 		</>
 	);
