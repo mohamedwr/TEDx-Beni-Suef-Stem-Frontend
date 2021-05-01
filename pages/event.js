@@ -3,9 +3,9 @@ import Nav from '../components/Nav';
 import Section from '../components/Section';
 import Timer from '../components/Timer';
 import Title from '../components/Title';
-import PersonCard from '../components/PersonCard';
 import Footer from '../components/Footer';
 import TicketCard from '../components/TicketCard';
+// import PersonCard from '../components/PersonCard';
 // import { FilledButton } from '../components/Button';
 // import Separator from '../components/Separator';
 
@@ -57,7 +57,17 @@ const event = () => {
 	return (
 		<>
 			<Nav />
-			<Title>Event Details</Title>
+			<Title
+				keywords={[
+					'ticket',
+					'tickets',
+					'event',
+					'Helwan university',
+					'event beniSuef',
+				]}
+			>
+				Event Details
+			</Title>
 			<div className='container py-5 space-y-6'>
 				<section className='px-6 pb-16 space-y-4 bg-red-500 rounded-md shadow-lg pt-11'>
 					<h1 className='text-4xl font-bold text-center text-white'>

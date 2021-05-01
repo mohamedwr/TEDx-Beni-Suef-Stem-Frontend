@@ -17,8 +17,10 @@ const TicketCard = ({
 	const router = useRouter();
 	return (
 		<div className='flex flex-col py-10 space-y-5 text-center bg-gray-100 border-2 rounded-md shadow-md px-7 xl:px-20 dark:bg-gray-700 dark:border-red-500'>
-			<h2 className='text-5xl font-bold uppercase dark:text-white'>{name}</h2>
-			<Separator color='dark:bg-red-500' className='bg-gray-300' />
+			<h2 className='text-5xl font-bold text-red-500 uppercase dark:text-white'>
+				{name}
+			</h2>
+			<Separator darkColor='bg-red-500' />
 			<h4 className='text-4xl font-bold dark:text-white'>
 				{price} <span className='text-xl font-normal'>EGP</span>
 			</h4>

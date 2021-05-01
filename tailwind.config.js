@@ -1,12 +1,12 @@
 module.exports = {
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-	darkMode: 'class', // or 'media' or 'class'
+	darkMode: 'class',
 	theme: {
 		extend: {
 			borderWidth: {
 				16: '16px',
 			},
-			backgroundImage: (theme) => ({
+			backgroundImage: () => ({
 				mainImage: "url('/cover.jpg')",
 				errImage: "url('/error.png')",
 				aboutLg: "url('/backgroundAboutlg.svg')",
@@ -15,7 +15,6 @@ module.exports = {
 			}),
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
-				cairo: ['Cairo', 'sans-serif'],
 			},
 			zIndex: {
 				'-10': '-10',
@@ -30,11 +29,6 @@ module.exports = {
 			},
 		},
 		linearGradientColors: (theme) => theme('colors'),
-		radialGradientColors: {
-			// defaults to {}
-			// 'gray-black': ['#f1f1f1', '#000'],
-		},
-
 		// radialGradientColors: (theme) => theme('colors'),
 		conicGradientColors: (theme) => theme('colors'),
 		container: {
@@ -76,8 +70,8 @@ module.exports = {
 		require('tailwindcss-children'),
 		require('@tailwindcss/forms'),
 		require('tailwindcss-gradients'),
-		// require('tailwindcss-debug-screens'),
 		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/typography'),
+		// require('tailwindcss-debug-screens'),
 	],
 };

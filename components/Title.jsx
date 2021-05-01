@@ -9,7 +9,7 @@ const Title = ({
 	description = 'TEDxYouth@BeniSuefSTEM aims to spot the light on the idea and the concept of overcoming the tough times and convert them into a huge success. In addition, spread and discuss the ideas of our local STEM community, which includes hundreds of students with bright minds. We plan to spread practical steps for success, to rise with our people, community, and our lovely country, Egypt.',
 	title = 'TEDx Youth@BeniSuefSTEM Website',
 	image = 'https://tedxyouthbstem.com/tedLogoWhite.png',
-	keywords = ['tedx', 'benisuef', 'stem', 'youth'],
+	keywords = [],
 }) => {
 	const router = useRouter();
 	let EditedDescription = mdToText(description);
@@ -17,17 +17,20 @@ const Title = ({
 		EditedDescription.length <= 750
 			? EditedDescription
 			: EditedDescription.slice(0, 750);
+
+	let EditedTitle = `${children} | TEDx BeniSuefStem`;
+	let EditedKeywords = ['tedx', 'benisuef', 'stem', 'youth', ...keywords];
 	return (
 		<Head>
 			{/* Viewport Meta Tag */}
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
 			{/* Keywords Meta Tag */}
-			<meta name='keywords' content={keywords.join(', ')} />
+			<meta name='keywords' content={EditedKeywords} />
 
 			{/* Open Graph Meta Tags */}
 			<meta property='og:image' content={image} />
-			<meta property='og:title' content={title} />
+			<meta property='og:title' content={EditedTitle} />
 			<meta property='og:description' content={EditedDescription} />
 			<meta
 				property='og:url'
@@ -37,7 +40,7 @@ const Title = ({
 			{/* Twitter Meta Tags */}
 			<meta name='twitter:image' content={image} />
 			<meta name='twitter:card' content='summary_large_image' />
-			<meta name='twitter:title' content={title} />
+			<meta name='twitter:title' content={EditedTitle} />
 			<meta name='twitter:description' content={EditedDescription} />
 			<meta
 				name='twitter:site'
@@ -46,7 +49,7 @@ const Title = ({
 
 			<meta name='description' content={EditedDescription} />
 
-			<title>{children} | TEDx BeniSuefStem</title>
+			<title>{EditedTitle}</title>
 		</Head>
 	);
 };

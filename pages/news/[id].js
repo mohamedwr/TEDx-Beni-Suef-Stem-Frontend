@@ -25,7 +25,7 @@ const postPage = ({ post }) => {
 	return (
 		<>
 			<Nav />
-			<Title description={post.content} title={post.title} image={post.image}>
+			<Title description={post.content} image={post.image}>
 				{post.title}
 			</Title>
 			<div className='container py-4 space-y-1 lg:px-20 lg:py-14 lg:space-y-3'>

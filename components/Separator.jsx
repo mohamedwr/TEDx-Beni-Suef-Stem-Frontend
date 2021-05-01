@@ -1,9 +1,9 @@
-const Separator = ({ color = '', className = '' }) => (
-	<hr
-		className={`w-full h-1 ${
-			color == '' ? 'bg-gray-200' : color
-		} dark:bg-gray-600 rounded-md border-0 ${className}`}
-	/>
-);
+const Separator = ({
+	color = 'bg-gray-200',
+	darkColor = 'dark:bg-gray-600',
+}) => {
+	let dark = `dark:${darkColor}`;
+	return <hr className={`w-full h-1 ${color} ${dark} rounded-md border-0`} />;
+};
 
 export default Separator;
