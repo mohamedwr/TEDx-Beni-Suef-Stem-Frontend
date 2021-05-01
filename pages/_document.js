@@ -33,9 +33,7 @@ class MyDocument extends Document {
 					<meta property='og:site_name' content='TEDx Youth@BeniSuef STEM' />
 
 					{/* Author, Design, Publisher */}
-					<meta name='author' content='Devien George' />
-					<meta name='designer' content='Devien George' />
-					<meta name='publisher' content='Devien George' />
+					<link type='text/plain' rel='author' href='/humans.txt' />
 
 					<link rel='preconnect' href='https://fonts.gstatic.com' />
 					<link
