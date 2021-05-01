@@ -1,21 +1,88 @@
-# Next.js + Tailwind CSS Example
+# TEDx Beni Suef Website Project
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) (v2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![Logo](https://tedxyouthbstem.com/logoWhite.png)
 
-## Deploy your own
+## Project Title
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+The Frontend For TEDx Beni Suef STEM Website. built with
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Authors
 
-## How to use
+- [@deviengeorge](https://www.github.com/deviengeorge)
+- [@GasserAbdlrazk](https://github.com/gasser)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Documentation
+
+- `pages folder` Contain the Pages that are loaded inside the browser by NextJS
+- `components folder` Contain the components that are used inside every page has been made
+- `hooks folder` Contain Custom hooks to not replicate the logic twice inside the component and to reuse it again in another component
+- `utils folder` Contain Custom function to help the logic inside the code
+- `context folder` Contain Context Provider for React component
+- `public folder` Contain files that are exposed to the public Internet
+- `styles folder` Contain CSS files to style the pages and the components
+
+## Screenshots
+
+![Example_Light](https://siasky.net/_A145vdi94cIVbstf4c8iL8RyLX5Xb5OhcSSgreLSJ1-_g)
+
+![Example_Dark](https://siasky.net/_A2JbQJ_XLDRnvoPf3MQvmZvak0gVawQUrlO3u5eV9uhww)
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+  git clone https://link-to-project
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+Open the local Server On Port 3000
+
+```http
+  http://localhost:3000
+```
+
+## Lessons Learned
+
+What did you learn while building this project? What challenges did you face and how did you overcome them?
+
+- Build highly efficient components to reuse it again in another page
+- Improve the SEO by meta tags, sitemaps and robots.txt files
+- Build a appropriate logic that help the component to work
+- Design a Whole system design without any framework for css only with tailwind css
+- Make the website had a dark and light theme
+
+## Tech Client Stack
+
+- NextJS ( ReactJS )
+- PostCSS ( CSS Preprocessor )
+- TailwindCSS
+- Keen Slider
+- Sweet Alert 2
+- Axios
+- React Form Hook
+- React Remark ( Markdown Text )
+- React Image LightBox
+- React Messenger Customer Chat
+- Next Sitemap ( Sitemap Files For SEO )
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
