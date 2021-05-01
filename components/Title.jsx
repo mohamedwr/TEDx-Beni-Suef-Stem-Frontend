@@ -34,7 +34,7 @@ const Title = ({
 			<meta property='og:description' content={EditedDescription} />
 			<meta
 				property='og:url'
-				content={`http://tedxyouthbstem.com/${router.asPath}`}
+				content={`http://tedxyouthbstem.com${router.asPath}`}
 			/>
 
 			{/* Twitter Meta Tags */}
@@ -44,7 +44,7 @@ const Title = ({
 			<meta name='twitter:description' content={EditedDescription} />
 			<meta
 				name='twitter:site'
-				content={`http://tedxyouthbstem.com/${router.asPath}`}
+				content={`http://tedxyouthbstem.com${router.asPath}`}
 			/>
 
 			<meta name='description' content={EditedDescription} />
