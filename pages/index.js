@@ -103,7 +103,7 @@ export default function Home() {
 						<div className='flex items-center justify-center space-x-5'>
 							<CircularCard
 								title='followers'
-								num={3000}
+								num={4000}
 								color='bg-transparent'
 							/>
 						</div>

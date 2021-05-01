@@ -1,14 +1,59 @@
 // Components
 import Nav from '../components/Nav';
 import Section from '../components/Section';
-import { FilledButton } from '../components/Button';
 import Timer from '../components/Timer';
 import Title from '../components/Title';
-import Separator from '../components/Separator';
 import PersonCard from '../components/PersonCard';
 import Footer from '../components/Footer';
+import TicketCard from '../components/TicketCard';
+// import { FilledButton } from '../components/Button';
+// import Separator from '../components/Separator';
 
 const event = () => {
+	const tickets = [
+		{
+			name: 'Normal',
+			price: 120,
+			form: 'https://forms.gle/K5ycFiAq9CRpYpg68',
+			benefits: [
+				'Attendance & Breakfast',
+				'Normal Welcome Package',
+				'Normal Sticker Package',
+				'Face Mask',
+				'-',
+				'-',
+				'-',
+			],
+		},
+		{
+			name: 'Pro',
+			price: 150,
+			form: 'https://forms.gle/wqgY9f4EsQyURy5H9',
+			benefits: [
+				'Attendance & Breakfast',
+				'Pro Welcome Package',
+				'Pro Sticker Package',
+				'Face Mask',
+				'Printed T-Shirt',
+				'Pro Seat',
+				'-',
+			],
+		},
+		{
+			name: 'VIP',
+			price: 180,
+			form: 'https://forms.gle/uS2jDJYTsfQ5X7k49 ',
+			benefits: [
+				'Attendance & Breakfast',
+				'VIP Welcome Package',
+				'Full Sticker Package',
+				'Face Mask',
+				'Printed T-Shirt',
+				'VIP Seat',
+				'Lunch',
+			],
+		},
+	];
 	return (
 		<>
 			<Nav />
@@ -21,15 +66,11 @@ const event = () => {
 					<Timer />
 				</section>
 
-				{/* <Separator color='bg-red-500' /> */}
-
-				<section className='flex flex-col justify-around space-y-2 md:flex-row md:space-y-0'>
+				{/* <section className='flex flex-col justify-around space-y-2 md:flex-row md:space-y-0'>
 					<FilledButton>Volunteer</FilledButton>
 					<FilledButton>Book Your Ticket</FilledButton>
 					<FilledButton>Event On Facebook</FilledButton>
-				</section>
-
-				<Separator color='bg-red-500' />
+				</section> */}
 
 				<Section withBorder title='Event Description'>
 					<p className='font-light text-black dark:text-white'>
@@ -51,28 +92,27 @@ const event = () => {
 					</p>
 				</Section>
 
-				<Separator color='bg-red-500' />
-
+				{/* Tickets */}
 				<Section
+					title='Tickets'
 					withBorder
-					title='Partners'
 					className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'
 				>
-					{[1, 2, 3, 4, 5, 6].map((card) => (
-						<PersonCard
-							key={card}
-							isMember
-							img='/cover.jpg'
-							name={`Partner ${card}`}
+					{tickets.map(({ name, price, form, benefits }) => (
+						<TicketCard
+							// name={`${name} Ticket`}
+							name={name}
+							price={price}
+							form={form}
+							benefits={benefits}
 						/>
 					))}
 				</Section>
 
-				<Separator color='bg-red-500' />
-
-				<Section
+				{/* Partners & Sponsors */}
+				{/* <Section
 					withBorder
-					title='Sponsors'
+					title='Partners & Sponsors'
 					className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'
 				>
 					{[1, 2, 3, 4, 5, 6].map((card) => (
@@ -80,9 +120,28 @@ const event = () => {
 							key={card}
 							isMember
 							img='/cover.jpg'
-							name={`Sponsor ${card}`}
+							name={`Person ${card}`}
 						/>
 					))}
+				</Section> */}
+
+				{/* Speakers */}
+				<Section
+					withBorder
+					title='Speakers'
+					// className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'
+				>
+					{/* {[1, 2, 3, 4, 5, 6].map((card) => (
+						<PersonCard
+							key={card}
+							isMember
+							img='/cover.jpg'
+							name={`Speaker ${card}`}
+						/>
+					))} */}
+					<h2 className='py-5 text-5xl font-bold text-center text-gray-600'>
+						SOON
+					</h2>
 				</Section>
 			</div>
 			<Footer />

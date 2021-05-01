@@ -18,7 +18,6 @@ const Title = ({
 		EditedDescription.length <= 750
 			? EditedDescription
 			: EditedDescription.slice(0, 750);
-	console.log(EditedDescription);
 	return (
 		<Head>
 			{/* Viewport Meta Tag */}
