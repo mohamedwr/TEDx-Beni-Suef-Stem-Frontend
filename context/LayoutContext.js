@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from 'react';
 const LayoutContext = createContext();
 
 const LayoutProvider = ({ children }) => {
-	const [dark, setDark] = useState(false);
+	const [dark, setDark] = useState(true);
 	const [firstLoad, setFirstLoad] = useState(false);
 
 	const toggleDark = () => {
