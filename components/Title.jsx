@@ -7,7 +7,6 @@ import { mdToText } from '../utils/mdToText';
 const Title = ({
 	children = '',
 	description = 'TEDxYouth@BeniSuefSTEM aims to spot the light on the idea and the concept of overcoming the tough times and convert them into a huge success. In addition, spread and discuss the ideas of our local STEM community, which includes hundreds of students with bright minds. We plan to spread practical steps for success, to rise with our people, community, and our lovely country, Egypt.',
-	title = 'TEDx Youth@BeniSuefSTEM Website',
 	image = 'https://tedxyouthbstem.com/tedLogoWhite.png',
 	keywords = [],
 }) => {

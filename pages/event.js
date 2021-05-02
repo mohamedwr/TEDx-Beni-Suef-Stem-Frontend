@@ -58,6 +58,11 @@ const event = () => {
 		<>
 			<Nav />
 			<Title
+				image='https://res.cloudinary.com/dxaqlmgag/image/upload/v1619954113/Event-29-5-2021.jpg'
+				description='TEDxYouth@BeniSuefSTEM season 2021 event will be held at the end
+							of this month, 29 May 2021. Do not miss the chance of joining our
+							big event by buying our ticket as soon as tickets are available.
+							We are waiting for you all.'
 				keywords={[
 					'ticket',
 					'tickets',
@@ -83,22 +88,34 @@ const event = () => {
 				</section> */}
 
 				<Section withBorder title='Event Description'>
-					<p className='font-light text-black dark:text-white'>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
-						corrupti autem natus illo, harum quam suscipit molestiae voluptates
-						omnis reprehenderit deserunt aperiam sit doloremque itaque neque qui
-						architecto placeat explicabo quos dolore aliquam nisi.
-						Necessitatibus natus earum assumenda expedita voluptate. Inventore
-						numquam expedita quibusdam dignissimos esse similique sequi modi
-						enim, et cum qui dolor corporis dolorem sapiente nam facilis
-						suscipit nihil ipsam facere illo aliquid. Aliquam quae quam
-						praesentium ipsam expedita asperiores doloremque molestias nisi
-						provident veritatis voluptate cupiditate doloribus voluptas sint
-						quod, ea adipisci in error vel, perspiciatis iure ipsa distinctio.
-						Id placeat sapiente repudiandae, iure sequi quod consequatur sit
-						pariatur deleniti inventore quae illo expedita earum obcaecati
-						voluptatum eum minus velit ratione eius iusto, dolor provident fugit
-						excepturi.
+					<p className='font-light text-justify text-black dark:text-white'>
+						<p dir='ltr'>
+							On TEDx’s red carpet, over 2600 talks had been presented till now,
+							millions of people are all ears, sitting and glaring at the
+							speakers. TEDx event is an annual event which is held by its own
+							people and community at the end of each season. Thus, our mission
+							as TEDxYouth@BeniSuefSTEM - a TEDx distributer - is to reach out
+							to all people, exposing insights, beliefs, inspirations, and WORTH
+							SPREADING IDEAS.
+						</p>
+						<p dir='ltr'>
+							TEDxYouth@BeniSuefSTEM season 2021 event will be held at the end
+							of this month, 29 May 2021. Do not miss the chance of joining our
+							big event by buying our ticket as soon as tickets are available.
+							We are waiting for you all.
+						</p>
+						<br />
+						<p dir='rtl'>
+							على السجادة الحمراء لـ TEDx، تم تقديم أكثر من 2600 مؤتمر حتى الآن،
+							الملايين من الناس كلهم ​​آذان صاغية، جالسون ومستمعون للمتحدثين
+							والمقدمين. حدث TEDx هو حدث سنوي يقام من قبل الناس والمجتمع الخاص
+							به في نهاية كل موسم. وبالتالي، فإن مهمتنا بصفتنا
+							TEDxYouth@BeniSuefSTEM - أحد موزعي TEDx - هي الوصول إلى جميع
+							الأشخاص، وكشف الرؤى والمعتقدات والإلهام والأفكار التي تستحق
+							الانتشار. سيقام حدث TEDxYouth@BeniSuefSTEM لموسم 2021 في نهاية هذا
+							الشهر، 29 مايو 2021. لا تفوت فرصة الانضمام إلى حدثنا الكبير عن
+							طريق شراء تذكرتنا بمجرد توفر التذاكر قريبا. نحن في انتظاركم جميعا.
+						</p>
 					</p>
 				</Section>
 
