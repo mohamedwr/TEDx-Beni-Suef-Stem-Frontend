@@ -41,7 +41,7 @@ class MyDocument extends Document {
 						rel='stylesheet'
 					/>
 				</Head>
-				<body className='duration-300 ease-in-out bg-fixed bg-no-repeat bg-cover debug-screens dark:bg-gray-800 '>
+				<body className='duration-300 ease-in-out bg-fixed bg-no-repeat bg-cover debug-screens dark:bg-gray-900 '>
 					<Main />
 					<NextScript />
 				</body>

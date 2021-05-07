@@ -26,10 +26,10 @@ export default function Home() {
 
 			<Slider
 				images={[
-					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617782209/Slider/2_riiqk5.png',
-					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617782209/Slider/1_t2ocns.png',
-					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617782211/Slider/3_mgyliw.png',
-					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1617782214/Slider/4_hy3ghx.png',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1620389306/Slider/1_mibk8p.webp',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1620389306/Slider/2_ddth74.webp',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1620389306/Slider/3_a9pw0i.webp',
+					'https://res.cloudinary.com/dxaqlmgag/image/upload/v1620389305/Slider/4_kwt6rs.webp',
 				]}
 			/>
 			<section className='flex items-center justify-center'>
