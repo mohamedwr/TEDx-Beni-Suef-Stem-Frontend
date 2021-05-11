@@ -1,7 +1,7 @@
-import { FilledButton } from '../components/Button';
 import { useRouter } from 'next/router';
 
 // Components
+import Button from '../components/Button';
 import Title from '../components/Title';
 
 const Error = () => {
@@ -15,9 +15,9 @@ const Error = () => {
 					<h1 className='font-bold tracking-wide text-red-500 text-9xl font-roboto'>
 						404
 					</h1>
-					<FilledButton onClick={() => router.push('/')}>
+					<Button type='filled' onClick={() => router.push('/')}>
 						Back To Home
-					</FilledButton>
+					</Button>
 				</div>
 				<div className='absolute inset-0 z-10 flex flex-col items-center justify-center bg-black opacity-70'></div>
 			</div>

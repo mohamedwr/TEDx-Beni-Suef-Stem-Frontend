@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 // Components
 import Separator from './Separator';
-import { FilledButton } from './Button';
+import Button from './Button';
 
 const TicketCard = ({
 	name = 'Ticket',
@@ -34,9 +34,9 @@ const TicketCard = ({
 					</h3>
 				))}
 			</div>
-			<FilledButton onClick={() => router.push(form)}>
+			<Button type='filled' onClick={() => router.push(form)}>
 				Book Your Ticket
-			</FilledButton>
+			</Button>
 		</div>
 	);
 };

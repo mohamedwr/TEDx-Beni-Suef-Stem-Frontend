@@ -11,7 +11,9 @@ const Footer = () => (
 				<FooterLink name='news' path='/news' />
 				<FooterLink name='about' path='/about' />
 				<FooterLink name='our team' path='/team' />
+				<FooterLink name='gallery' path='/gallery' />
 				<FooterLink name='contacts us' path='/contact' />
+				<FooterLink name='event' path='/event' />
 			</ul>
 			<ul className='flex space-x-4 select-none md:space-x-10'>
 				<Icon
@@ -29,7 +31,7 @@ const Footer = () => (
 				/>
 			</ul>
 			<MailingForm />
-			<h4 className='text-sm text-gray-400 md:text-base font-roboto text-center'>
+			<h4 className='text-sm text-center text-gray-400 md:text-base font-roboto'>
 				© {new Date().getFullYear().toString()} All Rights Reserved |
 				TEDxYouth@BeniSuefSTEM
 			</h4>
