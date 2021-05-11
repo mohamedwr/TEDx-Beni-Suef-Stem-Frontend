@@ -63,7 +63,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run precommit"
+			"pre-commit": "npm run precommit",
+			"pre-push": "echo 'hello world from pre push'"
 		}
 	},
 	"lint-staged": {

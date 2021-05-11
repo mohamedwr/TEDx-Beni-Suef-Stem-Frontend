@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
+import {useEffect} from 'react';
+import {useForm} from 'react-hook-form';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
@@ -20,10 +20,10 @@ const contact = () => {
 		};
 	}, []);
 
-	const { register, handleSubmit, errors } = useForm();
+	const {register, handleSubmit, errors} = useForm();
 	const backend_url = process.env.BACKEND_URL;
 	const onSubmit = (data) => {
-		let { email, message, name, subject } = data;
+		let {email, message, name, subject} = data;
 		axios
 			.post(`https://tedx-beni-suef-api.herokuapp.com/api/contact`, {
 				name,
@@ -35,7 +35,7 @@ const contact = () => {
 				Swal.fire(
 					'SuccessFull',
 					'Form Has Been Submit. We Will Mail You',
-					'success'
+					'success',
 				);
 			})
 			.catch(() => {
@@ -50,72 +50,80 @@ const contact = () => {
 		<>
 			<Nav />
 			<Title>Contact Us</Title>
-			<section className='z-20 flex items-center justify-center'>
+			<section className="z-20 flex items-center justify-center">
 				<Particle />
-				<div className='container py-10 space-y-5'>
-					<h2 className='pb-4 text-4xl font-bold text-center text-white uppercase font-roboto'>
+				<div className="container py-10 space-y-5">
+					<h2 className="pb-4 text-4xl font-bold text-center text-white uppercase font-roboto">
 						contact us
 					</h2>
-					<div className='flex items-center justify-center '>
-						<div className='w-11/12 lg:w-1/3'>
+					<div className="flex items-center justify-center ">
+						<div className="w-11/12 lg:w-1/3">
 							<form
-								className='grid grid-cols-1 gap-6'
+								className="grid grid-cols-1 gap-6"
 								onSubmit={handleSubmit(onSubmit)}
 							>
 								{/* Start Form */}
 
-								<label className='block'>
-									<span className='text-white'>Full Name</span>
+								<label className="block">
+									<span className="text-white">
+										Full Name
+									</span>
 									<input
 										required
-										type='text'
-										name='name'
-										ref={register({ required: true })}
+										type="text"
+										name="name"
+										ref={register({required: true})}
 										className={`${inputStyle} ${
 											errors.name ? 'border-red-500' : ''
 										}`}
-										placeholder='John Doe'
+										placeholder="John Doe"
 									/>
 								</label>
-								<label className='block'>
-									<span className='text-white'>Email Address</span>
+								<label className="block">
+									<span className="text-white">
+										Email Address
+									</span>
 									<input
-										type='email'
-										name='email'
-										ref={register({ required: true })}
+										type="email"
+										name="email"
+										ref={register({required: true})}
 										className={`${inputStyle} ${
 											errors.email ? 'border-red-500' : ''
 										}`}
-										placeholder='john@example.com'
+										placeholder="john@example.com"
 									/>
 								</label>
-								<label className='block'>
-									<span className='text-white'>Subject</span>
+								<label className="block">
+									<span className="text-white">Subject</span>
 									<input
-										type='text'
-										name='subject'
-										ref={register({ required: true })}
+										type="text"
+										name="subject"
+										ref={register({required: true})}
 										className={`${inputStyle} ${
-											errors.subject ? 'border-red-500' : ''
+											errors.subject
+												? 'border-red-500'
+												: ''
 										}`}
-										placeholder='Hello There'
+										placeholder="Hello There"
 									/>
 								</label>
-								<label className='block'>
-									<span className='text-white'>Message</span>
+								<label className="block">
+									<span className="text-white">Message</span>
 									<textarea
-										name='message'
-										ref={register({ required: true })}
+										name="message"
+										ref={register({required: true})}
 										className={`${inputStyle} resize-none ${
-											errors.message ? 'border-red-500' : ''
+											errors.message
+												? 'border-red-500'
+												: ''
 										}`}
-										rows='6'
-										placeholder='Enter Message...'
+										rows="6"
+										placeholder="Enter Message..."
 									></textarea>
 								</label>
 								<button
-									type='submit'
-									className='px-2 py-3 text-xl font-bold text-white uppercase bg-red-500 rounded-full font-roboto'
+									type="submit"
+									className="px-2 py-3 text-xl font-bold text-white uppercase bg-red-500 rounded-full font-roboto"
 								>
 									Submit
 								</button>
