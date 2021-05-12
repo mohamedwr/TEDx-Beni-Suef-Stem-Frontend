@@ -1,13 +1,12 @@
-import { useEffect } from 'react';
-import axios from 'axios';
+import axios from "axios";
 
 // Components
-import Nav from '../../components/Nav';
-import Card from '../../components/Card';
-import Footer from '../../components/Footer';
-import Title from '../../components/Title';
+import Nav from "../../components/Nav";
+import Card from "../../components/Card";
+import Footer from "../../components/Footer";
+import Title from "../../components/Title";
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
 	const backend_url = process.env.BACKEND_URL;
 	const { data: posts } = await axios.get(`${backend_url}/api/post`);
 

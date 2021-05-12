@@ -40,9 +40,13 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					fixed && underNavHeight
 						? "py-5 xl:px-12 px-6"
 						: "py-6 xl:py-10 xl:px-28 px-10"
-				}
-				${autoTransparent ? (underNavHeight ? "bg-black" : "") : "bg-black"}
-				${menu ? "bg-black" : ""}
+				} ${
+					autoTransparent
+						? underNavHeight
+							? "bg-black"
+							: "bg-gradient-t-black"
+						: "bg-black"
+				} ${menu ? "bg-black" : ""}
 				duration-500 ease-in flex flex-wrap justify-between items-center`}
 			>
 				{/* Logo */}
@@ -81,12 +85,12 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				>
 					<nav className="py-6 lg:py-0">
 						<ul className="flex flex-col items-center justify-between space-x-0 space-y-4 text-white lg:flex-row lg:space-x-4 lg:space-y-0">
-							<NavLink link="home" path="/" />
 							<NavLink link="news" path="/news" />
 							<NavLink link="about us" path="/about" />
 							<NavLink link="our team" path="/team" />
+							<NavLink link="gallery" path="/gallery" />
 							<NavLink link="contact us" path="/contact" />
-							<NavLink link="events news" soon />
+							<NavLink link="events news" path="/event" />
 						</ul>
 					</nav>
 				</div>

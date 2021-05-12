@@ -17,7 +17,7 @@
 .DS_Store
 *.pem
 
-.vscode/
+/.vscode/
 # local env files
 .env
 .env.local

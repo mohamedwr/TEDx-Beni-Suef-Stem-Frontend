@@ -1,3 +1,7 @@
+import FooterLink from "./FooterLink";
+import Icon from "./Icon";
+import MailingForm from "./MailingForm";
+
 const Footer = () => (
 	<footer className="z-50 py-10 bg-black">
 		<div className="container flex flex-col items-center justify-center space-y-5">

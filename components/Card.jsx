@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const Card = ({
-	title = 'Lorem ipsum dolor.',
-	img = '/cover.jpg',
-	author = 'John Doe',
-	time = '25-Jan-2020',
-	id = '1',
+	title = "Lorem ipsum dolor.",
+	img = "/cover.jpg",
+	author = "John Doe",
+	time = "25-Jan-2020",
+	id = "1",
 }) => {
 	const [isHover, setIsHover] = useState(false);
 	const router = useRouter();
@@ -18,9 +19,9 @@ const Card = ({
 		>
 			<motion.img
 				animate={
-					isHover ? { scale: 1.15, filter: 'brightness(0.7)' } : {}
+					isHover ? { scale: 1.15, filter: "brightness(0.7)" } : {}
 				}
-				transition={{ type: 'tween' }}
+				transition={{ type: "tween" }}
 				className="absolute object-cover border-red-500 rounded-xl border-l-16"
 				src={img}
 			/>
@@ -39,10 +40,10 @@ const Card = ({
 				className="absolute flex items-center justify-center h-full bg-red-500-alpha"
 				animate={
 					isHover
-						? { width: '100%', opacity: 1 }
-						: { width: '0%', opacity: 0 }
+						? { width: "100%", opacity: 1 }
+						: { width: "0%", opacity: 0 }
 				}
-				transition={{ type: 'keyframes', easings: 'easeInOut' }}
+				transition={{ type: "keyframes", easings: "easeInOut" }}
 				onClick={() => router.push(`/news/${id}`)}
 			>
 				<button className="px-8 py-4 text-xl font-bold text-white uppercase rounded-full shadow-md font-roboto bg-ted">
