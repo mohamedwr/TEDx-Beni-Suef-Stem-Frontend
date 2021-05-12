@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 // Styles
-import 'keen-slider/keen-slider.min.css';
+import "keen-slider/keen-slider.min.css";
 
 const PersonCard = ({
 	img,
@@ -17,9 +17,9 @@ const PersonCard = ({
 	return (
 		<div
 			className={`${
-				isSlide ? 'keen-slider__slide' : ''
+				isSlide ? "keen-slider__slide" : ""
 			} inline-flex flex-col justify-start items-center select-none ${
-				margin ? 'sm:mx-12' : ''
+				margin ? "sm:mx-12" : ""
 			}`}
 		>
 			<div
@@ -33,9 +33,10 @@ const PersonCard = ({
 							src="/x.svg"
 							className={`h-60 z-0 duration-500 ease-in-out opacity-100 ${
 								hover
-									? ''
-									: 'transform rotate-180 scale-0 translate-x-56 opacity-0'
+									? ""
+									: "transform rotate-180 scale-0 translate-x-56 opacity-0"
 							}`}
+							alt={name}
 						/>
 					</div>
 				)}
@@ -43,7 +44,7 @@ const PersonCard = ({
 					src={img}
 					alt={name}
 					className={`w-44 h-44 lg:h-52 lg:w-52 object-cover rounded-full relative z-20 duration-200 ease-in-out ${
-						grayscale && isMember ? 'grayscale' : ''
+						grayscale && isMember ? "grayscale" : ""
 					}`}
 				/>
 			</div>

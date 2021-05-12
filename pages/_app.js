@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
-import NextNProgress from 'nextjs-progressbar';
-import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
+import { useEffect } from "react";
+import NextNProgress from "nextjs-progressbar";
+import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
 
 // Components
-import SideLoader from '../components/SideLoader';
+import SideLoader from "../components/SideLoader";
 
 // Styles
-import '../styles/globals.css';
-import '../components/TeamSlider.css';
-import 'react-image-lightbox/style.css';
+import "../styles/globals.css";
+import "../components/TeamSlider.css";
+import "react-image-lightbox/style.css";
 
 // Contexts
-import { LayoutProvider } from '../context/LayoutContext';
+import { LayoutProvider } from "../context/LayoutContext";
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {
-		window.history.scrollRestoration = 'manual';
+		window.history.scrollRestoration = "manual";
 	}, []);
 
 	return (

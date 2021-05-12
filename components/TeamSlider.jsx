@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { useKeenSlider } from 'keen-slider/react';
+import { useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
 
 // Components
-import PersonCard from './PersonCard';
+import PersonCard from "./PersonCard";
 
-const ArrowLeft = (props) => {
-	const disableId = props.disabled ? ' arrow--disabled' : '';
+const ArrowLeft = ({ disabled, onClick }) => {
+	const disableId = disabled ? "arrow--disabled" : "";
 	return (
 		<svg
-			onClick={props.onClick}
-			className={'arrow arrow--left' + disableId}
+			onClick={onClick}
+			className={`arrow arrow--left ${disableId}`}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 		>
@@ -18,12 +18,12 @@ const ArrowLeft = (props) => {
 	);
 };
 
-const ArrowRight = (props) => {
-	const disableId = props.disabled ? ' arrow--disabled' : '';
+const ArrowRight = ({ disabled, onClick }) => {
+	const disableId = disabled ? " arrow--disabled" : "";
 	return (
 		<svg
-			onClick={props.onClick}
-			className={'arrow arrow--right' + disableId}
+			onClick={onClick}
+			className={`arrow arrow--right${disableId}`}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 		>
@@ -48,22 +48,22 @@ const TeamSlider = ({
 
 	const settings = {
 		initial: 0,
-		mode: 'free-snap',
+		mode: "free-snap",
 		centered: center,
-		loop: loop,
+		loop,
 		spacing: 15,
 		// mobile
 		breakpoints: {
 			// tablet sm - md
-			'(min-width: 768px)': {
+			"(min-width: 768px)": {
 				slidesPerView: md,
 			},
 			// mini laptop lg - xl
-			'(min-width: 1200px)': {
+			"(min-width: 1200px)": {
 				slidesPerView: lg,
 			},
 			// laptop 2xl
-			'(min-width: 1600px)': {
+			"(min-width: 1600px)": {
 				slidesPerView: xl,
 			},
 		},
@@ -80,7 +80,7 @@ const TeamSlider = ({
 				{persons.map((person) => (
 					<PersonCard
 						isSlide
-						key={`${person.name}-${person.role}`}
+						key={`${person.name} - ${person.title}`}
 						img={person.image}
 						name={person.name}
 						role={person.title}
@@ -103,27 +103,22 @@ const TeamSlider = ({
 			)}
 			{slider && dots && (
 				<div className="flex dots md:hidden">
-					{[...Array(slider.details().size).keys()].map((idx) => {
-						return (
-							<button
-								key={idx}
-								onClick={() => {
-									slider.moveToSlideRelative(idx);
-								}}
-								className={
-									'dot' +
-									(currentSlide === idx ? ' active' : '')
-								}
-							/>
-						);
-					})}
+					{[...Array(slider.details().size).keys()].map((idx) => (
+						<button
+							key={idx}
+							onClick={() => {
+								slider.moveToSlideRelative(idx);
+							}}
+							className={`dot${
+								currentSlide === idx ? " active" : ""
+							}`}
+							type="button"
+						/>
+					))}
 				</div>
 			)}
 		</>
 	);
 };
-
-// persons Schema
-// { name: "Ahmed mohamed", title: "CEO", img: "https://localhost:3000/img.jpg" }
 
 export default TeamSlider;

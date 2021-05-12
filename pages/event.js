@@ -1,53 +1,53 @@
 // Components
-import Nav from '../components/Nav';
-import Section from '../components/Section';
-import Timer from '../components/Timer';
-import Title from '../components/Title';
-import Footer from '../components/Footer';
-import TicketCard from '../components/TicketCard';
+import Nav from "../components/Nav";
+import Section from "../components/Section";
+import Timer from "../components/Timer";
+import Title from "../components/Title";
+import Footer from "../components/Footer";
+import TicketCard from "../components/TicketCard";
 
 const event = () => {
 	const tickets = [
 		{
-			name: 'Normal',
+			name: "Normal",
 			price: 120,
-			form: 'https://forms.gle/K5ycFiAq9CRpYpg68',
+			form: "https://forms.gle/K5ycFiAq9CRpYpg68",
 			benefits: [
-				'Attendance & Breakfast',
-				'Normal Welcome Package',
-				'Normal Sticker Package',
-				'Face Mask',
-				'-',
-				'-',
-				'-',
+				"Attendance & Breakfast",
+				"Normal Welcome Package",
+				"Normal Sticker Package",
+				"Face Mask",
+				"-",
+				"-",
+				"-",
 			],
 		},
 		{
-			name: 'Pro',
+			name: "Pro",
 			price: 150,
-			form: 'https://forms.gle/wqgY9f4EsQyURy5H9',
+			form: "https://forms.gle/wqgY9f4EsQyURy5H9",
 			benefits: [
-				'Attendance & Breakfast',
-				'Pro Welcome Package',
-				'Pro Sticker Package',
-				'Face Mask',
-				'Printed T-Shirt',
-				'Pro Seat',
-				'-',
+				"Attendance & Breakfast",
+				"Pro Welcome Package",
+				"Pro Sticker Package",
+				"Face Mask",
+				"Printed T-Shirt",
+				"Pro Seat",
+				"-",
 			],
 		},
 		{
-			name: 'VIP',
+			name: "VIP",
 			price: 180,
-			form: 'https://forms.gle/uS2jDJYTsfQ5X7k49 ',
+			form: "https://forms.gle/uS2jDJYTsfQ5X7k49 ",
 			benefits: [
-				'Attendance & Breakfast',
-				'VIP Welcome Package',
-				'Full Sticker Package',
-				'Face Mask',
-				'Printed T-Shirt',
-				'VIP Seat',
-				'Lunch',
+				"Attendance & Breakfast",
+				"VIP Welcome Package",
+				"Full Sticker Package",
+				"Face Mask",
+				"Printed T-Shirt",
+				"VIP Seat",
+				"Lunch",
 			],
 		},
 	];
@@ -61,11 +61,11 @@ const event = () => {
 							big event by buying our ticket as soon as tickets are available.
 							We are waiting for you all."
 				keywords={[
-					'ticket',
-					'tickets',
-					'event',
-					'Helwan university',
-					'event beniSuef',
+					"ticket",
+					"tickets",
+					"event",
+					"Helwan university",
+					"event beniSuef",
 				]}
 			>
 				Event Details
@@ -122,9 +122,9 @@ const event = () => {
 					withBorder
 					className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
 				>
-					{tickets.map(({name, price, form, benefits}) => (
+					{tickets.map(({ name, price, form, benefits }) => (
 						<TicketCard
-							// name={`${name} Ticket`}
+							key={name}
 							name={name}
 							price={price}
 							form={form}

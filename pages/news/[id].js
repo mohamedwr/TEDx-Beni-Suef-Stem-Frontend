@@ -1,17 +1,16 @@
-import { useRouter } from 'next/router';
-// import ReactMarkdown from 'react-markdown';
-import axios from 'axios';
+import { useRouter } from "next/router";
+import { Remark } from "react-remark";
+import axios from "axios";
 
 // Components
-import Nav from '../../components/Nav';
-import Title from '../../components/Title';
-import Footer from '../../components/Footer';
-import { Remark } from 'react-remark';
+import Nav from "../../components/Nav";
+import Title from "../../components/Title";
+import Footer from "../../components/Footer";
 
 export async function getServerSideProps({ query }) {
-	const backend_url = process.env.BACKEND_URL;
+	const backendUrl = process.env.BACKEND_URL;
 	const { data: post } = await axios.get(
-		`${backend_url}/api/post/${query.id}`
+		`${backendUrl}/api/post/${query.id}`
 	);
 
 	return {
@@ -21,7 +20,7 @@ export async function getServerSideProps({ query }) {
 	};
 }
 
-const postPage = ({ post }) => {
+const PostPage = ({ post }) => {
 	const router = useRouter();
 
 	return (
@@ -52,54 +51,50 @@ const postPage = ({ post }) => {
 							remarkToRehypeOptions={{ commonmark: true }}
 							rehypeReactOptions={{
 								components: {
-									a: (props) => (
+									a: ({ children, href }) => (
 										<a
 											className="px-0 py-2 text-xl font-bold text-red-500 underline uppercase duration-200 ease-in-out cursor-pointer font-roboto"
 											target="_blank"
-											{...props}
-										/>
+											href={href}
+											rel="noreferrer"
+										>
+											{children[0]}
+										</a>
 									),
-									h1: (props) => (
-										<h1
-											className="text-6xl text-black dark:text-white"
-											{...props}
-										/>
+									h1: ({ children }) => (
+										<h1 className="text-6xl text-black dark:text-white">
+											{children[0]}
+										</h1>
 									),
-									h2: (props) => (
-										<h2
-											className="text-5xl text-black dark:text-white"
-											{...props}
-										/>
+									h2: ({ children }) => (
+										<h2 className="text-5xl text-black dark:text-white">
+											{children[0]}
+										</h2>
 									),
-									h3: (props) => (
-										<h3
-											className="text-3xl text-black dark:text-white"
-											{...props}
-										/>
+									h3: ({ children }) => (
+										<h3 className="text-3xl text-black dark:text-white">
+											{children[0]}
+										</h3>
 									),
-									h4: (props) => (
-										<h4
-											className="text-2xl text-black dark:text-white"
-											{...props}
-										/>
+									h4: ({ children }) => (
+										<h4 className="text-2xl text-black dark:text-white">
+											{children[0]}
+										</h4>
 									),
-									h5: (props) => (
-										<h5
-											className="text-xl text-black dark:text-white"
-											{...props}
-										/>
+									h5: ({ children }) => (
+										<h5 className="text-xl text-black dark:text-white">
+											{children[0]}
+										</h5>
 									),
-									h6: (props) => (
-										<h6
-											className="text-lg text-black dark:text-white"
-											{...props}
-										/>
+									h6: ({ children }) => (
+										<h6 className="text-lg text-black dark:text-white">
+											{children[0]}
+										</h6>
 									),
-									p: (props) => (
-										<h6
-											className="text-lg text-black dark:text-white"
-											{...props}
-										/>
+									p: ({ children }) => (
+										<p className="text-lg text-black dark:text-white">
+											{children[0]}
+										</p>
 									),
 								},
 							}}
@@ -114,6 +109,7 @@ const postPage = ({ post }) => {
 						className="flex items-center justify-center px-12 py-4 text-xl font-bold text-white uppercase duration-200 ease-in-out bg-blue-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-blue-600"
 						href={post.facebookPost}
 						target="_blank"
+						rel="noreferrer"
 					>
 						View In
 						<img
@@ -124,7 +120,8 @@ const postPage = ({ post }) => {
 					</a>
 					<button
 						className="px-12 py-4 text-xl font-bold text-white uppercase duration-200 ease-in-out bg-red-500 rounded-full shadow-md cursor-pointer font-roboto hover:bg-red-600"
-						onClick={() => router.push('/news')}
+						onClick={() => router.push("/news")}
+						type="button"
 					>
 						Back
 					</button>
@@ -135,4 +132,4 @@ const postPage = ({ post }) => {
 	);
 };
 
-export default postPage;
+export default PostPage;

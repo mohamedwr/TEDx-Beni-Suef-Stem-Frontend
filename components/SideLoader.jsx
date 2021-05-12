@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const SideLoader = () => {
-	const initial = { width: '100%' };
-	const animate = { width: '0%' };
-	let time = 1;
+	const initial = { width: "100%" };
+	const animate = { width: "0%" };
+	const time = 1;
 
 	const transitions = {
 		duration: time,
-		ease: 'easeInOut',
-		type: 'tween',
+		ease: "easeInOut",
+		type: "tween",
 	};
 
 	return (

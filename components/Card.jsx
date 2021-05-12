@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 const Card = ({
 	title = "Lorem ipsum dolor.",
@@ -15,7 +16,9 @@ const Card = ({
 		<div
 			className="relative overflow-hidden bg-gray-100 select-none md:flex aspect-h-9 aspect-w-16 rounded-xl"
 			onMouseOver={() => setIsHover(true)}
+			onFocus={() => setIsHover(true)}
 			onMouseOut={() => setIsHover(false)}
+			onBlur={() => setIsHover(false)}
 		>
 			<motion.img
 				animate={
@@ -46,9 +49,7 @@ const Card = ({
 				transition={{ type: "keyframes", easings: "easeInOut" }}
 				onClick={() => router.push(`/news/${id}`)}
 			>
-				<button className="px-8 py-4 text-xl font-bold text-white uppercase rounded-full shadow-md font-roboto bg-ted">
-					View Post
-				</button>
+				<Button type="filled">View Post</Button>
 			</motion.div>
 		</div>
 	);

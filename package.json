@@ -6,7 +6,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "lint": "eslint ./components/*.jsx ./pages/** -c .eslintrc",
+    "lint:fix": "eslint --fix --cache ./components/*.jsx ./pages/** -c .eslintrc",
+    "prepare": "husky install"
   },
   "repository": {},
   "keywords": [],
@@ -29,6 +32,7 @@
     "next": "^10.0.5",
     "nextjs-progressbar": "0.0.7",
     "postcss": "^8.1.10",
+    "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.14.0",
@@ -51,7 +55,21 @@
     "typewriter-effect": "^2.17.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "faker": "^5.3.1",
-    "next-sitemap": "^1.6.25"
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "next-sitemap": "^1.6.25",
+    "stylelint-prettier": "^1.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "npm lint:fix"
   }
 }
