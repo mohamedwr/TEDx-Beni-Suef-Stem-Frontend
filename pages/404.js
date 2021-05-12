@@ -11,7 +11,11 @@ const Error = () => {
 			<Title>404</Title>
 			<div className="relative flex w-screen h-screen bg-no-repeat bg-cover bg-errImage">
 				<div className="z-20 flex flex-col items-center justify-center w-full h-full space-y-6">
-					<img src="/logoWhite.png" className="h-36" />
+					<img
+						src="/logoWhite.png"
+						className="h-36"
+						alt="TEDx BeniSuef Logo"
+					/>
 					<h1 className="font-bold tracking-wide text-red-500 text-9xl font-roboto">
 						404
 					</h1>
@@ -19,7 +23,7 @@ const Error = () => {
 						Back To Home
 					</Button>
 				</div>
-				<div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black opacity-70"></div>
+				<div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black opacity-70" />
 			</div>
 		</>
 	);

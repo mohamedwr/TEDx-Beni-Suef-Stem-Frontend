@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // div className='flex flex-col items-center justify-center w-64 h-64 m-0 border-2 border-red-500 rounded-full'
 const Tile = ({ text, value }) => (
@@ -22,23 +22,23 @@ const Timer = ({ time }) => {
 		second: 0,
 	});
 
-	let countDownDate = new Date(`${time} 00:00:00`).getTime();
+	const countDownDate = new Date(`${time} 00:00:00`).getTime();
 
 	// Update the count down every 1 second
 	useEffect(() => {
-		let timeDate = setInterval(() => {
-			let now = new Date().getTime();
+		const timeDate = setInterval(() => {
+			const now = new Date().getTime();
 
-			let distance = countDownDate - now;
+			const distance = countDownDate - now;
 
-			let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			let hours = Math.floor(
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor(
 				(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 			);
-			let minutes = Math.floor(
+			const minutes = Math.floor(
 				(distance % (1000 * 60 * 60)) / (1000 * 60)
 			);
-			let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 			setTime({
 				day: days,
@@ -46,14 +46,11 @@ const Timer = ({ time }) => {
 				minute: minutes,
 				second: seconds,
 			});
-			// setHour(hours);
-			// setMinute(minutes);
-			// setSecond(seconds);
 		}, 1000);
 		return () => {
 			clearInterval(timeDate);
 		};
-	}, []);
+	}, [countDownDate]);
 
 	return (
 		<ul className="grid grid-cols-1 divide-y-2 md:divide-y-0 md:divide-x-2 md:grid-cols-4">

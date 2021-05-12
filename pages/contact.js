@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import Title from "../components/Title";
 import Particle from "../components/Particle";
 
-const contact = () => {
+const Contact = () => {
 	useEffect(() => {
 		document.body.classList.remove("dark:bg-gray-800");
 		document.body.classList.add("bg-black");
@@ -22,7 +22,7 @@ const contact = () => {
 
 	const { register, handleSubmit, errors } = useForm();
 	const onSubmit = (data) => {
-		let { email, message, name, subject } = data;
+		const { email, message, name, subject } = data;
 		axios
 			.post(`https://tedx-beni-suef-api.herokuapp.com/api/contact`, {
 				name,
@@ -63,7 +63,7 @@ const contact = () => {
 							>
 								{/* Start Form */}
 
-								<label className="block">
+								<label className="block" htmlFor="name">
 									<span className="text-white">
 										Full Name
 									</span>
@@ -78,7 +78,7 @@ const contact = () => {
 										placeholder="John Doe"
 									/>
 								</label>
-								<label className="block">
+								<label className="block" htmlFor="email">
 									<span className="text-white">
 										Email Address
 									</span>
@@ -92,7 +92,7 @@ const contact = () => {
 										placeholder="john@example.com"
 									/>
 								</label>
-								<label className="block">
+								<label className="block" htmlFor="subject">
 									<span className="text-white">Subject</span>
 									<input
 										type="text"
@@ -106,7 +106,7 @@ const contact = () => {
 										placeholder="Hello There"
 									/>
 								</label>
-								<label className="block">
+								<label className="block" htmlFor="message">
 									<span className="text-white">Message</span>
 									<textarea
 										name="message"
@@ -118,7 +118,7 @@ const contact = () => {
 										}`}
 										rows="6"
 										placeholder="Enter Message..."
-									></textarea>
+									/>
 								</label>
 								<button
 									type="submit"
@@ -137,4 +137,4 @@ const contact = () => {
 	);
 };
 
-export default contact;
+export default Contact;

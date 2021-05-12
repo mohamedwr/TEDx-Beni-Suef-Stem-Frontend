@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 // Custom Hooks
@@ -23,10 +23,23 @@ import SunIcon from "../public/icons/sun.svg";
 const Nav = ({ fixed = false, autoTransparent = false }) => {
 	const router = useRouter();
 	const [menu, setMenu] = useState(false);
+	const [bg, setBG] = useState(false);
 	const { dark, toggleDark } = useContext(LayoutContext);
-	let LayoutIcon = dark ? MoonIcon : SunIcon;
-	let MenuIcon = menu ? CloseIcon : OpenIcon;
+	const LayoutIcon = dark ? MoonIcon : SunIcon;
+	const MenuIcon = menu ? CloseIcon : OpenIcon;
 	const { divRef, underNavHeight } = useHeight();
+
+	useEffect(() => {
+		if (autoTransparent) {
+			if (underNavHeight) {
+				setBG("bg-black");
+			} else {
+				setBG("bg-gradient-t-black");
+			}
+		} else {
+			setBG("bg-black");
+		}
+	}, [underNavHeight, autoTransparent, bg]);
 
 	return (
 		<div
@@ -38,19 +51,14 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 			<header
 				className={`${
 					fixed && underNavHeight
-						? "py-5 xl:px-12 px-6"
-						: "py-6 xl:py-10 xl:px-28 px-10"
-				} ${
-					autoTransparent
-						? underNavHeight
-							? "bg-black"
-							: "bg-gradient-t-black"
-						: "bg-black"
-				} ${menu ? "bg-black" : ""}
+						? "py-5 px-6 xl:px-12"
+						: "py-6 px-10 xl:py-10 xl:px-28"
+				} ${bg} ${menu ? "bg-black" : ""}
 				duration-500 ease-in flex flex-wrap justify-between items-center`}
 			>
 				{/* Logo */}
-				<div
+				<button
+					type="button"
 					className="flex items-center justify-between flex-1"
 					onClick={() => router.push("/")}
 				>
@@ -59,7 +67,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 						alt="logo"
 						className="h-12 cursor-pointer"
 					/>
-				</div>
+				</button>
 
 				<LayoutIcon
 					className="block w-6 h-6 mr-4 text-white fill-current xl:hidden"
@@ -68,11 +76,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 
 				<MenuIcon
 					className="block w-6 h-6 text-white fill-current pointer-cursor lg:hidden"
-					onClick={() =>
-						setMenu((prev) => {
-							return !prev;
-						})
-					}
+					onClick={() => setMenu((prev) => !prev)}
 				/>
 
 				{/* Nav */}

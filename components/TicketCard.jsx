@@ -25,9 +25,9 @@ const TicketCard = ({
 				{price} <span className="text-xl font-normal">EGP</span>
 			</h4>
 			<div className="flex flex-col space-y-3">
-				{benefits.map((benefit, index) => (
+				{benefits.map((benefit) => (
 					<h3
-						key={`${index}-${benefit}`}
+						key={`${name} - ${benefit}`}
 						className="text-xl font-medium text-gray-500 dark:text-white"
 					>
 						{benefit}

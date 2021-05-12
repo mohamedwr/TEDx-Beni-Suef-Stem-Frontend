@@ -1,9 +1,9 @@
 // Components
-import SlickSlider from 'react-slick';
+import SlickSlider from "react-slick";
 
 // Style Files
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Slider = ({ images = [] }) => (
 	<SlickSlider
@@ -15,10 +15,11 @@ const Slider = ({ images = [] }) => (
 		autoplaySpeed={3000}
 		className="overflow-hidden bg-black"
 	>
-		{images?.map((image) => (
+		{images?.map((image, index) => (
 			<img
 				key={image}
 				src={image}
+				alt={`number ${index}`}
 				className="object-cover object-center w-screen h-screen"
 			/>
 		))}

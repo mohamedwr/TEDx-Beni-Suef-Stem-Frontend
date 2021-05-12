@@ -7,8 +7,8 @@ import Footer from "../../components/Footer";
 import Title from "../../components/Title";
 
 export async function getServerSideProps() {
-	const backend_url = process.env.BACKEND_URL;
-	const { data: posts } = await axios.get(`${backend_url}/api/post`);
+	const backendUrl = process.env.BACKEND_URL;
+	const { data: posts } = await axios.get(`${backendUrl}/api/post`);
 
 	return {
 		props: {
@@ -17,27 +17,26 @@ export async function getServerSideProps() {
 	};
 }
 
-const news = ({ posts }) => {
-	return (
-		<>
-			<Nav />
-			<Title>News</Title>
-			<div className="container py-5 md:px-52">
-				<div className="grid grid-cols-1 gap-5">
-					{posts.map((post) => (
-						<Card
-							id={post.id}
-							title={post.title}
-							author={post.author}
-							time={post.created_at}
-							img={post.image}
-						/>
-					))}
-				</div>
+const news = ({ posts }) => (
+	<>
+		<Nav />
+		<Title>News</Title>
+		<div className="container py-5 md:px-52">
+			<div className="grid grid-cols-1 gap-5">
+				{posts.map((post) => (
+					<Card
+						key={post.title}
+						id={post.id}
+						title={post.title}
+						author={post.author}
+						time={post.created_at}
+						img={post.image}
+					/>
+				))}
 			</div>
-			<Footer />
-		</>
-	);
-};
+		</div>
+		<Footer />
+	</>
+);
 
 export default news;
