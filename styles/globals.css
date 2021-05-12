@@ -15,7 +15,7 @@ body {
 	transition: all 0.15s ease-out;
 }
 .underline:before {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 100%;
 	height: 3px; /* border height */
@@ -46,12 +46,12 @@ body {
 	position: relative;
 }
 .soon::after {
-	content: 'soon';
+	content: "soon";
 	position: absolute;
 	top: -7px;
 	right: 0;
 	font-size: 10px;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 700;
 	color: white;
 }
