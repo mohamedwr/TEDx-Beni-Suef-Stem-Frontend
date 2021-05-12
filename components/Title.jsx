@@ -22,31 +22,34 @@ const Title = ({
 	return (
 		<Head>
 			{/* Viewport Meta Tag */}
-			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1.0"
+			/>
 
 			{/* Keywords Meta Tag */}
-			<meta name='keywords' content={EditedKeywords} />
+			<meta name="keywords" content={EditedKeywords} />
 
 			{/* Open Graph Meta Tags */}
-			<meta property='og:image' content={image} />
-			<meta property='og:title' content={EditedTitle} />
-			<meta property='og:description' content={EditedDescription} />
+			<meta property="og:image" content={image} />
+			<meta property="og:title" content={EditedTitle} />
+			<meta property="og:description" content={EditedDescription} />
 			<meta
-				property='og:url'
+				property="og:url"
 				content={`http://tedxyouthbstem.com${router.asPath}`}
 			/>
 
 			{/* Twitter Meta Tags */}
-			<meta name='twitter:image' content={image} />
-			<meta name='twitter:card' content='summary_large_image' />
-			<meta name='twitter:title' content={EditedTitle} />
-			<meta name='twitter:description' content={EditedDescription} />
+			<meta name="twitter:image" content={image} />
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:title" content={EditedTitle} />
+			<meta name="twitter:description" content={EditedDescription} />
 			<meta
-				name='twitter:site'
+				name="twitter:site"
 				content={`http://tedxyouthbstem.com${router.asPath}`}
 			/>
 
-			<meta name='description' content={EditedDescription} />
+			<meta name="description" content={EditedDescription} />
 
 			<title>{EditedTitle}</title>
 		</Head>

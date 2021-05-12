@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
 
 // Custom Hooks
@@ -21,7 +21,6 @@ import SunIcon from '../public/icons/sun.svg';
 // autoTransparent => for controlling in transparent
 
 const Nav = ({ fixed = false, autoTransparent = false }) => {
-	// const { y } = useWindowScroll();
 	const router = useRouter();
 	const [menu, setMenu] = useState(false);
 	const { dark, toggleDark } = useContext(LayoutContext);
@@ -44,30 +43,34 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					fixed && underNavHeight
 						? 'py-5 xl:px-12 px-6'
 						: 'py-6 xl:py-10 xl:px-28 px-10'
-				}
-				${autoTransparent ? (underNavHeight ? 'bg-black' : '') : 'bg-black'}
-				${menu ? 'bg-black' : ''}
+				} ${
+					autoTransparent
+						? underNavHeight
+							? 'bg-black'
+							: 'bg-gradient-t-black'
+						: 'bg-black'
+				} ${menu ? 'bg-black' : ''}
 				duration-500 ease-in flex flex-wrap justify-between items-center`}
 			>
 				{/* Logo */}
 				<div
-					className='flex items-center justify-between flex-1'
+					className="flex items-center justify-between flex-1"
 					onClick={() => router.push('/')}
 				>
 					<img
-						src='/logoWhite.png'
-						alt='logo'
-						className='h-12 cursor-pointer'
+						src="/logoWhite.png"
+						alt="logo"
+						className="h-12 cursor-pointer"
 					/>
 				</div>
 
 				<LayoutIcon
-					className='block w-6 h-6 mr-4 text-white fill-current xl:hidden'
+					className="block w-6 h-6 mr-4 text-white fill-current xl:hidden"
 					onClick={() => toggleDark()}
 				/>
 
 				<MenuIcon
-					className='block w-6 h-6 text-white fill-current pointer-cursor lg:hidden'
+					className="block w-6 h-6 text-white fill-current pointer-cursor lg:hidden"
 					onClick={() =>
 						setMenu((prev) => {
 							return !prev;
@@ -81,22 +84,21 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 					className={`${
 						menu ? 'block' : 'hidden'
 					} lg:flex lg:items-center lg:w-auto w-full`}
-					id='menu'
+					id="menu"
 				>
-					<nav className='py-6 lg:py-0'>
-						<ul className='flex flex-col items-center justify-between space-x-0 space-y-4 text-white lg:flex-row lg:space-x-4 lg:space-y-0'>
-							{/* <NavLink link='home' path='/' /> */}
-							<NavLink link='news' path='/news' />
-							<NavLink link='about us' path='/about' />
-							<NavLink link='our team' path='/team' />
-							<NavLink link='gallery' path='/gallery' />
-							<NavLink link='contact us' path='/contact' />
-							<NavLink link='events news' path='/event' />
+					<nav className="py-6 lg:py-0">
+						<ul className="flex flex-col items-center justify-between space-x-0 space-y-4 text-white lg:flex-row lg:space-x-4 lg:space-y-0">
+							<NavLink link="news" path="/news" />
+							<NavLink link="about us" path="/about" />
+							<NavLink link="our team" path="/team" />
+							<NavLink link="gallery" path="/gallery" />
+							<NavLink link="contact us" path="/contact" />
+							<NavLink link="events news" path="/event" />
 						</ul>
 					</nav>
 				</div>
 				<LayoutIcon
-					className='hidden w-6 h-6 ml-4 text-white fill-current xl:block'
+					className="hidden w-6 h-6 ml-4 text-white fill-current xl:block"
 					onClick={() => toggleDark()}
 				/>
 			</header>

@@ -42,10 +42,10 @@ const gallery = () => {
 			<Nav />
 			<Title>Gallery</Title>
 
-			<h1 className='pt-5 text-5xl font-bold text-center text-red-500 md:text-7xl'>
+			<h1 className="pt-5 text-5xl font-bold text-center text-red-500 md:text-7xl">
 				Outing Day
 			</h1>
-			<section className='container grid grid-cols-3 gap-2 py-5 md:gap-5'>
+			<section className="container grid grid-cols-3 gap-2 py-5 md:gap-5">
 				{images.map((image, index) => (
 					<img
 						key={index}
@@ -56,7 +56,9 @@ const gallery = () => {
 							setOpen(true);
 						}}
 						className={`object-cover w-full h-full ${
-							Math.floor((index + 1) / 2) % 2 == 1 ? 'col-span-1' : 'col-span-2'
+							Math.floor((index + 1) / 2) % 2 == 1
+								? 'col-span-1'
+								: 'col-span-2'
 						} rounded-lg shadow-xl`}
 						style={
 							Math.floor((index + 1) / 2) % 2 == 0
@@ -72,10 +74,14 @@ const gallery = () => {
 				<Lightbox
 					mainSrc={images[imageIndex]}
 					nextSrc={images[(imageIndex + 1) % images.length]}
-					prevSrc={images[(imageIndex + images.length - 1) % images.length]}
+					prevSrc={
+						images[(imageIndex + images.length - 1) % images.length]
+					}
 					onCloseRequest={() => setOpen(false)}
 					onMovePrevRequest={() =>
-						setImageIndex((imageIndex + images.length - 1) % images.length)
+						setImageIndex(
+							(imageIndex + images.length - 1) % images.length
+						)
 					}
 					onMoveNextRequest={() =>
 						setImageIndex((imageIndex + 1) % images.length)

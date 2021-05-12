@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 
 const MailingForm = () => {
-	const { register, handleSubmit, errors } = useForm();
 
 	const sendEmail = (email) => {
 		axios
-			.post('https://tedx-beni-suef-api.herokuapp.com/api/mailing', { email })
+			.post('https://tedx-beni-suef-api.herokuapp.com/api/mailing', {
+				email,
+			})
 			.then(() => {
 				Swal.fire(
 					'SuccessFull',
@@ -24,7 +24,8 @@ const MailingForm = () => {
 		await Swal.fire({
 			title: 'Join More Than 3000 Followers',
 			input: 'email',
-			inputLabel: 'To Get Updated With Our News, Events, Offers, and Updates.',
+			inputLabel:
+				'To Get Updated With Our News, Events, Offers, and Updates.',
 			inputPlaceholder: 'Enter Your E-mail Address',
 			preConfirm: (email) => {
 				sendEmail(email);
@@ -35,7 +36,7 @@ const MailingForm = () => {
 	return (
 		<button
 			onClick={() => handleClick()}
-			className='px-10 py-2 text-lg font-bold text-black duration-150 bg-gray-100 rounded-full hover:bg-gray-200'
+			className="px-10 py-2 text-lg font-bold text-black duration-150 bg-gray-100 rounded-full hover:bg-gray-200"
 		>
 			Join Us
 		</button>

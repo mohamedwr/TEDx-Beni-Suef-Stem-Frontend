@@ -11,7 +11,7 @@ const NavLink = ({ link, soon, path = false }) => {
 				: 'cursor-pointer underline py-3 px-3'
 		} ${router.pathname.endsWith(path) ? 'active font-bold text-ted' : ''}`}
 			onClick={() => {
-				if (path != '') {
+				if (path !== '') {
 					router.push(path);
 				}
 			}}

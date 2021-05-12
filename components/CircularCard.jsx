@@ -35,8 +35,8 @@ const CircularCard = ({ title, num, color = 'bg-ted' }) => {
 			ref={divRef}
 			className={`h-64 w-64 ${color} rounded-full border-4 border-ted flex flex-col justify-center items-center font-bold font-roboto`}
 		>
-			<span className='text-7xl dark:text-white'>{countUp}</span>
-			<h3 className='text-2xl uppercase text-ted'>{title}</h3>
+			<span className="text-7xl dark:text-white">{countUp}</span>
+			<h3 className="text-2xl uppercase text-ted">{title}</h3>
 		</div>
 	);
 };

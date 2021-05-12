@@ -8,18 +8,18 @@ The Frontend For TEDx Beni Suef STEM Website. built with
 
 ## Authors
 
-- [@deviengeorge](https://www.github.com/deviengeorge)
-- [@GasserAbdlrazk](https://github.com/gasser)
+-   [@deviengeorge](https://www.github.com/deviengeorge)
+-   [@GasserAbdlrazk](https://github.com/gasser)
 
 ## Documentation
 
-- `pages folder` Contain the Pages that are loaded inside the browser by NextJS
-- `components folder` Contain the components that are used inside every page has been made
-- `hooks folder` Contain Custom hooks to not replicate the logic twice inside the component and to reuse it again in another component
-- `utils folder` Contain Custom function to help the logic inside the code
-- `context folder` Contain Context Provider for React component
-- `public folder` Contain files that are exposed to the public Internet
-- `styles folder` Contain CSS files to style the pages and the components
+-   `pages folder` Contain the Pages that are loaded inside the browser by NextJS
+-   `components folder` Contain the components that are used inside every page has been made
+-   `hooks folder` Contain Custom hooks to not replicate the logic twice inside the component and to reuse it again in another component
+-   `utils folder` Contain Custom function to help the logic inside the code
+-   `context folder` Contain Context Provider for React component
+-   `public folder` Contain files that are exposed to the public Internet
+-   `styles folder` Contain CSS files to style the pages and the components
 
 ## Screenshots
 
@@ -63,25 +63,25 @@ Open the local Server On Port 3000
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
-- Build highly efficient components to reuse it again in another page
-- Improve the SEO by meta tags, sitemaps and robots.txt files
-- Build a appropriate logic that help the component to work
-- Design a Whole system design without any framework for css only with tailwind css
-- Make the website had a dark and light theme
+-   Build highly efficient components to reuse it again in another page
+-   Improve the SEO by meta tags, sitemaps and robots.txt files
+-   Build a appropriate logic that help the component to work
+-   Design a Whole system design without any framework for css only with tailwind css
+-   Make the website had a dark and light theme
 
 ## Tech Client Stack
 
-- NextJS ( ReactJS )
-- PostCSS ( CSS Preprocessor )
-- TailwindCSS
-- Keen Slider
-- Sweet Alert 2
-- Axios
-- React Form Hook
-- React Remark ( Markdown Text )
-- React Image LightBox
-- React Messenger Customer Chat
-- Next Sitemap ( Sitemap Files For SEO )
+-   NextJS ( ReactJS )
+-   PostCSS ( CSS Preprocessor )
+-   TailwindCSS
+-   Keen Slider
+-   Sweet Alert 2
+-   Axios
+-   React Form Hook
+-   React Remark ( Markdown Text )
+-   React Image LightBox
+-   React Messenger Customer Chat
+-   Next Sitemap ( Sitemap Files For SEO )
 
 ## License
 

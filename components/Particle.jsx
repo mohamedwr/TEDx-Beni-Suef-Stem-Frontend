@@ -4,7 +4,7 @@ const Particle = ({ lineColor = '#fff', dotColor = '#e74c3c' }) => {
 	return (
 		<>
 			<Particles
-				className='absolute inset-0 -z-10'
+				className="absolute inset-0 -z-10"
 				options={{
 					background: {
 						color: {

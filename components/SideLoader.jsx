@@ -14,13 +14,13 @@ const SideLoader = () => {
 	return (
 		<>
 			<motion.div
-				className='fixed h-full bg-gray-900 z-60'
+				className="fixed h-full bg-gray-900 z-60"
 				initial={initial}
 				animate={animate}
 				transition={{ ...transitions }}
 			/>
 			<motion.div
-				className='fixed z-50 h-full bg-red-500'
+				className="fixed z-50 h-full bg-red-500"
 				initial={initial}
 				animate={animate}
 				transition={{

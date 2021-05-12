@@ -23,8 +23,8 @@ const news = ({ posts }) => {
 		<>
 			<Nav />
 			<Title>News</Title>
-			<div className='container py-5 md:px-52'>
-				<div className='grid grid-cols-1 gap-5'>
+			<div className="container py-5 md:px-52">
+				<div className="grid grid-cols-1 gap-5">
 					{posts.map((post) => (
 						<Card
 							id={post.id}

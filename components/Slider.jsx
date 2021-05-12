@@ -13,13 +13,13 @@ const Slider = ({ images = [] }) => (
 		speed={500}
 		autoplay
 		autoplaySpeed={3000}
-		className='overflow-hidden bg-black'
+		className="overflow-hidden bg-black"
 	>
 		{images?.map((image) => (
 			<img
 				key={image}
 				src={image}
-				className='object-cover object-center w-screen h-screen'
+				className="object-cover object-center w-screen h-screen"
 			/>
 		))}
 	</SlickSlider>

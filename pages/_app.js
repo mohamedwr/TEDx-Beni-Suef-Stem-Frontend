@@ -21,14 +21,17 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<LayoutProvider>
 			<NextNProgress
-				color='#f34423'
-				height='6'
+				color="#f34423"
+				height="6"
 				startPosition={0.3}
 				stopDelayMs={200}
 				options={{ showSpinner: true }}
 			/>
 			<SideLoader />
-			<MessengerCustomerChat pageId='100148515225265' appId='884572085427135' />
+			<MessengerCustomerChat
+				pageId="100148515225265"
+				appId="884572085427135"
+			/>
 			<Component {...pageProps} />
 		</LayoutProvider>
 	);
