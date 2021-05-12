@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 // Components
-import Button from '../components/Button';
-import Title from '../components/Title';
+import Button from "../components/Button";
+import Title from "../components/Title";
 
 const Error = () => {
 	const router = useRouter();
@@ -15,7 +15,7 @@ const Error = () => {
 					<h1 className="font-bold tracking-wide text-red-500 text-9xl font-roboto">
 						404
 					</h1>
-					<Button type="filled" onClick={() => router.push('/')}>
+					<Button type="filled" onClick={() => router.push("/")}>
 						Back To Home
 					</Button>
 				</div>

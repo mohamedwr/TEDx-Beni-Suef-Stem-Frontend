@@ -1,13 +1,13 @@
-import { Fragment, useEffect, useState } from 'react';
-import axios from 'axios';
+import { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 
 // Components
-import PersonCard from '../components/PersonCard';
-import Separator from '../components/Separator';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
-import Title from '../components/Title';
-import TeamSection from '../components/TeamSection';
+import PersonCard from "../components/PersonCard";
+import Separator from "../components/Separator";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Title from "../components/Title";
+import TeamSection from "../components/TeamSection";
 
 export async function getServerSideProps(context) {
 	const backend_url = process.env.BACKEND_URL;
@@ -33,7 +33,7 @@ const teams = ({ committees }) => {
 				<h2 className="pl-4 mb-8 text-3xl font-bold text-black duration-300 ease-in-out border-l-8 border-red-500 rounded lg:text-4xl font-roboto dark:text-white">
 					<span className="font-black text-red-500">
 						TED<sup>x</sup>
-					</span>{' '}
+					</span>{" "}
 					Youth@BeniSuefSTEM Management Board
 				</h2>
 				<div className="flex flex-col space-y-6">

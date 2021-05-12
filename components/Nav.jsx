@@ -1,20 +1,20 @@
-import { useContext, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useContext, useState } from "react";
+import { useRouter } from "next/router";
 
 // Custom Hooks
-import { useHeight } from '../hooks/useHeight';
+import { useHeight } from "../hooks/useHeight";
 
 // Context(s)
-import { LayoutContext } from '../context/LayoutContext';
+import { LayoutContext } from "../context/LayoutContext";
 
 // Components
-import NavLink from './NavLink';
+import NavLink from "./NavLink";
 
 // SVG(s)
-import OpenIcon from '../public/icons/menu.svg';
-import CloseIcon from '../public/icons/close.svg';
-import MoonIcon from '../public/icons/moon.svg';
-import SunIcon from '../public/icons/sun.svg';
+import OpenIcon from "../public/icons/menu.svg";
+import CloseIcon from "../public/icons/close.svg";
+import MoonIcon from "../public/icons/moon.svg";
+import SunIcon from "../public/icons/sun.svg";
 
 // Props:
 // fixed => position fixed or sticky
@@ -34,28 +34,28 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 	return (
 		<div
 			className={`${
-				fixed ? 'fixed inset-x-0' : 'sticky inset-0'
+				fixed ? "fixed inset-x-0" : "sticky inset-0"
 			} z-40 select-none`}
 			ref={divRef}
 		>
 			<header
 				className={`${
 					fixed && underNavHeight
-						? 'py-5 xl:px-12 px-6'
-						: 'py-6 xl:py-10 xl:px-28 px-10'
+						? "py-5 xl:px-12 px-6"
+						: "py-6 xl:py-10 xl:px-28 px-10"
 				} ${
 					autoTransparent
 						? underNavHeight
-							? 'bg-black'
-							: 'bg-gradient-t-black'
-						: 'bg-black'
-				} ${menu ? 'bg-black' : ''}
+							? "bg-black"
+							: "bg-gradient-t-black"
+						: "bg-black"
+				} ${menu ? "bg-black" : ""}
 				duration-500 ease-in flex flex-wrap justify-between items-center`}
 			>
 				{/* Logo */}
 				<div
 					className="flex items-center justify-between flex-1"
-					onClick={() => router.push('/')}
+					onClick={() => router.push("/")}
 				>
 					<img
 						src="/logoWhite.png"
@@ -82,7 +82,7 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 
 				<div
 					className={`${
-						menu ? 'block' : 'hidden'
+						menu ? "block" : "hidden"
 					} lg:flex lg:items-center lg:w-auto w-full`}
 					id="menu"
 				>

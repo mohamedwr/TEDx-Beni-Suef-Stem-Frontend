@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 // Components
-import Separator from './Separator';
-import Button from './Button';
+import Separator from "./Separator";
+import Button from "./Button";
 
 const TicketCard = ({
-	name = 'Ticket',
+	name = "Ticket",
 	price = 150,
 	benefits = [
-		'Lorem, ipsum dolor.',
-		'Lorem, ipsum dolor.',
-		'Lorem, ipsum dolor.',
+		"Lorem, ipsum dolor.",
+		"Lorem, ipsum dolor.",
+		"Lorem, ipsum dolor.",
 	],
-	form = '/error',
+	form = "/error",
 }) => {
 	const router = useRouter();
 	return (
