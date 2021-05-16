@@ -70,6 +70,6 @@
     "stylelint-prettier": "^1.2.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": "npm lint:fix"
+    "*.{js,jsx}": "npm run lint:fix"
   }
 }

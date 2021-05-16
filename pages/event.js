@@ -5,6 +5,7 @@ import Timer from "../components/Timer";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
 import TicketCard from "../components/TicketCard";
+import PersonCard from "../components/PersonCard";
 
 const event = () => {
 	const tickets = [
@@ -54,6 +55,38 @@ const event = () => {
 			],
 		},
 	];
+
+	const speakers = [
+		{
+			name: "Abdurahman El Gammal",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173287/Speakers%20Event%202021/Abdurahman_El_Gammal_dlx4g1.png",
+		},
+		{
+			name: "Manar ElSaeed",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173295/Speakers%20Event%202021/Manar_Elsaeed_jmo9ea.png",
+		},
+		{
+			name: "Omar Hefnawy",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173306/Speakers%20Event%202021/Omar_Hefnawy_ofjpkt.png",
+		},
+		{
+			name: "Essam Gouda",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173287/Speakers%20Event%202021/Essam_Gouda_zn2u1d.png",
+		},
+		{
+			name: "Nayyera Askar",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173300/Speakers%20Event%202021/Nayyera_Askar_juzcbt.png",
+		},
+		{
+			name: "Ahmed Elgebaly",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173287/Speakers%20Event%202021/Ahmed_Elgebaly_oy3je2.png",
+		},
+		{
+			name: "Mahmoud Edris",
+			img: "https://res.cloudinary.com/dxaqlmgag/image/upload/v1621173291/Speakers%20Event%202021/Mahmoud_Edris_rbggbw.png",
+		},
+	];
+
 	return (
 		<>
 			<Nav />
@@ -157,19 +190,11 @@ const event = () => {
 				<Section
 					withBorder
 					title="Speakers"
-					// className='grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'
+					className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
 				>
-					{/* {[1, 2, 3, 4, 5, 6].map((card) => (
-						<PersonCard
-							key={card}
-							isMember
-							img='/cover.jpg'
-							name={`Speaker ${card}`}
-						/>
-					))} */}
-					<h2 className="py-5 text-5xl font-bold text-center text-gray-600">
-						SOON
-					</h2>
+					{speakers.map(({ name, img }) => (
+						<PersonCard key={name} img={img} name={name} />
+					))}
 				</Section>
 			</div>
 			<Footer />
