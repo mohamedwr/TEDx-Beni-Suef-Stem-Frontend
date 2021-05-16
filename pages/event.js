@@ -11,6 +11,7 @@ const event = () => {
 		{
 			name: "Normal",
 			price: 120,
+			sold: false,
 			form: "https://forms.gle/K5ycFiAq9CRpYpg68",
 			benefits: [
 				"Attendance & Breakfast",
@@ -25,6 +26,7 @@ const event = () => {
 		{
 			name: "Pro",
 			price: 150,
+			sold: false,
 			form: "https://forms.gle/wqgY9f4EsQyURy5H9",
 			benefits: [
 				"Attendance & Breakfast",
@@ -39,7 +41,8 @@ const event = () => {
 		{
 			name: "VIP",
 			price: 180,
-			form: "https://forms.gle/uS2jDJYTsfQ5X7k49 ",
+			sold: true,
+			form: "https://forms.gle/uS2jDJYTsfQ5X7k49",
 			benefits: [
 				"Attendance & Breakfast",
 				"VIP Welcome Package",
@@ -122,13 +125,14 @@ const event = () => {
 					withBorder
 					className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
 				>
-					{tickets.map(({ name, price, form, benefits }) => (
+					{tickets.map(({ name, price, form, benefits, sold }) => (
 						<TicketCard
 							key={name}
 							name={name}
 							price={price}
 							form={form}
 							benefits={benefits}
+							sold={sold}
 						/>
 					))}
 				</Section>

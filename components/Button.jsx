@@ -1,4 +1,10 @@
-const Button = ({ children, type = "flat", onClick, className }) => {
+const Button = ({
+	children,
+	type = "flat",
+	onClick,
+	disabled = false,
+	className,
+}) => {
 	const defaultClasses =
 		"cursor-pointer capitalize py-3 px-8 text-lg font-medium text-center tracking-wide text-white duration-200 transition-colors ease-in-out rounded-full";
 
@@ -15,11 +21,15 @@ const Button = ({ children, type = "flat", onClick, className }) => {
 		default:
 			break;
 	}
+
 	return (
 		<button
-			className={`${buttonStyle} ${className}`}
+			className={`${buttonStyle} ${
+				disabled ? "cursor-not-allowed" : ""
+			} ${className}`}
 			onClick={onClick}
 			type="button"
+			disabled={disabled}
 		>
 			{children}
 		</button>

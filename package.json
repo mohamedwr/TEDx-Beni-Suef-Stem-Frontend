@@ -11,8 +11,14 @@
     "lint:fix": "eslint --fix --cache ./components/*.jsx ./pages/** -c .eslintrc",
     "prepare": "husky install"
   },
-  "repository": {},
-  "keywords": [],
+  "repository": "github:deviengeorge/TEDx-Beni-Suef-Stem-Frontend",
+  "keywords": [
+    "TEDx",
+    "stem",
+    "BeniSuef",
+    "Front-End",
+    "NextJS"
+  ],
   "author": "Devien George",
   "license": "ISC",
   "bugs": {
@@ -70,6 +76,6 @@
     "stylelint-prettier": "^1.2.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": "npm lint:fix"
+    "*.{js,jsx}": "npm run lint:fix"
   }
 }

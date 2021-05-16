@@ -13,6 +13,7 @@ const TicketCard = ({
 		"Lorem, ipsum dolor.",
 	],
 	form = "/error",
+	sold = false,
 }) => {
 	const router = useRouter();
 	return (
@@ -34,8 +35,13 @@ const TicketCard = ({
 					</h3>
 				))}
 			</div>
-			<Button type="filled" onClick={() => router.push(form)}>
-				Book Your Ticket
+			<Button
+				type="filled"
+				onClick={() => {
+					if (!sold) router.push(form);
+				}}
+			>
+				{sold ? "Sold Out" : "Book Your Ticket"}
 			</Button>
 		</div>
 	);
