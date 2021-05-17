@@ -27,7 +27,7 @@ const event = () => {
 		{
 			name: "Pro",
 			price: 150,
-			sold: false,
+			sold: true,
 			form: "https://forms.gle/wqgY9f4EsQyURy5H9",
 			benefits: [
 				"Attendance & Breakfast",
