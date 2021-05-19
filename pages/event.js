@@ -115,7 +115,7 @@ const event = () => {
 				</section>
 
 				<Section withBorder title="Event Description">
-					<p className="font-light text-justify text-black dark:text-white">
+					<p className="font-light text-black dark:text-white">
 						<p dir="ltr">
 							On TEDx’s red carpet, over 2600 talks had been
 							presented till now, millions of people are all ears,
