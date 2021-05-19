@@ -12,7 +12,7 @@ const event = () => {
 		{
 			name: "Normal",
 			price: 120,
-			sold: false,
+			sold: true,
 			form: "https://forms.gle/K5ycFiAq9CRpYpg68",
 			benefits: [
 				"Attendance & Breakfast",
