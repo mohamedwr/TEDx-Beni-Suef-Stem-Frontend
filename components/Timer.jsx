@@ -11,14 +11,11 @@ const Tile = ({ text, value }) => (
 );
 
 const Timer = ({ time }) => {
-	// const [minute, setMinute] = useState(0);
-	// const [day, setDay] = useState(0);
-	// const [hour, setHour] = useState(0);
-	// const [second, setSecond] = useState(0);
+	const [active, setActive] = useState(true);
 	const [timeState, setTime] = useState({
-		minute: 0,
 		days: 0,
 		hour: 0,
+		minute: 0,
 		second: 0,
 	});
 
@@ -40,12 +37,17 @@ const Timer = ({ time }) => {
 			);
 			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-			setTime({
-				day: days,
-				hour: hours,
-				minute: minutes,
-				second: seconds,
-			});
+			if (seconds < 0) {
+				setActive(false);
+				clearInterval(timeDate);
+			} else {
+				setTime({
+					day: days,
+					hour: hours,
+					minute: minutes,
+					second: seconds,
+				});
+			}
 		}, 1000);
 		return () => {
 			clearInterval(timeDate);
@@ -53,20 +55,28 @@ const Timer = ({ time }) => {
 	}, [countDownDate]);
 
 	return (
-		<ul className="grid grid-cols-1 divide-y-2 md:divide-y-0 md:divide-x-2 md:grid-cols-4">
-			<li className="flex flex-col items-center justify-center py-3 md:py-0">
-				<Tile text="days" value={timeState.day} />
-			</li>
-			<li className="flex flex-col items-center justify-center py-3 md:py-0">
-				<Tile text="hour" value={timeState.hour} />
-			</li>
-			<li className="flex flex-col items-center justify-center py-3 md:py-0">
-				<Tile text="minutes" value={timeState.minute} />
-			</li>
-			<li className="flex flex-col items-center justify-center py-3 md:py-0">
-				<Tile text="seconds" value={timeState.second} />
-			</li>
-		</ul>
+		<>
+			{active ? (
+				<ul className="grid grid-cols-1 divide-y-2 md:divide-y-0 md:divide-x-2 md:grid-cols-4">
+					<li className="flex flex-col items-center justify-center py-3 md:py-0">
+						<Tile text="days" value={timeState.day} />
+					</li>
+					<li className="flex flex-col items-center justify-center py-3 md:py-0">
+						<Tile text="hour" value={timeState.hour} />
+					</li>
+					<li className="flex flex-col items-center justify-center py-3 md:py-0">
+						<Tile text="minutes" value={timeState.minute} />
+					</li>
+					<li className="flex flex-col items-center justify-center py-3 md:py-0">
+						<Tile text="seconds" value={timeState.second} />
+					</li>
+				</ul>
+			) : (
+				<h2 className="font-black text-center text-white uppercase text-7xl lg:text-8xl xl:text-9xl">
+					Event Has Ended
+				</h2>
+			)}
+		</>
 	);
 };
 
