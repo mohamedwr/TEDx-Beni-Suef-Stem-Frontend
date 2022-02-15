@@ -31,7 +31,7 @@ const tickets = () => {
 		{
 			name: "Gold",
 			price: 150,
-			sold: !isStillAvailable,
+			sold: true,
 			form: "https://forms.gle/NBoS5AwKtcP3cYPn9",
 			benefits: [
 				"Attendance",
