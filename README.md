@@ -1,10 +1,21 @@
 # TEDx Beni Suef Website Project
 
+Forked this repository to:
+
+-   edit the event page to make it suitable for the new event
+-   create a separate page for the tickets
+-   add a luck wheel to generate gifts and discounts for the tickets
+-   make other required edits to be suitable for the new season (2022)
+
+Luck wheel code: [mohamedwr/luck-wheel](https://github.com/mohamedwr/luck-wheel)
+
+#
+
 ![Logo](https://tedxyouthbstem.com/logoWhite.png)
 
 ## Project Title
 
-The Frontend For TEDx Beni Suef STEM Website. built with
+The Frontend For TEDx Beni Suef STEM Website built with NextJS, TailwindCSS
 
 ## Authors
 
