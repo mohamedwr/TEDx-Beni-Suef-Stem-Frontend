@@ -9,6 +9,9 @@ import SideLoader from "../components/SideLoader";
 import "../styles/globals.css";
 import "../components/TeamSlider.css";
 import "react-image-lightbox/style.css";
+// eslint-disable-next-line import/no-unresolved
+import "../styles/wheel.css";
+import "../styles/wheel.conf.css";
 
 // Contexts
 import { LayoutProvider } from "../context/LayoutContext";

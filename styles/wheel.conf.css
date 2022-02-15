@@ -1,0 +1,15 @@
+@media screen(md) {
+	.wheel {
+		--width: 500px;
+		--text-size: 20px;
+		--text-width: 130px;
+	}
+}
+
+@media screen(lg, xl, 2xl) {
+	.wheel {
+		--width: 600px;
+		--text-size: 22px;
+		--text-width: 145px;
+	}
+}
