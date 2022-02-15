@@ -52,7 +52,7 @@ const tickets = () => {
 		"Free Mug",
 		"2 Free Tickets",
 	];
-	const wheelItemsPopup = ["Buy 2 Tickets Get 1 Free"];
+	const wheelItemsPopup = ["Buy 1 Ticket Get 1 Free"];
 
 	const giftValidHours = 3;
 
