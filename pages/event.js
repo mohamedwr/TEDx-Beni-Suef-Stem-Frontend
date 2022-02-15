@@ -1,61 +1,12 @@
 // Components
 import Nav from "../components/Nav";
 import Section from "../components/Section";
-import Timer from "../components/Timer";
+import EventTimer from "../components/EventTimer";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
-import TicketCard from "../components/TicketCard";
 import PersonCard from "../components/PersonCard";
 
 const event = () => {
-	const tickets = [
-		{
-			name: "Normal",
-			price: 120,
-			sold: true,
-			form: "https://forms.gle/K5ycFiAq9CRpYpg68",
-			benefits: [
-				"Attendance & Breakfast",
-				"Normal Welcome Package",
-				"Normal Sticker Package",
-				"Face Mask",
-				"-",
-				"-",
-				"-",
-			],
-		},
-		{
-			name: "Pro",
-			price: 150,
-			sold: true,
-			form: "https://forms.gle/wqgY9f4EsQyURy5H9",
-			benefits: [
-				"Attendance & Breakfast",
-				"Pro Welcome Package",
-				"Pro Sticker Package",
-				"Face Mask",
-				"Printed T-Shirt",
-				"Pro Seat",
-				"-",
-			],
-		},
-		{
-			name: "VIP",
-			price: 180,
-			sold: true,
-			form: "https://forms.gle/uS2jDJYTsfQ5X7k49",
-			benefits: [
-				"Attendance & Breakfast",
-				"VIP Welcome Package",
-				"Full Sticker Package",
-				"Face Mask",
-				"Printed T-Shirt",
-				"VIP Seat",
-				"Lunch",
-			],
-		},
-	];
-
 	const speakers = [
 		{
 			name: "Abdurahman El Gammal",
@@ -107,15 +58,11 @@ const event = () => {
 				Event Details
 			</Title>
 			<div className="container py-5 space-y-6">
-				<section className="px-6 pb-16 space-y-4 bg-red-500 rounded-md shadow-lg pt-11">
-					<h1 className="text-4xl font-bold text-center text-white">
-						Event Date
-					</h1>
-					<Timer time="May 29, 2021" />
-				</section>
+				{/* Event Timer */}
+				<EventTimer />
 
 				<Section withBorder title="Event Description">
-					<p className="font-light text-black dark:text-white">
+					<div className="font-light text-black dark:text-white">
 						<p dir="ltr">
 							On TEDx’s red carpet, over 2600 talks had been
 							presented till now, millions of people are all ears,
@@ -149,25 +96,7 @@ const event = () => {
 							الكبير عن طريق شراء تذكرتنا بمجرد توفر التذاكر
 							قريبا. نحن في انتظاركم جميعا.
 						</p>
-					</p>
-				</Section>
-
-				{/* Tickets */}
-				<Section
-					title="Tickets"
-					withBorder
-					className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
-				>
-					{tickets.map(({ name, price, form, benefits, sold }) => (
-						<TicketCard
-							key={name}
-							name={name}
-							price={price}
-							form={form}
-							benefits={benefits}
-							sold={sold}
-						/>
-					))}
+					</div>
 				</Section>
 
 				{/* Partners & Sponsors */}
@@ -190,7 +119,7 @@ const event = () => {
 				<Section
 					withBorder
 					title="Speakers"
-					className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
+					className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 content-center"
 				>
 					{speakers.map(({ name, img }) => (
 						<PersonCard key={name} img={img} name={name} />
