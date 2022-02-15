@@ -10,7 +10,7 @@ const Tile = ({ text, value }) => (
 	</>
 );
 
-const Timer = ({ time }) => {
+const Timer = ({ y, m, d, h }) => {
 	const [active, setActive] = useState(true);
 	const [timeState, setTime] = useState({
 		days: 0,
@@ -19,7 +19,7 @@ const Timer = ({ time }) => {
 		second: 0,
 	});
 
-	const countDownDate = new Date(`${time} 00:00:00`).getTime();
+	const countDownDate = new Date(y, m, d, h).getTime();
 
 	// Update the count down every 1 second
 	useEffect(() => {
