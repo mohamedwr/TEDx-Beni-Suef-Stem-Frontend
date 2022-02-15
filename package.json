@@ -5,7 +5,7 @@
   "scripts": {
     "wheel": "sass --no-source-map --style=compressed ./styles/wheel.scss ./styles/wheel.css",
     "dev": "next",
-    "build": "next build",
+    "build": "npm run wheel && next build",
     "start": "next start",
     "postbuild": "next-sitemap",
     "lint": "eslint ./components/*.jsx ./pages/** -c .eslintrc",
