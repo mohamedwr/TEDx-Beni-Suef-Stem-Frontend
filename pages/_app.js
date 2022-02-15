@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import NextNProgress from "nextjs-progressbar";
 import MessengerCustomerChat from "react-messenger-customer-chat/lib/MessengerCustomerChat";
+import Head from "next/head";
 
 // Components
 import SideLoader from "../components/SideLoader";
@@ -22,21 +23,29 @@ function MyApp({ Component, pageProps }) {
 	}, []);
 
 	return (
-		<LayoutProvider>
-			<NextNProgress
-				color="#f34423"
-				height="6"
-				startPosition={0.3}
-				stopDelayMs={200}
-				options={{ showSpinner: true }}
-			/>
-			<SideLoader />
-			<MessengerCustomerChat
-				pageId="100148515225265"
-				appId="884572085427135"
-			/>
-			<Component {...pageProps} />
-		</LayoutProvider>
+		<>
+			<Head>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+				/>
+			</Head>
+			<LayoutProvider>
+				<NextNProgress
+					color="#f34423"
+					height="6"
+					startPosition={0.3}
+					stopDelayMs={200}
+					options={{ showSpinner: true }}
+				/>
+				<SideLoader />
+				<MessengerCustomerChat
+					pageId="100148515225265"
+					appId="884572085427135"
+				/>
+				<Component {...pageProps} />
+			</LayoutProvider>
+		</>
 	);
 }
 

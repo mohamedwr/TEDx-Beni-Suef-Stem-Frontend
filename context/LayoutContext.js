@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from "react";
 
 const LayoutContext = createContext();
 
@@ -12,11 +12,11 @@ const LayoutProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
-		let Html = document.querySelector('html');
+		const Html = document.querySelector("html");
 		if (dark) {
-			Html.classList.add('dark');
+			Html.classList.add("dark");
 		} else {
-			Html.classList.remove('dark');
+			Html.classList.remove("dark");
 		}
 	}, [dark]);
 
