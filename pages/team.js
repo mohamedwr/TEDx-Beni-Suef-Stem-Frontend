@@ -10,8 +10,9 @@ import Title from "../components/Title";
 import TeamSection from "../components/TeamSection";
 
 export async function getServerSideProps() {
-	const backendUrl = process.env.BACKEND_URL;
-	const { data: committees } = await axios.get(`${backendUrl}/api/committee`);
+	const { data: committees } = await axios.get(
+		`${process.env.apiURL}/api/committee`
+	);
 
 	committees.shift();
 

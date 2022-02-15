@@ -10,8 +10,7 @@ import Section from "../components/Section";
 import RectangleCard from "../components/RectangleCard";
 
 export async function getServerSideProps() {
-	const backendUrl = process.env.BACKEND_URL;
-	const { data: thanks } = await axios.get(`${backendUrl}/api/thank`);
+	const { data: thanks } = await axios.get(`${process.env.apiURL}/api/thank`);
 
 	return {
 		props: {

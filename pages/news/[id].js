@@ -8,9 +8,8 @@ import Title from "../../components/Title";
 import Footer from "../../components/Footer";
 
 export async function getServerSideProps({ query }) {
-	const backendUrl = process.env.BACKEND_URL;
 	const { data: post } = await axios.get(
-		`${backendUrl}/api/post/${query.id}`
+		`${process.env.apiURL}/api/post/${query.id}`
 	);
 
 	return {

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const MailingForm = () => {
 	const sendEmail = (email) => {
 		axios
-			.post("https://tedx-beni-suef-api.herokuapp.com/api/mailing", {
+			.post(`${process.env.apiURL}/api/mailing`, {
 				email,
 			})
 			.then(() => {

@@ -7,8 +7,7 @@ import Footer from "../../components/Footer";
 import Title from "../../components/Title";
 
 export async function getServerSideProps() {
-	const backendUrl = process.env.BACKEND_URL;
-	const { data: posts } = await axios.get(`${backendUrl}/api/post`);
+	const { data: posts } = await axios.get(`${process.env.apiURL}/api/post`);
 
 	return {
 		props: {

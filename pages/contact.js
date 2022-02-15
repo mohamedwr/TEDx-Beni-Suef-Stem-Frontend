@@ -24,7 +24,7 @@ const Contact = () => {
 	const onSubmit = (data) => {
 		const { email, message, name, subject } = data;
 		axios
-			.post(`https://tedx-beni-suef-api.herokuapp.com/api/contact`, {
+			.post(`${process.env.apiURL}/api/contact`, {
 				name,
 				email,
 				subject,
