@@ -52,6 +52,7 @@ const tickets = () => {
 		"Free Mug",
 		"2 Free Tickets",
 	];
+	const wheelItemsPopup = ["Buy 2 Tickets Get 1 Free"];
 
 	const giftValidHours = 3;
 
@@ -109,8 +110,9 @@ const tickets = () => {
 							expirationTimestamp
 						).toLocaleString();
 						if (expirationTimestamp > Date.now() / 1000) {
+							const index = data.random % wheelItems.length;
 							const gift =
-								wheelItems[data.random % wheelItems.length];
+								wheelItemsPopup[index] || wheelItems[index];
 							if (data.new) {
 								wheelBtn.current.disabled = true;
 								wheel.current.style.transform = `rotate(-${
