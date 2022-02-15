@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 // Components
 import Footer from "../components/Footer";
@@ -7,7 +7,7 @@ import Nav from "../components/Nav";
 import Section from "../components/Section";
 import Separator from "../components/Separator";
 import Slider from "../components/Slider";
-import TeamSlider from "../components/TeamSlider";
+// import TeamSlider from "../components/TeamSlider";
 import Title from "../components/Title";
 import Word from "../components/Word";
 import CircularCard from "../components/CircularCard";
@@ -17,7 +17,7 @@ import { LayoutContext } from "../context/LayoutContext";
 
 export default function Home() {
 	const { dark } = useContext(LayoutContext);
-	const router = useRouter();
+	// const router = useRouter();
 
 	return (
 		<>
@@ -120,20 +120,20 @@ export default function Home() {
 						<div className="flex items-center justify-center space-x-5">
 							<CircularCard
 								title="crew"
-								num={135}
+								num={121}
 								color="bg-transparent"
 							/>
 						</div>
 						<div className="flex items-center justify-center space-x-5">
 							<CircularCard
 								title="followers"
-								num={4000}
+								num={8000}
 								color="bg-transparent"
 							/>
 						</div>
 					</section>
 
-					<Separator />
+					{/* <Separator />
 
 					<Section
 						title="TEDx Youth@BeniSuefSTEM Management Board"
@@ -189,7 +189,7 @@ export default function Home() {
 								rest of our team
 							</button>
 						</div>
-					</Section>
+							</Section> */}
 				</div>
 			</section>
 
