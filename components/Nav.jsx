@@ -89,12 +89,13 @@ const Nav = ({ fixed = false, autoTransparent = false }) => {
 				>
 					<nav className="py-6 lg:py-0">
 						<ul className="flex flex-col items-center justify-between space-x-0 space-y-4 text-white lg:flex-row lg:space-x-4 lg:space-y-0">
-							<NavLink link="news" path="/news" />
+							{/* <NavLink link="news" path="/news" /> */}
 							<NavLink link="about us" path="/about" />
-							<NavLink link="our team" path="/team" />
+							{/* <NavLink link="our team" path="/team" /> */}
 							<NavLink link="gallery" path="/gallery" />
 							<NavLink link="contact us" path="/contact" />
-							<NavLink link="events news" path="/event" />
+							<NavLink link="event" path="/event" />
+							<NavLink link="tickets" path="/tickets" />
 						</ul>
 					</nav>
 				</div>

@@ -1,18 +1,19 @@
 import FooterLink from "./FooterLink";
 import Icon from "./Icon";
-import MailingForm from "./MailingForm";
+// import MailingForm from "./MailingForm";
 
 const Footer = () => (
 	<footer className="z-50 py-10 bg-black">
 		<div className="container flex flex-col items-center justify-center space-y-5">
 			<ul className="flex flex-col space-y-4 text-lg text-center select-none font-roboto md:flex-row md:space-y-0 md:space-x-8">
 				<FooterLink name="home" path="/" />
-				<FooterLink name="news" path="/news" />
+				{/* <FooterLink name="news" path="/news" /> */}
 				<FooterLink name="about" path="/about" />
-				<FooterLink name="our team" path="/team" />
+				{/* <FooterLink name="our team" path="/team" /> */}
 				<FooterLink name="gallery" path="/gallery" />
 				<FooterLink name="contacts us" path="/contact" />
 				<FooterLink name="event" path="/event" />
+				<FooterLink name="tickets" path="/tickets" />
 			</ul>
 			<ul className="flex space-x-4 select-none md:space-x-10">
 				<Icon
@@ -29,10 +30,18 @@ const Footer = () => (
 					url="https://www.youtube.com/channel/UCA-y2ItuAJGsWnlo1egpLtw"
 				/>
 			</ul>
-			<MailingForm />
+			{/* <MailingForm /> */}
 			<h4 className="text-sm text-center text-gray-400 md:text-base font-roboto">
 				© {new Date().getFullYear().toString()} All Rights Reserved |
-				TEDxYouth@BeniSuefSTEM
+				TEDxYouth@BeniSuefSTEM | {/**/}
+				<a
+					className="uppercase text-ted hover:text-gray-100"
+					href="https://2021.tedxyouthbstem.com"
+					target="_blank"
+					rel="noreferrer"
+				>
+					season 2021
+				</a>
 			</h4>
 		</div>
 	</footer>
