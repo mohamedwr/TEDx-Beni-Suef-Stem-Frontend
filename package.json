@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "TEDx Beni Suef STEM Website with NextJS, TailwindCSS",
   "scripts": {
+    "wheel": "sass --no-source-map --style=compressed ./styles/wheel.scss ./styles/wheel.css",
     "dev": "next",
     "build": "next build",
     "start": "next start",
@@ -14,7 +15,7 @@
   "repository": {},
   "keywords": [],
   "author": "Devien George",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/deviengeorge/TEDx-Beni-Suef-Stem-Frontend/issues"
   },
@@ -67,6 +68,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "next-sitemap": "^1.6.25",
+    "sass": "^1.49.7",
     "stylelint-prettier": "^1.2.0"
   },
   "lint-staged": {

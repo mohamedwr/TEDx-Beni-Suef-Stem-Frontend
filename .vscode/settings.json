@@ -7,5 +7,6 @@
 		"**/.DS_Store": true
 	},
 	"explorerExclude.backup": null,
-	"cSpell.words": ["noodp", "suef", "youssef"]
+	"cSpell.words": ["noodp", "suef", "youssef"],
+	"css.validate": false
 }
